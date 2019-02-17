@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="college_BBS" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="244bd3f1-2423-4f7e-bbc8-0e7ac11dce25" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="MessageDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/MessageDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="c3p0-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+              <folding>
+                <element signature="e#155#160#0" expanded="true" />
+                <element signature="e#182#187#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="1779" column="31" lean-forward="false" selection-start-line="1779" selection-start-column="31" selection-end-line="1779" selection-end-column="31" />
+              <folding>
+                <marker date="1537335448828" expanded="true" signature="45710:45720" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="45785:45806" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="45887:45901" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="48764:48774" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="48839:48860" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="48941:48955" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="51764:51781" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="54800:54817" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="57207:57224" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="60340:60357" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="63564:63581" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="69413:69427" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="70002:70016" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="70696:70717" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="70921:70942" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="71038:71059" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="72886:72907" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="73111:73132" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="73228:73249" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="80570:80591" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="80809:80830" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="80977:80998" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="81084:81098" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="81399:81420" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="81729:81750" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="81897:81918" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="82004:82018" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="82316:82337" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="82646:82667" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="82814:82835" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="82921:82935" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="83230:83251" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="83564:83585" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="83732:83753" ph="..." />
+                <marker date="1537335448828" expanded="true" signature="83839:83853" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceMessageServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/ReceMessageServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetMessageCountServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/GetMessageCountServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reply.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/reply.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="270" column="24" lean-forward="false" selection-start-line="270" selection-start-column="24" selection-end-line="270" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="342" column="39" lean-forward="false" selection-start-line="342" selection-start-column="39" selection-end-line="342" selection-end-column="39" />
+              <folding>
+                <marker date="1532159514152" expanded="true" signature="18731:18762" ph="..." />
+                <marker date="1532159514152" expanded="true" signature="18976:19000" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>回答了</find>
+      <find>getmess</find>
+      <find>best</find>
+      <find>birthday</find>
+      <find>user.bi</find>
+      <find>user.</find>
+      <find>mlis</find>
+      <find>follow-tab</find>
+      <find>more</find>
+      <find>userid</find>
+      <find>var userid</find>
+      <find>more-tab</find>
+      <find>MORE</find>
+      <find>login</find>
+      <find>MORE-TAB</find>
+      <find>recemes</find>
+      <find>const</find>
+      <find>answer_page</find>
+      <find>mymoda</find>
+      <find>publish_page</find>
+      <find>list[i].head</find>
+      <find>follow</find>
+      <find>collection_</find>
+      <find>gethea</find>
+      <find>img</find>
+      <find>questionAjax</find>
+      <find>single-mis</find>
+      <find>.a_q</find>
+      <find>message</find>
+      <find>information</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/CollectionDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/bean/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/UpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/PageServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/PageMajorServlet.java" />
+        <option value="D:/腾讯游戏/settings(6).html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/web/html/home.html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/MessageDao.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/serviceImpl/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/GetMessageCountServlet.java" />
+        <option value="$PROJECT_DIR$/web/css/style3.css" />
+        <option value="$PROJECT_DIR$/web/css/page.css" />
+        <option value="$PROJECT_DIR$/web/css/styles.css" />
+        <option value="$PROJECT_DIR$/web/html/information.html" />
+        <option value="$PROJECT_DIR$/web/css/style1.css" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/FollowDaoImpl.java" />
+        <option value="D:/腾讯游戏/settings(8).html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/ChooseBestServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/AnswerDao.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/serviceImpl/AnswerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/AnswerService.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/DelMessageServlet.java" />
+        <option value="D:/Tomcat/webapps/college_BBS/html/index.html" />
+        <option value="D:/Tomcat/webapps/college_BBS/html/settings.html" />
+        <option value="$USER_HOME$/Desktop/college_BBS/html/about.html" />
+        <option value="$PROJECT_DIR$/web/css/setting.css" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/GetPublishedServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/GetMyAnswerServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/CollectionServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/FollowServlet.java" />
+        <option value="$PROJECT_DIR$/web/html/index.html" />
+        <option value="$PROJECT_DIR$/web/html/reply.html" />
+        <option value="$PROJECT_DIR$/web/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/QuestionDao.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/QuestionService.java" />
+        <option value="$PROJECT_DIR$/web/js/SensitiveTest.js" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/QuestionServlet.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/serviceImpl/QuestionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/html/community.html" />
+        <option value="$USER_HOME$/Desktop/about.html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/AnswerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/html/about.html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/web/html/settings.html" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/QuestionDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/GetRecommendServlet.java" />
+        <option value="$PROJECT_DIR$/src/c3p0-config.xml" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/MessageDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/muzhou/com/servlet/ReceMessageServlet.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-212" />
+    <option name="y" value="9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="daoImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college_BBS" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="college_BBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="college_BBS" type="cbb8eebc:String" user="college_BBS" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="college_BBS" type="cbb8eebc:String" user="college_BBS" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="college_BBS" type="cbb8eebc:String" user="college_BBS" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="muzhou/com" type="cbb8eebc:String" user="muzhou/com" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="college_BBS" type="cbb8eebc:String" user="college_BBS" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="muzhou/com" type="cbb8eebc:String" user="muzhou/com" />
+              <item name="bean" type="cbb8eebc:String" user="bean" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="college_BBS" type="cbb8eebc:String" user="college_BBS" />
+              <item name="web" type="cbb8eebc:String" user="web" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\college_BBS\web\images" />
+      <recent name="D:\IdeaProjects\college_BBS\web\css" />
+      <recent name="D:\IdeaProjects\college_BBS\web\js" />
+      <recent name="D:\IdeaProjects\college_BBS\web\html" />
+      <recent name="D:\IdeaProjects\college_BBS\src\muzhou\com\bean" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="muzhou.com.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\college_BBS\web\html" />
+      <recent name="D:\IdeaProjects\college_BBS\src\muzhou\com\service\serviceImpl" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.91" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_college_BBS" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57213" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration name="muzhou" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.91" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="college_BBS">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_college_BBS" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57213" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="college_BBS" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="244bd3f1-2423-4f7e-bbc8-0e7ac11dce25" name="Default" comment="" />
+      <created>1530580080419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530580080419</updated>
+      <workItem from="1530580083456" duration="16752000" />
+      <workItem from="1530601551140" duration="16988000" />
+      <workItem from="1530664957234" duration="8221000" />
+      <workItem from="1530684210659" duration="20350000" />
+      <workItem from="1530705087862" duration="5414000" />
+      <workItem from="1530751218055" duration="39143000" />
+      <workItem from="1530858052966" duration="17634000" />
+      <workItem from="1530946326294" duration="11640000" />
+      <workItem from="1530967512144" duration="10965000" />
+      <workItem from="1531009984996" duration="686000" />
+      <workItem from="1531010678700" duration="6201000" />
+      <workItem from="1531016894417" duration="10003000" />
+      <workItem from="1531027177512" duration="3360000" />
+      <workItem from="1531030545775" duration="17303000" />
+      <workItem from="1531060523270" duration="599000" />
+      <workItem from="1531096671163" duration="15279000" />
+      <workItem from="1531112221970" duration="424000" />
+      <workItem from="1531112656510" duration="21453000" />
+      <workItem from="1531145926683" duration="4570000" />
+      <workItem from="1531182654441" duration="5583000" />
+      <workItem from="1531189502950" duration="9871000" />
+      <workItem from="1531199527979" duration="19617000" />
+      <workItem from="1531228933800" duration="3752000" />
+      <workItem from="1531270015513" duration="10519000" />
+      <workItem from="1531288857980" duration="10658000" />
+      <workItem from="1531355722781" duration="33565000" />
+      <workItem from="1531442166233" duration="14293000" />
+      <workItem from="1531462965473" duration="17885000" />
+      <workItem from="1531526800903" duration="32248000" />
+      <workItem from="1531616518634" duration="1319000" />
+      <workItem from="1531621436819" duration="1689000" />
+      <workItem from="1531628726682" duration="1156000" />
+      <workItem from="1531634937240" duration="9172000" />
+      <workItem from="1531701928426" duration="29283000" />
+      <workItem from="1531744899092" duration="433000" />
+      <workItem from="1531748384358" duration="4904000" />
+      <workItem from="1531787798524" duration="14610000" />
+      <workItem from="1531807425189" duration="13482000" />
+      <workItem from="1531823369379" duration="2932000" />
+      <workItem from="1531828933189" duration="7666000" />
+      <workItem from="1531874448976" duration="41325000" />
+      <workItem from="1531917819952" duration="3203000" />
+      <workItem from="1531960494230" duration="15390000" />
+      <workItem from="1531979632100" duration="24276000" />
+      <workItem from="1532005433217" duration="3886000" />
+      <workItem from="1532039150327" duration="2710000" />
+      <workItem from="1532046968921" duration="40618000" />
+      <workItem from="1532091333201" duration="3530000" />
+      <workItem from="1532134871464" duration="103000" />
+      <workItem from="1532135223295" duration="34264000" />
+      <workItem from="1532179916077" duration="2304000" />
+      <workItem from="1532751767196" duration="172000" />
+      <workItem from="1536152777901" duration="3944000" />
+      <workItem from="1537198436758" duration="465000" />
+      <workItem from="1537234800516" duration="12416000" />
+      <workItem from="1537265610128" duration="696000" />
+      <workItem from="1537271163847" duration="1297000" />
+      <workItem from="1537332800702" duration="9818000" />
+      <workItem from="1537517615232" duration="1049000" />
+      <workItem from="1550398564948" duration="13435000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="686523000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.01585504" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.5064378" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49356222" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1668455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38505095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.5064378" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38505095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.01585504" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49356222" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="uml://JavaScript-modules-diagram/D:/IdeaProjects/college_BBS/src/muzhou/com/dao;D:/IdeaProjects/college_BBS/src/muzhou/com/bean;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/muzhou/com/dao;D:/IdeaProjects/college_BBS/src/muzhou/com/bean;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="682.0" y="387.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/muzhou.com.dao">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>muzhou.com.dao</OriginalElement>
+          <nodes>
+            <node x="" y="">muzhou.com.dao.AnswerDao</node>
+            <node x="" y="">muzhou.com.dao.CommentDao</node>
+            <node x="" y="">muzhou.com.dao.CollectionDao</node>
+            <node x="" y="">muzhou.com.dao.daoImpl</node>
+            <node x="" y="">muzhou.com.dao.QuestionDao</node>
+            <node x="" y="">muzhou.com.dao.MessageDao</node>
+            <node x="" y="">muzhou.com.dao.FollowDao</node>
+            <node x="" y="">muzhou.com.dao.UserDao</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="606.0" y="68.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/muzhou.com.bean">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>muzhou.com.bean</OriginalElement>
+          <nodes>
+            <node x="681.0" y="497.0">muzhou.com.bean.FollowBean</node>
+            <node x="443.0" y="838.0">muzhou.com.bean.Index</node>
+            <node x="0.0" y="0.0">muzhou.com.bean.QuestionBean</node>
+            <node x="310.0" y="0.0">muzhou.com.bean.UserBean</node>
+            <node x="456.0" y="497.0">muzhou.com.bean.PageBean</node>
+            <node x="228.0" y="497.0">muzhou.com.bean.MessageBean</node>
+            <node x="228.0" y="838.0">muzhou.com.bean.Content</node>
+            <node x="0.0" y="838.0">muzhou.com.bean.CollectionBean</node>
+            <node x="566.0" y="0.0">muzhou.com.bean.AnswerBean</node>
+            <node x="0.0" y="497.0">muzhou.com.bean.CommentBean</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-169.0" y="423.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/muzhou.com.dao.daoImpl">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>muzhou.com.dao.daoImpl</OriginalElement>
+          <nodes>
+            <node x="0.0" y="474.0">muzhou.com.dao.daoImpl.CommentDaoImpl</node>
+            <node x="1745.0" y="0.0">muzhou.com.dao.daoImpl.DAO</node>
+            <node x="2698.0" y="487.0">muzhou.com.dao.daoImpl.CollectionDaoImpl</node>
+            <node x="2201.0" y="500.0">muzhou.com.dao.daoImpl.MessageDaoImpl</node>
+            <node x="499.0" y="305.0">muzhou.com.dao.daoImpl.QuestionDaoImpl</node>
+            <node x="1207.0" y="357.0">muzhou.com.dao.daoImpl.AnswerDaoImpl</node>
+            <node x="1831.0" y="448.0">muzhou.com.dao.daoImpl.UserDaoImpl</node>
+            <node x="3341.0" y="461.0">muzhou.com.dao.daoImpl.FollowDaoImpl</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="muzhou.com.dao.daoImpl.UserDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-122.0" />
+              <point x="0.0" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.AnswerDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-213.0" />
+              <point x="1509.0" y="285.0" />
+              <point x="1931.4285714285713" y="285.0" />
+              <point x="-74.57142857142867" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.FollowDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-109.0" />
+              <point x="3639.5" y="265.0" />
+              <point x="2229.714285714286" y="265.0" />
+              <point x="223.71428571428578" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.CommentDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-96.0" />
+              <point x="239.5" y="265.0" />
+              <point x="1782.2857142857142" y="265.0" />
+              <point x="-223.71428571428578" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.QuestionDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-265.0" />
+              <point x="843.0" y="275.0" />
+              <point x="1856.857142857143" y="275.0" />
+              <point x="-149.1428571428571" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.CollectionDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-83.0" />
+              <point x="3009.5" y="275.0" />
+              <point x="2155.142857142857" y="275.0" />
+              <point x="149.14285714285688" y="122.5" />
+            </edge>
+            <edge source="muzhou.com.dao.daoImpl.MessageDaoImpl" target="muzhou.com.dao.daoImpl.DAO">
+              <point x="0.0" y="-70.0" />
+              <point x="2439.5" y="285.0" />
+              <point x="2080.5714285714284" y="285.0" />
+              <point x="74.57142857142844" y="122.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="2030.0" y="349.0" />
+          <SelectedNodes>
+            <node>muzhou.com.dao.daoImpl.FollowDaoImpl</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/CollectionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/production/college_BBS/muzhou/com/dao/daoImpl/FollowDaoImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/uploadHeadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/production/college_BBS/muzhou/com/dao/daoImpl/QuestionDaoImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/production/college_BBS/muzhou/com/dao/MessageDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/MessageDaoImpl.class" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/production/college_BBS/muzhou/com/dao/daoImpl/MessageDaoImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="17" column="136" lean-forward="false" selection-start-line="17" selection-start-column="136" selection-end-line="17" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/service/AnswerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/AnswerBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/CollectionBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/CommentBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/AnswerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/FollowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/CollectionDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/JQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/paging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/LoginAjax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-539">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5962">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/QuestionBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/PageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/bean/FollowBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/MessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/AnswerServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ReceMessageServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="35" column="61" lean-forward="false" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.7.jar!/org/apache/commons/dbutils/QueryRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="157" column="19" lean-forward="false" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
+          <folding>
+            <marker date="1529508215887" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1529508215887" expanded="false" signature="150:378" ph="..." />
+            <marker date="1529508215887" expanded="true" signature="460:467" ph="{}" />
+            <marker date="1529508215887" expanded="false" signature="515:526" ph=" { " />
+            <marker date="1529508215887" expanded="false" signature="548:554" ph=" }" />
+            <marker date="1529508215887" expanded="false" signature="593:604" ph=" { " />
+            <marker date="1529508215887" expanded="false" signature="614:620" ph=" }" />
+            <marker date="1529508215887" expanded="false" signature="679:690" ph=" { " />
+            <marker date="1529508215887" expanded="false" signature="708:714" ph=" }" />
+            <marker date="1529508215887" expanded="false" signature="777:788" ph=" { " />
+            <marker date="1529508215887" expanded="false" signature="814:820" ph=" }" />
+            <marker date="1529508215887" expanded="false" signature="894:905" ph=" { " />
+            <marker date="1529508215887" expanded="false" signature="927:933" ph=" }" />
+            <marker date="1529508215887" expanded="true" signature="1032:1086" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="1179:1239" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="1315:1426" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="1539:2701" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="2707:2725" ph="/**...*/" />
+            <marker date="1529508215887" expanded="true" signature="2853:2917" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="2923:2941" ph="/**...*/" />
+            <marker date="1529508215887" expanded="true" signature="3072:3137" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="3254:3319" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="3418:3491" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="3497:3515" ph="/**...*/" />
+            <marker date="1529508215887" expanded="true" signature="3626:3741" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="3747:3765" ph="/**...*/" />
+            <marker date="1529508215887" expanded="true" signature="3879:3995" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="4095:4211" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="4293:4417" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="4554:5747" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="5820:5889" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="5976:6036" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="6127:6188" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="6244:6364" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="6434:6545" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="6619:6731" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="6842:7650" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="7733:7826" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="7927:8012" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="8112:8186" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="8304:8370" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="8508:9621" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="9728:9818" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="9942:10013" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="10157:11438" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="11530:11592" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="11667:11780" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="11905:11972" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="12080:12198" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="12310:13204" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="13349:14818" ph="{...}" />
+            <marker date="1529508215887" expanded="true" signature="14920:15179" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/QuestionDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="179" column="163" lean-forward="false" selection-start-line="179" selection-start-column="163" selection-end-line="179" selection-end-column="163" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/service/serviceImpl/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/SearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="44" column="60" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="60" />
+          <folding>
+            <marker date="1532073196249" expanded="true" signature="950:1027" ph="..." />
+            <marker date="1532073196249" expanded="true" signature="2050:2144" ph="..." />
+            <marker date="1532073196249" expanded="true" signature="3210:3287" ph="..." />
+            <marker date="1532073196249" expanded="true" signature="3800:3877" ph="..." />
+            <marker date="1532073196249" expanded="true" signature="5747:5824" ph="..." />
+            <marker date="1532073196249" expanded="true" signature="6337:6414" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/GetLeastServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/GetRecommendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#155#160#0" expanded="true" />
+            <element signature="e#182#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="270" column="24" lean-forward="false" selection-start-line="270" selection-start-column="24" selection-end-line="270" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="342" column="39" lean-forward="false" selection-start-line="342" selection-start-column="39" selection-end-line="342" selection-end-column="39" />
+          <folding>
+            <marker date="1532159514152" expanded="true" signature="18731:18762" ph="..." />
+            <marker date="1532159514152" expanded="true" signature="18976:19000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="1779" column="31" lean-forward="false" selection-start-line="1779" selection-start-column="31" selection-end-line="1779" selection-end-column="31" />
+          <folding>
+            <marker date="1537335448828" expanded="true" signature="45710:45720" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="45785:45806" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="45887:45901" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="48764:48774" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="48839:48860" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="48941:48955" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="51764:51781" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="54800:54817" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="57207:57224" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="60340:60357" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="63564:63581" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="69413:69427" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="70002:70016" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="70696:70717" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="70921:70942" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="71038:71059" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="72886:72907" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="73111:73132" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="73228:73249" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="80570:80591" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="80809:80830" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="80977:80998" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="81084:81098" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="81399:81420" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="81729:81750" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="81897:81918" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="82004:82018" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="82316:82337" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="82646:82667" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="82814:82835" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="82921:82935" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="83230:83251" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="83564:83585" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="83732:83753" ph="..." />
+            <marker date="1537335448828" expanded="true" signature="83839:83853" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/dao/daoImpl/MessageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/catalina.2019-02-17.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="134380" column="1615" lean-forward="false" selection-start-line="134380" selection-start-column="1615" selection-end-line="134380" selection-end-column="1615" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/catalina.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="48" column="441" lean-forward="false" selection-start-line="48" selection-start-column="441" selection-end-line="48" selection-end-column="441" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/GetMessageCountServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/muzhou/com/servlet/ReceMessageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>college_BBS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|college_BBS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

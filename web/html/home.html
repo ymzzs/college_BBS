@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        $(document).ready(function () {
+
+            getLeastQuestions();
+            window.setInterval(getLeastQuestions, 1000*60*3);
+
+            $.ajax({
+                type: "GET",
+                url: "../GetHotServlet",
+                dataType: "json",
+                async: false,
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var array = [];
+                    var hotQuestions = data.hotQuestions;
+                    for (var i=0;i<hotQuestions.length;i++)
+                    {
+                        var k = i+1;
+                        array.push(' <li>\n' +
+                            '                <span id="topic_flag_hot'+k+'" class="topic_flag">'+k+'</span>\n' +
+                            '                <div class="content-hot-que" style="width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">\n' +
+                            '                    <a class="a_question" qid="'+hotQuestions[i].qid+'">'+hotQuestions[i].title+'</a></div>\n' +
+                            '                <div class="content-hot-num">'+hotQuestions[i].answerCount+'</div>\n' +
+                            '            </li>')
+                    }
+                    document.getElementById("content-hot").innerHTML = array.join('');
+                }
+            });
+
+
+        });
+        function getLeastQuestions() {
+            $.ajax({
+                type: "GET",
+                url: "../GetLeastServlet",
+                dataType: "json",
+                async: false,
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var array = [];
+                    var leastQuestions = data.leastQuestions;
+                    for (var i=0;i<leastQuestions.length;i++)
+                    {
+                        array.push(' <li style="margin-top: 0px; width: 470px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a class="a_question" qid="'+leastQuestions[i].qid+'"><strong>'+leastQuestions[i].title+'</strong></a></li>')
+                    }
+                    document.getElementById("leastQuestions").innerHTML = array.join('');
+                }
+            });
+
+        }
+
+        var userid1 = sessionStorage.getItem("userid");
+
+        if (userid1==="0")
+        {
+            $.ajax({
+                type: "GET",
+                url: "../GetRecommendServlet?Login=0",
+                dataType: "json",
+                async: false,
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var array = [];
+                    var qList = data.qList;
+                    for (var i=0;i<qList.length;i++)
+                    {
+                        array.push(' <ul class="topic_flag_reco">\n' +
+                            '                    <div class="topic_flag_reco top">\n' +
+                            '                        <div class="topic_flag_reco topic" style="width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">\n' +
+                            '                            <a name="a_question" qid="'+qList[i].qid+'" >'+qList[i].title+'</a></div>\n' +
+                            '                        <div class="topic_flag_reco offer">悬赏:'+qList[i].integral+'</div>\n' +
+                            '                    </div>\n' +
+                            '                    <div class="topic_flag_reco bottom">\n' +
+                            '                        <div class="topic_flag_reco que" style="width: 470px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">\n' +
+                            '                            <p>'+qList[i].keyword+'</p></div>\n' +
+                            '                        <div>\n' +
+                            '                            <div class="topic_flag_reco initiator"><a name="a_user" uid="'+qList[i].userid +'">'+qList[i].username+'</a></div>\n' +
+                            '                            <div class="topic_flag_reco time">'+new Date(qList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '                            <div class="topic_flag_reco classify">'+qList[i].category+'</div>\n' +
+                            '                            <div class="topic_flag_reco reply">回复数:'+qList[i].answerCount+'</div>\n' +
+                            '                        </div>\n' +
+                            '                    </div>\n' +
+                            '                </ul>')
+                    }
+                    document.getElementById("content-reco").innerHTML = array.join('');
+                }
+            });
+
+        }
+        else
+        {
+            $.ajax({
+                type: "GET",
+                url: "../GetRecommendServlet?Login=1",
+                data:{"userid":userid1},
+                dataType: "json",
+                async: false,
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var array = [];
+                    var qList = data.qList;
+                    for (var i=0;i<qList.length;i++)
+                    {
+                        array.push(' <ul class="topic_flag_reco">\n' +
+                            '                    <div class="topic_flag_reco top">\n' +
+                            '                        <div class="topic_flag_reco topic" style="width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">\n' +
+                            '                            <a name="a_question" qid="'+qList[i].qid+'" >'+qList[i].title+'</a></div>\n' +
+                            '                        <div class="topic_flag_reco offer">悬赏:'+qList[i].integral+'</div>\n' +
+                            '                    </div>\n' +
+                            '                    <div class="topic_flag_reco bottom">\n' +
+                            '                        <div class="topic_flag_reco que" style="width: 470px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">\n' +
+                            '                            <p>'+qList[i].keyword+'</p></div>\n' +
+                            '                        <div>\n' +
+                            '                            <div class="topic_flag_reco initiator"><a name="a_user" uid="'+qList[i].userid+'">'+qList[i].username+'</a></div>\n' +
+                            '                            <div class="topic_flag_reco time">'+new Date(qList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '                            <div class="topic_flag_reco classify">'+qList[i].category+'</div>\n' +
+                            '                            <div class="topic_flag_reco reply">回复数:'+qList[i].answerCount+'</div>\n' +
+                            '                        </div>\n' +
+                            '                    </div>\n' +
+                            '                </ul>')
+                    }
+                    document.getElementById("content-reco").innerHTML = array.join('');
+                }
+            });
+        }
+
+
+    </script>
+</head>
+<body>
+<div class="q-content">
+    <div class="q-left">
+        <div class="new-que" >
+            <div class="topic-new"><p style="width: 95px;border-bottom: 2px solid #fc6060">最新提问</p></div>
+            <div>
+
+                <ul id="leastQuestions" class="line">
+
+                </ul>
+                <script type="text/javascript" src="../js/myslideup.js"></script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".line").slideUp();
+                    })
+                </script>
+            </div>
+        </div>
+
+        <div class="recommend-que">
+            <div class="topic-reco"><p style="width: 47px;border-bottom: 2px solid #fc6060">推荐</p></div>
+
+            <div id="content-reco" class="content-reco" >
+
+            </div>
+
+        </div>
+    </div>
+    <div class="q-right">
+        <div class="topic-hot">最热</div>
+        <div id="content-hot" class="content-hot">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+            var oDiv = document.getElementsByClassName("q-right")[0],
+                H = 0,
+                Y = oDiv
+            while (Y) {
+                H += Y.offsetTop;
+                Y = Y.offsetParent;
+            }
+            window.onscroll = function()
+            {
+                var s = document.body.scrollTop || document.documentElement.scrollTop
+                if(s>H) {
+                    oDiv.style = "position:fixed;top:0;";
+                } else {
+                    oDiv.style = "";
+                }
+            }
+        });
+
+</script>
+
+</body>
+</html>

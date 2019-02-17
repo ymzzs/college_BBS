@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+    <link href="../css/mystyle.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/buttons.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="../js/JQuery.js"></script>
+    <link rel="stylesheet" href="../css/style1.css" media="screen" type="text/css" />
+    <script src="../js/SensitiveTest.js"></script>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+
+    <link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="../js/wow.min.js"></script>
+    <link href="../css/page.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- js -->
+
+</head>
+<body>
+
+
+
+<div class="set-content">
+
+    <div class="container">
+        <div class="all-questions-anwsers" style="top:-100px;">
+            <div class="bs-example bs-example-tabs orders-tab" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#solved" onclick="createPageAjax(1)" id="all-tab"
+                                                              role="tab" data-toggle="tab"
+                                                              aria-controls="all" aria-expanded="true">已解决</a></li>
+                    <li role="presentation"><a href="#unsolved" onclick="createPageAjax(0)" role="tab" id="pay-tab"
+                                               data-toggle="tab"
+                                               aria-controls="pay">未解决</a></li>
+                    <li role="presentation"><a href="#create-question" role="tab" id="shop-tab" data-toggle="tab"
+                                               aria-controls="shop">发起问题</a></li>
+                    <li style="left:40px; top:0px;"><p style="margin-top: 15px" id="categoryname">当前问题类型</p><li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tabs-para tab-pane fade in active" id="solved"
+                         aria-labelledby="all-tab">
+                        <div class="profile-gd">
+
+                            <div id="select_Content1">
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tabs-para tab-pane fade" id="unsolved" aria-labelledby="pay-tab">
+                        <div class="profile-gd">
+                            <div id="select_Content2">
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tabs-para tab-pane fade" id="create-question"
+                         aria-labelledby="shop-tab">
+                        <div id="make-question">
+                            <form id="questionForm" onsubmit="return false">
+                                <fieldset>
+                                    <div class="form-row">
+                                        <div class="question-label"><label for="field1"
+                                                                           style="color: black;font-weight:normal">问题名称</label>:
+                                        </div>
+                                        <div class="field-widget"><input name="questionTitle" id="field1"
+                                                                         class="required"
+                                                                         title="Enter your question"/></div>
+                                        <div style="margin-top:10px;">
+                                            <ul id="ulid21" style="float:left;list-style:none;">
+                                                <li id="li11"
+                                                    style="float:left;width:90px;margin-left:0px;margin-right:25px;">
+                                                    添加标签:
+                                                </li>
+                                            </ul>
+                                            <input style="width:30px;height:30px;margin-top:7px;margin-left:10px;padding: 2px"
+                                                   type="button" value="+" onKeypress="if(event.keyCode === 32)event.returnValue = false;"   onclick="insertLabel()"/>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="requirement-field-label"><label
+                                                style="color: black;font-weight:normal">问题内容</label>:
+                                        </div>
+                                        <div id="editor-make-question"></div>
+                                        <script type="text/javascript" src="../js/wangEditor.min.js"></script>
+                                        <script type="text/javascript" src="../js/jquery.min.js"></script>
+                                        <script type="text/javascript" src="../js/wangEditor-fullscreen-plugin.js"></script>
+
+                                        <script type="text/javascript">
+
+                                        </script>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="question-label"><label
+                                                style="color: black;font-weight:normal;margin-top: 5px;">专业</label>:
+                                        </div>
+                                        <div class="field-widget">
+                                            <select id="field2" name="field2" class="validate-selection"
+                                                    title="选择问题所属的专业" onChange="change()">
+                                                <option selected="selected">本科</option>
+                                                <option>考研</option>
+                                                <option>校园知识</option>
+                                            </select>
+                                            <select id="second" name="questionCategory" class="validate-selection" onChange="change2()">
+                                                <option selected="selected">哲学</option>
+                                                <option>经济学</option>
+                                                <option>法学</option>
+                                                <option>教育学</option>
+                                                <option>文学</option>
+                                                <option>历史学</option>
+                                                <option>理学</option>
+                                                <option>工学</option>
+                                                <option>农学</option>
+                                                <option>医学</option>
+                                                <option>管理学</option>
+                                                <option>艺术学</option>
+                                            </select>
+                                            <select id="third" name="questionCategory2" class="validate-selection">
+                                                <option selected="selected">哲学</option>
+                                                <option>逻辑学</option>
+                                                <option>宗教学</option>
+                                            </select>
+                                            <label style="width:80px;margin-left:10px;margin-top:5px;color: black;font-weight:normal">悬赏： </label><input
+                                                id="prizeNum" name="questionIntegral"
+                                                style="margin-top:5px;width:50px;height:25px;" type="number" step="1"
+                                                min="1" max="20" value="1"/>
+                                            <label style="width:200px;margin-top:5px;color: black;font-weight:normal">个积分(最大20)</label></label>
+
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <input type="submit" onclick="questionAjax()" class="submit" value="提交"/>
+                                <input class="reset" type="button" value="清空" onclick="my_reset(); return false;"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sortable-accordion">
+            <a class="sort" onclick="allSolved()" style="width: 100px;height: 50px;font-size: 30px;color: #fff;">全部分类</a>
+            <h2 id="group1" onclick="changecolor4('group1')">本科知识</h2>
+            <div id="inner" class="inner">
+                <ul class="mcd-menu">
+
+
+                    <li id="wen">
+                        <a>
+
+                            <strong>哲学</strong>
+                        </a>
+                        <ul >
+                            <li id="wen1"><a  href="#" id="wen11" onclick="changecolor('wen','wen1','wen11')">哲学 <small>(本科)</small></a></li>
+                            <li id="wen3"><a href="#" id="wen31" onclick="changecolor('wen','wen3','wen31')">逻辑学 <small>(本科)</small></a></li>
+                            <li id="wen4"><a href="#" id="wen41" onclick="changecolor('wen','wen4','wen41')">宗教学 <small>(本科)</small></a></li>
+
+                        </ul>
+                    </li>
+                    <li id="fa">
+                        <a>
+
+                            <strong>经济学</strong>
+                        </a>
+                        <ul>
+                            <li id="fa1"><a href="#" id="fa11" onclick="changecolor('fa','fa1','fa11')">经济学类 <small>(本科)</small></a></li>
+                            <li id="fa2"><a href="#" id="fa21"  onclick="changecolor('fa','fa2','fa21')">财政学 <small>(本科)</small></a></li>
+                            <li id="fa3"><a href="#" id="fa31"  onclick="changecolor('fa','fa3','fa31')">金融学类 <small>(本科)</small></a></li>
+                            <li id="fa4"><a href="#" id="fa41"  onclick="changecolor('fa','fa4','fa41')">经济与贸易类 <small>(本科)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="li">
+                        <a>
+
+                            <strong>法学</strong></a>
+
+                        <ul>
+                            <li id="li5"><a href="#" id="li51" onclick="changecolor('li','li5','li51')">法学类 <small>(本科)</small></a></li>
+                            <li id="li2"><a href="#" id="li21" onclick="changecolor('li','li2','li21')">政治学类 <small>(本科)</small></a></li>
+                            <li id="li3"><a href="#" id="li31" onclick="changecolor('li','li3','li31')">社会学类 <small>(本科)</small></a></li>
+                            <li id="li4"><a href="#" id="li41" onclick="changecolor('li','li4','li41')">名族学类 <small>(本科)</small></a></li>
+                            <li id="li7"><a href="#" id="li71" onclick="changecolor('li','li7','li71')">马克思主义理论类 <small>(本科)</small></a></li>
+                            <li id="li6"><a href="#" id="li61" onclick="changecolor('li','li6','li61')">公安学类 <small>(本科)</small></a></li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li id="gong">
+                        <a>
+                            <strong>教育学</strong>
+                        </a>
+                        <ul>
+                            <li id="gong1"><a href="#" id="gong11" onclick="changecolor('gong','gong1','gong11')">教育学类 <small>(本科)</small></a></li>
+                            <li id="gong2"><a href="#" id="gong21" onclick="changecolor('gong','gong2','gong21')">体育学类 <small>(本科)</small></a></li>
+
+                        </ul>
+                    </li>
+
+                    <li id="yi">
+                        <a>
+
+                            <strong>文学</strong>
+
+                        </a>
+                        <ul>
+                            <li id="yi1"><a href="#" id="yi11" onclick="changecolor('yi','yi1','yi11')">中国语言文学类 <small>(本科)</small></a></li>
+                            <li id="yi2"><a href="#" id="yi21" onclick="changecolor('yi','yi2','yi21')">外国语言文学类 <small>(本科)</small></a></li>
+                            <li id="yi3"><a href="#" id="yi31" onclick="changecolor('yi','yi3','yi31')">新闻传播学类 <small>(本科)</small></a></li>
+                        </ul>
+
+                    </li>
+                    <li id="nong">
+                        <a>
+
+                            <strong>历史学</strong>
+                        </a>
+                        <ul>
+                            <li id="nong1"><a href="#" id="nong11" onclick="changecolor('nong','nong1','nong11')">历史学 <small>(本科)</small></a></li>
+                            <li id="nong2"><a href="#" id="nong21" onclick="changecolor('nong','nong2','nong21')">世界史 <small>(本科)</small></a></li>
+                            <li id="nong3"><a href="#" id="nong31" onclick="changecolor('nong','nong3','nong31')">考古学 <small>(本科)</small></a></li>
+                            <li id="nong4"><a href="#" id="nong41" onclick="changecolor('nong','nong4','nong41')">文物与博物馆学 <small>(本科)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="ai">
+                        <a>
+
+                            <strong>理学</strong>
+
+                        </a>
+                        <ul>
+                            <li id="ai1"><a href="#" id="ai11" onclick="changecolor('ai','ai1','ai11')">数学类 <small>(本科)</small></a></li>
+                            <li id="ai2"><a href="#" id="ai21" onclick="changecolor('ai','ai2','ai21')">物理学类 <small>(本科)</small></a></li>
+                            <li id="ai3"><a href="#" id="ai31" onclick="changecolor('ai','ai3','ai31')">化学类 <small>(本科)</small></a></li>
+                            <li id="ai4"><a href="#" id="ai41" onclick="changecolor('ai','ai4','ai41')">天文学类 <small>(本科)</small></a></li>
+                            <li id="ai5"><a href="#" id="ai51" onclick="changecolor('ai','ai5','ai51')">地理科学类 <small>(本科)</small></a></li>
+                            <li id="ai6"><a href="#" id="ai61" onclick="changecolor('ai','ai6','ai61')">大气科学类 <small>(本科)</small></a></li>
+                            <li id="ai7"><a href="#" id="ai71" onclick="changecolor('ai','ai7','ai71')">海洋科学类 <small>(本科)</small></a></li>
+                            <li id="ai8"><a href="#" id="ai81" onclick="changecolor('ai','ai8','ai81')">地球物理学类 <small>(本科)</small></a></li>
+                            <li id="ai9"><a href="#" id="ai91" onclick="changecolor('ai','ai9','ai91')">地质学类 <small>(本科)</small></a></li>
+                            <li id="ai10"><a href="#" id="ai101" onclick="changecolor('ai','ai10','ai101')">生物科学类 <small>(本科)</small></a></li>
+                            <li id="ai11001"><a href="#" id="ai1100" onclick="changecolor('ai','ai11001','ai1100')">心理学类 <small>(本科)</small></a></li>
+                            <li id="ai12"><a href="#" id="ai121" onclick="changecolor('ai','ai12','ai121')">统计学类 <small>(本科)</small></a></li>
+                        </ul>
+
+                    </li>
+                    <li id="bi">
+                        <a>
+
+                            <strong>工学</strong>
+                        </a>
+                        <ul>
+                            <li id="bi1"><a href="#" id="bi11" onclick="changecolor('bi','bi1','bi11')">力学类 <small>(本科)</small></a></li>
+                            <li id="bi2"><a href="#" id="bi21" onclick="changecolor('bi','bi2','bi21')">机械类 <small>(本科)</small></a></li>
+                            <li id="bi3"><a href="#" id="bi31" onclick="changecolor('bi','bi3','bi31')">仪器类 <small>(本科)</small></a>
+                            </li>
+                            <li id="bi4"><a href="#" id="bi41" onclick="changecolor('bi','bi4','bi41')">材料类 <small>(本科)</small></a></li>
+
+                            <li id="bi5"><a href="#" id="bi51" onclick="changecolor('bi','bi5','bi51')">能源动力类 <small>(本科)</small></a></li>
+                            <li id="bi6"><a href="#" id="bi61" onclick="changecolor('bi','bi6','bi61')">电气类 <small>(本科)</small></a></li>
+                            <li id="bi7"><a href="#" id="bi71" onclick="changecolor('bi','bi7','bi71')">电子信息类 <small>(本科)</small></a></li>
+                            <li id="bi8"><a href="#" id="bi81" onclick="changecolor('bi','bi8','bi81')">自动化类 <small>(本科)</small></a></li>
+                            <li id="bi9"><a href="#" id="bi91" onclick="changecolor('bi','bi9','bi91')">计算机类 <small>(本科)</small></a></li>
+                            <li id="bi10"><a href="#" id="bi101" onclick="changecolor('bi','bi10','bi101')">土木类 <small>(本科)</small></a></li>
+                            <li id="bi111"><a href="#" id="bi1111" onclick="changecolor('bi','bi111','bi1111')">水利类 <small>(本科)</small></a></li>
+                            <li id="bi12"><a href="#" id="bi121" onclick="changecolor('bi','bi12','bi121')">测绘类 <small>(本科)</small></a></li>
+                            <li id="bi13"><a href="#" id="bi131" onclick="changecolor('bi','bi13','bi131')">化工与制药类 <small>(本科)</small></a></li>
+                            <li id="bi14"><a href="#" id="bi141" onclick="changecolor('bi','bi14','bi141')">地质类 <small>(本科)</small></a></li>
+                            <li id="bi15"><a href="#" id="bi151" onclick="changecolor('bi','bi15','bi151')">矿业类 <small>(本科)</small></a></li>
+                            <li id="bi16"><a href="#" id="bi161" onclick="changecolor('bi','bi16','bi161')">纺织类 <small>(本科)</small></a></li>
+                            <li id="bi17"><a href="#" id="bi171" onclick="changecolor('bi','bi17','bi171')">轻工类 <small>(本科)</small></a></li>
+                            <li id="bi18"><a href="#" id="bi181" onclick="changecolor('bi','bi18','bi181')">交通运输类 <small>(本科)</small></a></li>
+                            <li id="bi19"><a href="#" id="bi191" onclick="changecolor('bi','bi19','bi191')">海洋工程类 <small>(本科)</small></a></li>
+                            <li id="bi20"><a href="#" id="bi201" onclick="changecolor('bi','bi20','bi201')">航空航天类 <small>(本科)</small></a></li>
+                            <li id="bi211"><a href="#" id="bi2111" onclick="changecolor('bi','bi211','bi2111')">兵器类 <small>(本科)</small></a></li>
+                            <li id="bi22"><a href="#" id="bi221" onclick="changecolor('bi','bi22','bi221')">核工程类 <small>(本科)</small></a></li>
+                            <li id="bi23"><a href="#" id="bi231" onclick="changecolor('bi','bi23','bi231')">农业工程类 <small>(本科)</small></a></li>
+                            <li id="bi24"><a href="#" id="bi241" onclick="changecolor('bi','bi24','bi241')">环境科学与工程类 <small>(本科)</small></a></li>
+                            <li id="bi25"><a href="#" id="bi251" onclick="changecolor('bi','bi25','bi251')">生物医学工程类 <small>(本科)</small></a></li>
+                            <li id="bi26"><a href="#" id="bi261" onclick="changecolor('bi','bi26','bi261')">食品科学与工程类 <small>(本科)</small></a></li>
+                            <li id="bi27"><a href="#" id="bi271" onclick="changecolor('bi','bi27','bi271')">建筑类 <small>(本科)</small></a></li>
+                            <li id="bi28"><a href="#" id="bi281" onclick="changecolor('bi','bi28','bi281')">安全科学与工程类 <small>(本科)</small></a></li>
+                            <li id="bi29"><a href="#" id="bi291" onclick="changecolor('bi','bi29','bi291')">生物工程类 <small>(本科)</small></a></li>
+                            <li id="bi30"><a href="#" id="bi301" onclick="changecolor('bi','bi30','bi301')">公安技术类 <small>(本科)</small></a></li>
+
+                        </ul>
+                    </li>
+                    <li id="ci">
+                        <a>
+
+                            <strong>农学</strong></a>
+
+                        <ul>
+                            <li id="ci1"><a href="#" id="ci11" onclick="changecolor('ci','ci1','ci11')">植物生产类 <small>(本科)</small></a></li>
+                            <li id="ci2"><a href="#" id="ci21" onclick="changecolor('ci','ci2','ci21')">自然保护与环境生态类 <small>(本科)</small></a></li>
+                            <li id="ci3"><a href="#" id="ci31" onclick="changecolor('ci','ci3','ci31')">动物生产类 <small>(本科)</small></a></li>
+                            <li id="ci4"><a href="#" id="ci41" onclick="changecolor('ci','ci4','ci41')">动物医学类 <small>(本科)</small></a></li>
+                            <li id="ci5"><a href="#" id="ci51" onclick="changecolor('ci','ci5','ci51')">林学类 <small>(本科)</small></a></li>
+                            <li id="ci6"><a href="#" id="ci61" onclick="changecolor('ci','ci6','ci61')">水产类 <small>(本科)</small></a></li>
+                            <li id="ci7"><a href="#" id="ci71" onclick="changecolor('ci','ci7','ci71')">草学类 <small>(本科)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="di">
+                        <a>
+
+                            <strong>医学</strong></a>
+
+                        <ul>
+                            <li id="di1"><a href="#" id="di11" onclick="changecolor('di','di1','di11')">基础医学类 <small>(本科)</small></a></li>
+                            <li id="di2"><a href="#" id="di21" onclick="changecolor('di','di2','di21')">临床医学类 <small>(本科)</small></a></li>
+                            <li id="di3"><a href="#" id="di31" onclick="changecolor('di','di3','di31')">口腔医学类 <small>(本科)</small></a></li>
+                            <li id="di4"><a href="#" id="di41" onclick="changecolor('di','di4','di41')">公共卫生与预防医学类 <small>(本科)</small></a></li>
+                            <li id="di5"><a href="#" id="di51" onclick="changecolor('di','di5','di51')">中医学类 <small>(本科)</small></a></li>
+                            <li id="di6"><a href="#" id="di61" onclick="changecolor('di','di6','di61')">中西医结合类 <small>(本科)</small></a></li>
+                            <li id="di7"><a href="#" id="di71" onclick="changecolor('di','di7','di71')">药学类 <small>(本科)</small></a></li>
+                            <li id="di8"><a href="#" id="di81" onclick="changecolor('di','di8','di81')">中药学类 <small>(本科)</small></a></li>
+                            <li id="di9"><a href="#" id="di91" onclick="changecolor('di','di9','di91')">法医学类 <small>(本科)</small></a></li>
+                            <li id="di10"><a href="#" id="di101" onclick="changecolor('di','di10','di101')">医学技术类 <small>(本科)</small></a></li>
+                            <li id="di12"><a href="#" id="di121" onclick="changecolor('di','di12','di121')">护理学类 <small>(本科)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="ei">
+                        <a>
+
+                            <strong>管理学</strong></a>
+
+                        <ul>
+                            <li id="ei1"><a href="#" id="ei11" onclick="changecolor('ei','ei1','ei11')">管理科学与工程类 <small>(本科)</small></a></li>
+                            <li id="ei2"><a href="#" id="ei21" onclick="changecolor('ei','ei2','ei21')">工商管理类 <small>(本科)</small></a></li>
+                            <li id="ei3"><a href="#" id="ei31" onclick="changecolor('ei','ei3','ei31')">农业经济管理类 <small>(本科)</small></a></li>
+                            <li id="ei4"><a href="#" id="ei41" onclick="changecolor('ei','ei4','ei41')">公共管理类 <small>(本科)</small></a></li>
+                            <li id="ei5"><a href="#" id="ei51" onclick="changecolor('ei','ei5','ei51')">图书情报与档案管理类 <small>(本科)</small></a></li>
+                            <li id="ei6"><a href="#" id="ei61" onclick="changecolor('ei','ei6','ei61')">物流管理与工程类 <small>(本科)</small></a></li>
+                            <li id="ei7"><a href="#" id="ei71" onclick="changecolor('ei','ei7','ei71')">工业工程类 <small>(本科)</small>)</a></li>
+                            <li id="ei8"><a href="#" id="ei81" onclick="changecolor('ei','ei8','ei81')">电子商务类 <small>(本科)</small></a></li>
+                            <li id="ei9"><a href="#" id="ei91" onclick="changecolor('ei','ei9','ei91')">旅游管理类 <small>(本科)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="fi">
+                        <a>
+
+                            <strong>艺术学</strong></a>
+
+                        <ul>
+                            <li id="fi1"><a href="#" id="fi11" onclick="changecolor('fi','fi1','fi11')">艺术学理论类 <small>(本科)</small></a></li>
+                            <li id="fi2"><a href="#" id="fi21" onclick="changecolor('fi','fi2','fi21')">音乐与舞蹈学类 <small>(本科)</small></a></li>
+                            <li id="fi3"><a href="#" id="fi31" onclick="changecolor('fi','fi3','fi31')">戏剧与影视学类 <small>(本科)</small></a></li>
+                            <li id="fi4"><a href="#" id="fi41" onclick="changecolor('fi','fi4','fi41')">美术学类 <small>(本科)</small></a></li>
+                            <li id="fi5"><a href="#" id="fi51" onclick="changecolor('fi','fi5','fi51')">设计学类 <small>(本科)</small></a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <h2 id="group2" onclick="changecolor4('group2')">考研知识</h2>
+            <div class="inner">
+                <ul class="mcd-menu">
+                    <li id="qfa">
+                        <a>
+
+                            <strong>常考科目</strong>
+                        </a>
+                        <ul>
+                            <li id="qfa1"><a href="#" id="qfa11" onclick="changecolor('qfa','qfa1','qfa11')">思想政治理论 <small>(考研)</small></a></li>
+                            <li id="qfa2"><a href="#" id="qfa21"  onclick="changecolor('qfa','qfa2','qfa21')">英语 <small>(考研)</small></a></li>
+                            <li id="qfa3"><a href="#" id="qfa31"  onclick="changecolor('qfa','qfa3','qfa31')">数学 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qda">
+                        <a>
+
+                            <strong>考试那些事儿</strong>
+                        </a>
+                        <ul>
+                            <li id="qda1"><a href="#" id="qda11" onclick="changecolor('qda','qda1','qda11')">问学长/学姐 <small>(考研)</small></a></li>
+                            <li id="qda2"><a href="#" id="qda21"  onclick="changecolor('qda','qda2','qda21')">问同级考生 <small>(考研)</small></a></li>
+                            <li id="qda3"><a href="#" id="qda31"  onclick="changecolor('qda','qda3','qda31')">问老师 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="kwen">
+                        <a>
+
+                            <strong>哲学</strong>
+                        </a>
+                        <ul >
+                            <li id="kwen1"><a  href="#" id="kwen11" onclick="changecolor('kwen','kwen1','kwen11')">哲学 <small>(考研)</small></a></li>
+                            <li id="kwen3"><a href="#" id="kwen31" onclick="changecolor('kwen','kwen3','kwen31')">逻辑学 <small>(考研)</small></a></li>
+                            <li id="kwen4"><a href="#" id="kwen41" onclick="changecolor('kwen','kwen4','kwen41')">宗教学 <small>(考研)</small></a></li>
+
+                        </ul>
+                    </li>
+                    <li id="kfa">
+                        <a>
+
+                            <strong>经济学</strong>
+                        </a>
+                        <ul>
+                            <li id="kfa1"><a href="#" id="kfa11" onclick="changecolor('kfa','kfa1','kfa11')">经济学类 <small>(考研)</small></a></li>
+                            <li id="kfa2"><a href="#" id="kfa21"  onclick="changecolor('kfa','kfa2','kfa21')">财政学 <small>(考研)</small></a></li>
+                            <li id="kfa3"><a href="#" id="kfa31"  onclick="changecolor('kfa','kfa3','kfa31')">金融学类 <small>(考研)</small></a></li>
+                            <li id="kfa4"><a href="#" id="kfa41"  onclick="changecolor('kfa','kfa4','kfa41')">经济与贸易类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="kli">
+                        <a>
+
+                            <strong>法学</strong></a>
+
+                        <ul>
+                            <li id="kli5"><a href="#" id="kli51" onclick="changecolor('kli','kli5','kli51')">法学类 <small>(考研)</small></a></li>
+                            <li id="kli2"><a href="#" id="kli21" onclick="changecolor('kli','kli2','kli21')">政治学类 <small>(考研)</small></a></li>
+                            <li id="kli3"><a href="#" id="kli31" onclick="changecolor('kli','kli3','kli31')">社会学类 <small>(考研)</small></a></li>
+                            <li id="kli4"><a href="#" id="kli41" onclick="changecolor('kli','kli4','kli41')">名族学类 <small>(考研)</small></a></li>
+                            <li id="kli7"><a href="#" id="kli71" onclick="changecolor('kli','kli7','kli71')">马克思主义理论类 <small>(考研)</small></a></li>
+                            <li id="kli6"><a href="#" id="kli61" onclick="changecolor('kli','kli6','kli61')">公安学类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+
+
+                    <li id="kgong">
+                        <a>
+                            <strong>教育学</strong>
+                        </a>
+                        <ul>
+                            <li id="kgong1"><a href="#" id="kgong11" onclick="changecolor('kgong','kgong1','kgong11')">教育学类 <small>(考研)</small></a></li>
+                            <li id="kgong2"><a href="#" id="kgong21" onclick="changecolor('kgong','kgong2','kgong21')">体育学类 <small>(考研)</small></a></li>
+
+                        </ul>
+                    </li>
+
+                    <li id="qwen">
+                        <a>
+
+                            <strong>文科</strong>
+                        </a>
+                        <ul >
+                            <li id="qwen1"><a  href="#" id="qwen11" onclick="changecolor('qwen','qwen1','qwen11')">外国语言文学类 <small>(考研)</small></a></li>
+                            <li id="qwen2"><a href="#" id="qwen21" onclick="changecolor('qwen','qwen2','qwen21')">中国语言文学类 <small>(考研)</small></a></li>
+                            <li id="qwen3"><a href="#" id="qwen31" onclick="changecolor('qwen','qwen3','qwen31')">新闻传播学类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qnong">
+                        <a>
+
+                            <strong>历史学</strong>
+                        </a>
+                        <ul>
+                            <li id="qnong1"><a href="#" id="qnong11" onclick="changecolor('qnong','qnong1','qnong11')">历史学 <small>(考研)</small></a></li>
+                            <li id="qnong2"><a href="#" id="qnong21" onclick="changecolor('qnong','qnong2','qnong21')">世界史 <small>(考研)</small></a></li>
+                            <li id="qnong3"><a href="#" id="qnong31" onclick="changecolor('qnong','qnong3','qnong31')">考古学 <small>(考研)</small></a></li>
+                            <li id="qnong4"><a href="#" id="qnong41" onclick="changecolor('qnong','qnong4','qnong41')">文物与博物馆学 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qai">
+                        <a>
+
+                            <strong>理学</strong>
+
+                        </a>
+                        <ul>
+                            <li id="qai1"><a href="#" id="qai11" onclick="changecolor('qai','qai1','qai11')">数学类 <small>(考研)</small></a></li>
+                            <li id="qai2"><a href="#" id="qai21" onclick="changecolor('qai','qai2','qai21')">物理学类 <small>(考研)</small></a></li>
+                            <li id="qai3"><a href="#" id="qai31" onclick="changecolor('qai','qai3','qai31')">化学类 <small>(考研)</small></a></li>
+                            <li id="qai4"><a href="#" id="qai41" onclick="changecolor('qai','qai4','qai41')">天文学类 <small>(考研)</small></a></li>
+                            <li id="qai5"><a href="#" id="qai51" onclick="changecolor('qai','qai5','qai51')">地理科学类 <small>(考研)</small></a></li>
+                            <li id="qai6"><a href="#" id="qai61" onclick="changecolor('qai','qai6','qai61')">大气科学类 <small>(考研)</small></a></li>
+                            <li id="qai7"><a href="#" id="qai71" onclick="changecolor('qai','qai7','qai71')">海洋科学类 <small>(考研)</small></a></li>
+                            <li id="qai8"><a href="#" id="qai81" onclick="changecolor('qai','qai8','qai81')">地球物理学类 <small>(考研)</small></a></li>
+                            <li id="qai9"><a href="#" id="qai91" onclick="changecolor('qai','qai9','qai91')">地质学类 <small>(考研)</small></a></li>
+                            <li id="qai10"><a href="#" id="qai101" onclick="changecolor('qai','qai10','qai101')">生物科学类 <small>(考研)</small></a></li>
+                            <li id="qai11001"><a href="#" id="qai1100" onclick="changecolor('qai','qai11001','qai1100')">心理学类 <small>(考研)</small></a></li>
+                            <li id="qai12"><a href="#" id="qai121" onclick="changecolor('qai','qai12','qai121')">统计学类 <small>(考研)</small></a></li>
+                        </ul>
+
+                    </li>
+                    <li id="qbi">
+                        <a>
+
+                            <strong>工学</strong>
+                        </a>
+                        <ul>
+                            <li id="qbi1"><a href="#" id="qbi11" onclick="changecolor('qbi','qbi1','qbi11')">力学类 <small>(考研)</small></a></li>
+                            <li id="qbi2"><a href="#" id="qbi21" onclick="changecolor('qbi','qbi2','qbi21')">机械类 <small>(考研)</small></a></li>
+                            <li id="qbi3"><a href="#" id="qbi31" onclick="changecolor('qbi','qbi3','qbi31')">仪器类 <small>(考研)</small></a>
+                            </li>
+                            <li id="qbi4"><a href="#" id="qbi41" onclick="changecolor('qbi','qbi4','qbi41')">材料类 <small>(考研)</small></a></li>
+
+                            <li id="qbi5"><a href="#" id="qbi51" onclick="changecolor('qbi','qbi5','qbi51')">能源动力类 <small>(考研)</small></a></li>
+                            <li id="qbi6"><a href="#" id="qbi61" onclick="changecolor('qbi','qbi6','qbi61')">电气类 <small>(考研)</small></a></li>
+                            <li id="qbi7"><a href="#" id="qbi71" onclick="changecolor('qbi','qbi7','qbi71')">电子信息类 <small>(考研)</small></a></li>
+                            <li id="qbi8"><a href="#" id="qbi81" onclick="changecolor('qbi','qbi8','qbi81')">自动化类 <small>(考研)</small></a></li>
+                            <li id="qbi9"><a href="#" id="qbi91" onclick="changecolor('qbi','qbi9','qbi91')">计算机类 <small>(考研)</small></a></li>
+                            <li id="qbi10"><a href="#" id="qbi101" onclick="changecolor('qbi','qbi10','qbi101')">土木类 <small>(考研)</small></a></li>
+                            <li id="qbi111"><a href="#" id="qbi1111" onclick="changecolor('qbi','qbi111','qbi1111')">水利类 <small>(考研)</small></a></li>
+                            <li id="qbi12"><a href="#" id="qbi121" onclick="changecolor('qbi','qbi12','qbi121')">测绘类 <small>(考研)</small></a></li>
+                            <li id="qbi13"><a href="#" id="qbi131" onclick="changecolor('qbi','qbi13','qbi131')">化工与制药类 <small>(考研)</small></a></li>
+                            <li id="qbi14"><a href="#" id="qbi141" onclick="changecolor('qbi','qbi14','qbi141')">地质类 <small>(考研)</small></a></li>
+                            <li id="qbi15"><a href="#" id="qbi151" onclick="changecolor('qbi','qbi15','qbi151')">矿业类 <small>(考研)</small></a></li>
+                            <li id="qbi16"><a href="#" id="qbi161" onclick="changecolor('qbi','qbi16','qbi161')">纺织类 <small>(考研)</small></a></li>
+                            <li id="qbi17"><a href="#" id="qbi171" onclick="changecolor('qbi','qbi17','qbi171')">轻工类 <small>(考研)</small></a></li>
+                            <li id="qbi18"><a href="#" id="qbi181" onclick="changecolor('qbi','qbi18','qbi181')">交通运输类 <small>(考研)</small></a></li>
+                            <li id="qbi19"><a href="#" id="qbi191" onclick="changecolor('qbi','qbi19','qbi191')">海洋工程类 <small>(考研)</small></a></li>
+                            <li id="qbi20"><a href="#" id="qbi201" onclick="changecolor('qbi','qbi20','qbi201')">航空航天类 <small>(考研)</small></a></li>
+                            <li id="qbi211"><a href="#" id="qbi2111" onclick="changecolor('qbi','qbi211','qbi2111')">兵器类 <small>(考研)</small></a></li>
+                            <li id="qbi22"><a href="#" id="qbi221" onclick="changecolor('qbi','qbi22','qbi221')">核工程类 <small>(考研)</small></a></li>
+                            <li id="qbi23"><a href="#" id="qbi231" onclick="changecolor('qbi','qbi23','qbi231')">农业工程类 <small>(考研)</small></a></li>
+                            <li id="qbi24"><a href="#" id="qbi241" onclick="changecolor('qbi','qbi24','qbi241')">环境科学与工程类 <small>(考研)</small></a></li>
+                            <li id="qbi25"><a href="#" id="qbi251" onclick="changecolor('qbi','qbi25','qbi251')">生物医学工程类 <small>(考研)</small></a></li>
+                            <li id="qbi26"><a href="#" id="qbi261" onclick="changecolor('qbi','qbi26','qbi261')">食品科学与工程类 <small>(考研)</small></a></li>
+                            <li id="qbi27"><a href="#" id="qbi271" onclick="changecolor('qbi','qbi27','qbi271')">建筑类 <small>(考研)</small></a></li>
+                            <li id="qbi28"><a href="#" id="qbi281" onclick="changecolor('qbi','qbi28','qbi281')">安全科学与工程类 <small>(考研)</small></a></li>
+                            <li id="qbi29"><a href="#" id="qbi291" onclick="changecolor('qbi','qbi29','qbi291')">生物工程类 <small>(考研)</small></a></li>
+                            <li id="qbi30"><a href="#" id="qbi301" onclick="changecolor('qbi','qbi30','qbi301')">公安技术类 <small>(考研)</small></a></li>
+
+                        </ul>
+                    </li>
+                    <li id="qci">
+                        <a>
+
+                            <strong>农学</strong></a>
+
+                        <ul>
+                            <li id="qci1"><a href="#" id="qci11" onclick="changecolor('qci','qci1','qci11')">植物生产类 <small>(考研)</small></a></li>
+                            <li id="qci2"><a href="#" id="qci21" onclick="changecolor('qci','qci2','qci21')">自然保护与环境生态类 <small>(考研)</small></a></li>
+                            <li id="qci3"><a href="#" id="qci31" onclick="changecolor('qci','qci3','qci31')">动物生产类 <small>(考研)</small></a></li>
+                            <li id="qci4"><a href="#" id="qci41" onclick="changecolor('qci','qci4','qci41')">动物医学类 <small>(考研)</small></a></li>
+                            <li id="qci5"><a href="#" id="qci51" onclick="changecolor('qci','qci5','qci51')">林学类 <small>(考研)</small></a></li>
+                            <li id="qci6"><a href="#" id="qci61" onclick="changecolor('qci','qci6','qci61')">水产类 <small>(考研)</small></a></li>
+                            <li id="qci7"><a href="#" id="qci71" onclick="changecolor('qci','qci7','qci71')">草学类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qdi">
+                        <a>
+
+                            <strong>医学</strong></a>
+
+                        <ul>
+                            <li id="qdi1"><a href="#" id="qdi11" onclick="changecolor('qdi','qdi1','qdi11')">基础医学类 <small>(考研)</small></a></li>
+                            <li id="qdi2"><a href="#" id="qdi21" onclick="changecolor('qdi','qdi2','qdi21')">临床医学类 <small>(考研)</small></a></li>
+                            <li id="qdi3"><a href="#" id="qdi31" onclick="changecolor('qdi','qdi3','qdi31')">口腔医学类 <small>(考研)</small></a></li>
+                            <li id="qdi4"><a href="#" id="qdi41" onclick="changecolor('qdi','qdi4','qdi41')">公共卫生与预防医学类 <small>(考研)</small></a></li>
+                            <li id="qdi5"><a href="#" id="qdi51" onclick="changecolor('qdi','qdi5','qdi51')">中医学类 <small>(考研)</small></a></li>
+                            <li id="qdi6"><a href="#" id="qdi61" onclick="changecolor('qdi','qdi6','qdi61')">中西医结合类 <small>(考研)</small></a></li>
+                            <li id="qdi7"><a href="#" id="qdi71" onclick="changecolor('qdi','qdi7','qdi71')">药学类 <small>(考研)</small></a></li>
+                            <li id="qdi8"><a href="#" id="qdi81" onclick="changecolor('qdi','qdi8','qdi81')">中药学类 <small>(考研)</small></a></li>
+                            <li id="qdi9"><a href="#" id="qdi91" onclick="changecolor('qdi','qdi9','qdi91')">法医学类 <small>(考研)</small></a></li>
+                            <li id="qdi10"><a href="#" id="qdi101" onclick="changecolor('qdi','qdi10','qdi101')">医学技术类 <small>(考研)</small></a></li>
+                            <li id="qdi12"><a href="#" id="qdi121" onclick="changecolor('qdi','qdi12','qdi121')">护理学类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qei">
+                        <a>
+
+                            <strong>管理学</strong></a>
+
+                        <ul>
+                            <li id="qei1"><a href="#" id="qei11" onclick="changecolor('qei','qei1','qei11')">管理科学与工程类 <small>(考研)</small></a></li>
+                            <li id="qei2"><a href="#" id="qei21" onclick="changecolor('qei','qei2','qei21')">工商管理类 <small>(考研)</small></a></li>
+                            <li id="qei3"><a href="#" id="qei31" onclick="changecolor('qei','qei3','qei31')">农业经济管理类 <small>(考研)</small></a></li>
+                            <li id="qei4"><a href="#" id="qei41" onclick="changecolor('qei','qei4','qei41')">公共管理类 <small>(考研)</small></a></li>
+                            <li id="qei5"><a href="#" id="qei51" onclick="changecolor('qei','qei5','qei51')">图书情报与档案管理类 <small>(考研)</small></a></li>
+                            <li id="qei6"><a href="#" id="qei61" onclick="changecolor('qei','qei6','qei61')">物流管理与工程类 <small>(考研)</small></a></li>
+                            <li id="qei7"><a href="#" id="qei71" onclick="changecolor('qei','qei7','qei71')">工业工程类 <small>(考研)</small></a></li>
+                            <li id="qei8"><a href="#" id="qei81" onclick="changecolor('qei','qei8','qei81')">电子商务类 <small>(考研)</small></a></li>
+                            <li id="qei9"><a href="#" id="qei91" onclick="changecolor('qei','qei9','qei91')">旅游管理类 <small>(考研)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="qfi">
+                        <a>
+
+                            <strong>艺术学</strong></a>
+
+                        <ul>
+                            <li id="qfi1"><a href="#" id="qfi11" onclick="changecolor('qfi','qfi1','qfi11')">艺术学理论类 <small>(考研)</small></a></li>
+                            <li id="qfi2"><a href="#" id="qfi21" onclick="changecolor('qfi','qfi2','qfi21')">音乐与舞蹈学类 <small>(考研)</small></a></li>
+                            <li id="qfi3"><a href="#" id="qfi31" onclick="changecolor('qfi','qfi3','qfi31')">戏剧与影视学类 <small>(考研)</small></a></li>
+                            <li id="qfi4"><a href="#" id="qfi41" onclick="changecolor('qfi','qfi4','qfi41')">美术学类 <small>(考研)</small></a></li>
+                            <li id="qfi5"><a href="#" id="qfi51" onclick="changecolor('qfi','qfi5','qfi51')">设计学类 <small>(考研)</small></a></li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+            <h2 id="group3" onclick="changecolor4('group3')">校园知识</h2>
+            <div class="inner">
+                <ul class="mcd-menu">
+                    <li id="wfa">
+                        <a>
+
+                            <strong>校园安全</strong>
+                        </a>
+                        <ul>
+                            <li id="wfa1"><a href="#" id="wfa11" onclick="changecolor('wfa','wfa1','wfa11')">校园防盗 <small>(校园知识)</small></a></li>
+                            <li id="wfa2"><a href="#" id="wfa21"  onclick="changecolor('wfa','wfa2','wfa21')">校园防火 <small>(校园知识)</small></a></li>
+                            <li id="wfa3"><a href="#" id="wfa31"  onclick="changecolor('wfa','wfa3','wfa31')">校园用电 <small>(校园知识)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="efa">
+                        <a>
+
+                            <strong>问问琐事</strong>
+                        </a>
+                        <ul>
+                            <li id="efa1"><a href="#" id="efa11" onclick="changecolor('efa','efa1','efa11')">问学长/学姐 <small>(校园知识)</small></a></li>
+                            <li id="efa2"><a href="#" id="efa21"  onclick="changecolor('efa','efa2','efa21')">问同学 <small>(校园知识)</small></a></li>
+                            <li id="efa3"><a href="#" id="efa31"  onclick="changecolor('efa','efa3','efa31')">问老师/辅导员 <small>(校园知识)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="rfa">
+                        <a>
+
+                            <strong>问问课程</strong>
+                        </a>
+                        <ul>
+                            <li id="rfa1"><a href="#" id="rfa11" onclick="changecolor('rfa','rfa1','rfa11')">问公选课 <small>(校园知识)</small></a></li>
+                            <li id="rfa2"><a href="#" id="rfa21"  onclick="changecolor('rfa','rfa2','rfa21')">问专业课 <small>(校园知识)</small></a></li>
+                            <li id="rfa3"><a href="#" id="rfa31"  onclick="changecolor('rfa','rfa3','rfa31')">问老师 <small>(校园知识)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="tfa">
+                        <a>
+
+                            <strong>大家一起玩</strong>
+                        </a>
+                        <ul>
+                            <li id="tfa1"><a href="#" id="tfa11" onclick="changecolor('tfa','tfa1','tfa11')">英雄联盟 <small>(校园知识)</small></a></li>
+                            <li id="tfa2"><a href="#" id="tfa21"  onclick="changecolor('tfa','tfa2','tfa21')">绝地求生 <small>(校园知识)</small></a></li>
+                            <li id="tfa3"><a href="#" id="tfa31"  onclick="changecolor('tfa','tfa3','tfa31')">王者荣耀 <small>(校园知识)</small></a></li>
+                            <li id="tfa4"><a href="#" id="tfa41"  onclick="changecolor('tfa','tfa4','tfa41')">刺激战场 <small>(校园知识)</small></a></li>
+                            <li id="tfa5"><a href="#" id="tfa51"  onclick="changecolor('tfa','tfa5','tfa51')">其他游戏 <small>(校园知识)</small></a></li>
+                        </ul>
+                    </li>
+                    <li id="yfa">
+                        <a>
+
+                            <strong>大家一起看</strong>
+                        </a>
+                        <ul>
+                            <li id="yfa1"><a href="#" id="yfa11" onclick="changecolor('yfa','yfa1','yfa11')">动漫 <small>(校园知识)</small></a></li>
+                            <li id="yfa2"><a href="#" id="yfa21"  onclick="changecolor('yfa','yfa2','yfa21')">电影 <small>(校园知识)</small></a></li>
+                            <li id="yfa3"><a href="#" id="yfa31"  onclick="changecolor('yfa','yfa3','yfa31')">电视剧 <small>(校园知识)</small></a></li>
+                            <li id="yfa4"><a href="#" id="yfa41"  onclick="changecolor('yfa','yfa4','yfa41')">综艺节目 <small>(校园知识)</small></a></li>
+                            <li id="yfa5"><a href="#" id="yfa51"  onclick="changecolor('yfa','yfa5','yfa51')">其他视频 <small>(校园知识)</small></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(function () {
+
+            $('.sortable-accordion div').slideToggle('slow');
+            $('#inner').show();
+            $('.sortable-accordion h2').click(function () {
+                $(this).next('.inner').slideToggle().siblings('.inner:visible').slideUp();
+                $(this).toggleClass('current');
+                $(this).siblings('h2').removeClass('current');
+            });
+        });
+
+
+        document.getElementById("categoryname").innerHTML = "";
+        createPageAjax(1);
+
+    });
+
+
+
+
+
+    function setOver(name, cursel, n) {
+        for (i = 1; i <= n; i++) {
+            var menu = document.getElementById(name + i);
+            menu.className = i === cursel ? "hover" : "";
+        }
+    }
+
+    function setOut(name, cursel, n) {
+        for (i = 1; i <= n; i++) {
+            var menu = document.getElementById(name + i);
+            menu.className = i === cursel ? "" : "hover";
+        }
+    }
+
+    function MM_showHideLayers() { //v9.0
+        var i, p, v, obj, args = MM_showHideLayers.arguments;
+        for (i = 0; i < (args.length - 2); i += 3)
+            with (document) if (getElementById && ((obj = getElementById(args[i])) != null)) {
+                v = args[i + 2];
+                if (obj.style) {
+                    obj = obj.style;
+                    v = (v === 'show') ? 'visible' : (v === 'hide') ? 'hidden' : v;
+                }
+                obj.visibility = v;
+            }
+    }
+
+    function change() {
+        var x = document.getElementById("field2");
+        var y = document.getElementById("second");
+        var z = document.getElementById("third");
+        y.options.length = 0;
+        z.options.length = 0;// 清除second下拉框的所有内容
+        if (x.selectedIndex === 0) {
+            y.options.add(new Option("哲学", false, true));
+            y.options.add(new Option("经济学"));
+            y.options.add(new Option("法学"));
+            y.options.add(new Option("教育学"));
+            y.options.add(new Option("文学"));
+            y.options.add(new Option("历史学"));
+            y.options.add(new Option("理学"));
+            y.options.add(new Option("工学"));
+            y.options.add(new Option("农学"));
+            y.options.add(new Option("医学"));
+            y.options.add(new Option("艺术学"));
+            y.options.add(new Option("管理学"));
+        }
+
+        if (x.selectedIndex === 1) {
+            y.options.add(new Option("常考项目", false, true));
+            y.options.add(new Option("考试那些事儿"));
+            y.options.add(new Option("哲学"));
+            y.options.add(new Option("经济学"));
+            y.options.add(new Option("法学"));
+            y.options.add(new Option("教育学"));
+            y.options.add(new Option("文学"));
+            y.options.add(new Option("历史学"));
+            y.options.add(new Option("理学"));
+            y.options.add(new Option("工学"));
+            y.options.add(new Option("农学"));
+            y.options.add(new Option("医学"));
+            y.options.add(new Option("艺术学"));
+            y.options.add(new Option("管理学"));
+
+
+        }
+
+        if (x.selectedIndex === 2) {
+            y.options.add(new Option("校园安全", false, true));
+            y.options.add(new Option("问问琐事"));
+            y.options.add(new Option("问问课程"));
+            y.options.add(new Option("大家一起玩"));
+            y.options.add(new Option("大家一起看"));
+        }
+
+        change2();
+    }
+
+    function change2() {
+        var x = document.getElementById("field2");
+        var y = document.getElementById("second");
+        var z = document.getElementById("third");
+        z.options.length = 0; // 清除下拉框的所有内容
+        if (x.selectedIndex === 0) {
+            if(y.selectedIndex === 0){
+                z.options.add(new Option("哲学"));
+                z.options.add(new Option("逻辑学"));
+                z.options.add(new Option("宗教学"));
+            }
+            if(y.selectedIndex === 1){
+                z.options.add(new Option("经济学类"));
+                z.options.add(new Option("财政学"));
+                z.options.add(new Option("金融学类"));
+                z.options.add(new Option("经济与贸易类"));
+            }
+
+            if(y.selectedIndex === 2){
+                z.options.add(new Option("法学类"));
+                z.options.add(new Option("政治学类"));
+                z.options.add(new Option("社会学类"));
+                z.options.add(new Option("名族学类"));
+                z.options.add(new Option("马克思主义理论类"));
+                z.options.add(new Option("公安学类"));
+            }
+            if(y.selectedIndex === 3){
+                z.options.add(new Option("教育学类"));
+                z.options.add(new Option("体育学类"));
+                z.op
+            }
+            if(y.selectedIndex === 4){
+                z.options.add(new Option("中国语言文学类"));
+                z.options.add(new Option("外国语言文学类"));
+                z.options.add(new Option("新闻传播学类"));
+            }
+            if(y.selectedIndex === 5){
+                z.options.add(new Option("历史学"));
+                z.options.add(new Option("世界史"));
+                z.options.add(new Option("考古学"));
+                z.options.add(new Option("文物与博物馆学"));
+            }
+            if(y.selectedIndex === 6){
+                z.options.add(new Option("数学类"));
+                z.options.add(new Option("物理学类"));
+                z.options.add(new Option("化学类"));
+                z.options.add(new Option("天文学类"));
+                z.options.add(new Option("地理科学类"));
+                z.options.add(new Option("大气科学类"));
+                z.options.add(new Option("海洋科学类"));
+                z.options.add(new Option("地球物理学类"));
+                z.options.add(new Option("地质学类"));
+                z.options.add(new Option("生物科学类"));
+                z.options.add(new Option("心理学类"));
+                z.options.add(new Option("统计学类"));
+            }
+            if(y.selectedIndex === 7){
+                z.options.add(new Option("力学类"));
+                z.options.add(new Option("机械类"));
+                z.options.add(new Option("仪器类"));
+                z.options.add(new Option("材料类"));
+                z.options.add(new Option("能源动力类"));
+                z.options.add(new Option("电气类"));
+                z.options.add(new Option("电子信息类"));
+                z.options.add(new Option("自动化类"));
+                z.options.add(new Option("计算机类"));
+                z.options.add(new Option("土木类"));
+                z.options.add(new Option("水利类"));
+                z.options.add(new Option("测绘类"));
+                z.options.add(new Option("化工与制药类"));
+                z.options.add(new Option("地质类"));
+                z.options.add(new Option("矿业类"));
+                z.options.add(new Option("纺织类"));
+                z.options.add(new Option("轻工类"));
+                z.options.add(new Option("交通运输类"));
+                z.options.add(new Option("海洋工程类"));
+                z.options.add(new Option("航空航天类"));
+                z.options.add(new Option("兵器类"));
+                z.options.add(new Option("核工程类"));
+                z.options.add(new Option("农业工程类"));
+                z.options.add(new Option("环境科学与工程类"));
+                z.options.add(new Option("生物医学工程类"));
+                z.options.add(new Option("食品科学与工程类"));
+                z.options.add(new Option("建筑类"));
+                z.options.add(new Option("安全科学与工程类"));
+                z.options.add(new Option("生物工程类"));
+                z.options.add(new Option("公安技术类"));
+            }
+            if(y.selectedIndex === 8){
+                z.options.add(new Option("植物生产类"));
+                z.options.add(new Option("自然保护与环境生态类"));
+                z.options.add(new Option("动物生产类"));
+                z.options.add(new Option("动物医学类"));
+                z.options.add(new Option("林学类"));
+                z.options.add(new Option("水产类"));
+                z.options.add(new Option("草学类"));
+            }
+            if(y.selectedIndex === 9){
+                z.options.add(new Option("基础医学类"));
+                z.options.add(new Option("临床医学类"));
+                z.options.add(new Option("口腔医学类"));
+                z.options.add(new Option("公卫生与预防医学类"));
+                z.options.add(new Option("中医学类"));
+                z.options.add(new Option("中西医结合类"));
+                z.options.add(new Option("药学类"));
+                z.options.add(new Option("中药学类"));
+                z.options.add(new Option("法医学类"));
+                z.options.add(new Option("医学技术类"));
+                z.options.add(new Option("护理类"));
+            }
+            if(y.selectedIndex === 10){
+                z.options.add(new Option("管理科学与工程类"));
+                z.options.add(new Option("工商管理类"));
+                z.options.add(new Option("农业经济管理类"));
+                z.options.add(new Option("公共管理类"));
+                z.options.add(new Option("图书情报与档案管理类"));
+                z.options.add(new Option("物流管理与工程类"));
+                z.options.add(new Option("工业工程类"));
+                z.options.add(new Option("电子商务类"));
+                z.options.add(new Option("旅游管理类"));
+
+            }
+            if(y.selectedIndex === 11){
+                z.options.add(new Option("艺术"));
+                z.options.add(new Option("艺术学理论类"));
+                z.options.add(new Option("音乐与舞蹈学类"));
+                z.options.add(new Option("戏剧与影视学类"));
+                z.options.add(new Option("美术学类"));
+                z.options.add(new Option("设计学类"));
+            }
+
+        }
+
+        if (x.selectedIndex === 1) {
+            if(y.selectedIndex === 0){
+                z.options.add(new Option("思想政治理论"));
+                z.options.add(new Option("英语"));
+                z.options.add(new Option("数学"));
+            }
+            if(y.selectedIndex === 1){
+                z.options.add(new Option("问学长/学姐"));
+                z.options.add(new Option("问同级考生"));
+                z.options.add(new Option("问老师"));
+            }
+            if(y.selectedIndex === 2){
+                z.options.add(new Option("哲学"));
+                z.options.add(new Option("逻辑学"));
+                z.options.add(new Option("宗教学"));
+            }
+            if(y.selectedIndex === 3){
+                z.options.add(new Option("经济学类"));
+                z.options.add(new Option("财政学"));
+                z.options.add(new Option("金融学类"));
+                z.options.add(new Option("经济与贸易类"));
+            }
+
+            if(y.selectedIndex === 4){
+                z.options.add(new Option("法学类"));
+                z.options.add(new Option("政治学类"));
+                z.options.add(new Option("社会学类"));
+                z.options.add(new Option("名族学类"));
+                z.options.add(new Option("马克思主义理论类"));
+                z.options.add(new Option("公安学类"));
+            }
+            if(y.selectedIndex === 5){
+                z.options.add(new Option("教育学类"));
+                z.options.add(new Option("体育学类"));
+                z.op
+            }
+            if(y.selectedIndex === 6){
+                z.options.add(new Option("中国语言文学类"));
+                z.options.add(new Option("外国语言文学类"));
+                z.options.add(new Option("新闻传播学类"));
+            }
+            if(y.selectedIndex === 7){
+                z.options.add(new Option("历史学"));
+                z.options.add(new Option("世界史"));
+                z.options.add(new Option("考古学"));
+                z.options.add(new Option("文物与博物馆学"));
+            }
+            if(y.selectedIndex === 8){
+                z.options.add(new Option("数学类"));
+                z.options.add(new Option("物理学类"));
+                z.options.add(new Option("化学类"));
+                z.options.add(new Option("天文学类"));
+                z.options.add(new Option("地理科学类"));
+                z.options.add(new Option("大气科学类"));
+                z.options.add(new Option("海洋科学类"));
+                z.options.add(new Option("地球物理学类"));
+                z.options.add(new Option("地质学类"));
+                z.options.add(new Option("生物科学类"));
+                z.options.add(new Option("心理学类"));
+                z.options.add(new Option("统计学类"));
+            }
+            if(y.selectedIndex === 9){
+                z.options.add(new Option("力学类"));
+                z.options.add(new Option("机械类"));
+                z.options.add(new Option("仪器类"));
+                z.options.add(new Option("材料类"));
+                z.options.add(new Option("能源动力类"));
+                z.options.add(new Option("电气类"));
+                z.options.add(new Option("电子信息类"));
+                z.options.add(new Option("自动化类"));
+                z.options.add(new Option("计算机类"));
+                z.options.add(new Option("土木类"));
+                z.options.add(new Option("水利类"));
+                z.options.add(new Option("测绘类"));
+                z.options.add(new Option("化工与制药类"));
+                z.options.add(new Option("地质类"));
+                z.options.add(new Option("矿业类"));
+                z.options.add(new Option("纺织类"));
+                z.options.add(new Option("轻工类"));
+                z.options.add(new Option("交通运输类"));
+                z.options.add(new Option("海洋工程类"));
+                z.options.add(new Option("航空航天类"));
+                z.options.add(new Option("兵器类"));
+                z.options.add(new Option("核工程类"));
+                z.options.add(new Option("农业工程类"));
+                z.options.add(new Option("环境科学与工程类"));
+                z.options.add(new Option("生物医学工程类"));
+                z.options.add(new Option("食品科学与工程类"));
+                z.options.add(new Option("建筑类"));
+                z.options.add(new Option("安全科学与工程类"));
+                z.options.add(new Option("生物工程类"));
+                z.options.add(new Option("公安技术类"));
+            }
+            if(y.selectedIndex === 10){
+                z.options.add(new Option("植物生产类"));
+                z.options.add(new Option("自然保护与环境生态类"));
+                z.options.add(new Option("动物生产类"));
+                z.options.add(new Option("动物医学类"));
+                z.options.add(new Option("林学类"));
+                z.options.add(new Option("水产类"));
+                z.options.add(new Option("草学类"));
+            }
+            if(y.selectedIndex === 11){
+                z.options.add(new Option("基础医学类"));
+                z.options.add(new Option("临床医学类"));
+                z.options.add(new Option("口腔医学类"));
+                z.options.add(new Option("公卫生与预防医学类"));
+                z.options.add(new Option("中医学类"));
+                z.options.add(new Option("中西医结合类"));
+                z.options.add(new Option("药学类"));
+                z.options.add(new Option("中药学类"));
+                z.options.add(new Option("法医学类"));
+                z.options.add(new Option("医学技术类"));
+                z.options.add(new Option("护理类"));
+            }
+            if(y.selectedIndex === 12){
+                z.options.add(new Option("管理科学与工程类"));
+                z.options.add(new Option("工商管理类"));
+                z.options.add(new Option("农业经济管理类"));
+                z.options.add(new Option("公共管理类"));
+                z.options.add(new Option("图书情报与档案管理类"));
+                z.options.add(new Option("物流管理与工程类"));
+                z.options.add(new Option("工业工程类"));
+                z.options.add(new Option("电子商务类"));
+                z.options.add(new Option("旅游管理类"));
+
+            }
+            if(y.selectedIndex === 13){
+                z.options.add(new Option("艺术"));
+                z.options.add(new Option("艺术学理论类"));
+                z.options.add(new Option("音乐与舞蹈学类"));
+                z.options.add(new Option("戏剧与影视学类"));
+                z.options.add(new Option("美术学类"));
+                z.options.add(new Option("设计学类"));
+            }
+        }
+
+        if (x.selectedIndex === 2) {
+            if(y.selectedIndex === 0){
+                z.options.add(new Option("校园防盗"));
+                z.options.add(new Option("校园防火"));
+                z.options.add(new Option("校园用电"));
+            }
+            if(y.selectedIndex === 1){
+                z.options.add(new Option("问学长/学姐"));
+                z.options.add(new Option("问同学"));
+                z.options.add(new Option("问老师/辅导员"));
+            }
+
+            if(y.selectedIndex === 2){
+                z.options.add(new Option("问公选课"));
+                z.options.add(new Option("问专业课"));
+                z.options.add(new Option("问老师"));
+            }
+            if(y.selectedIndex === 3){
+                z.options.add(new Option("英雄联盟"));
+                z.options.add(new Option("绝地求生"));
+                z.options.add(new Option("王者荣耀"));
+                z.options.add(new Option("刺激战场"));
+                z.options.add(new Option("其他游戏"));
+            }
+            if(y.selectedIndex === 4){
+                z.options.add(new Option("动漫"));
+                z.options.add(new Option("电影"));
+                z.options.add(new Option("电视剧"));
+                z.options.add(new Option("综艺节目"));
+                z.options.add(new Option("其他视频"));
+            }
+        }
+
+    }
+
+    var numOfLabel = 0;
+
+    function insertLabel() {
+        if (numOfLabel < 5) {
+
+            var li13 = document.getElementById("li13");
+            //创建li
+
+
+            var li15 = document.createElement("li");
+            li15.setAttribute('id', numOfLabel + 5);
+
+            //创建文本
+            var text15 = document.createElement('input');
+            text15.setAttribute('type', 'text');//输入框的类型
+            text15.setAttribute('name', "questionKeyword");//输入框的名字
+            text15.setAttribute('id', numOfLabel);//输入框的id
+
+            //把文本添加到li下面 appendChild
+            li15.appendChild(text15);
+            //获取到ul
+            var ul21 = document.getElementById("ulid21");
+
+            //insertBefore(newNode,oldNode)
+            ul21.appendChild(li15);
+
+            var butt = document.createElement("input");
+            butt.type = "button";
+            butt.value = "×";
+            butt.id = numOfLabel - 5;
+            butt.onclick = function () {
+                var m = document.getElementById(4 + numOfLabel);
+                m.parentNode.removeChild(m);
+                numOfLabel--;
+            }
+            var licontent = document.getElementById(5 + numOfLabel);
+            licontent.appendChild(butt);
+
+            numOfLabel = numOfLabel + 1;
+        } else {
+            alert("最多只能添加5个标签");
+        }
+
+    }
+
+    var E = window.wangEditor;
+    var editor = new E('#editor-make-question');
+    // 关闭粘贴样式的过滤
+    editor.customConfig.pasteFilterStyle = false;
+    // 忽略粘贴内容中的图片
+    editor.customConfig.pasteIgnoreImg = true;
+    editor.customConfig.uploadImgShowBase64 = true;
+    // 自定义处理粘贴的文本内容
+    editor.customConfig.pasteTextHandle = function (content) {
+        // content 即粘贴过来的内容（html 或 纯文本），可进行自定义处理然后返回
+        return content + '<p>在粘贴内容后面追加一行</p>';
+    }
+    editor.customConfig.linkCheck = function (text, link) {
+        console.log(text); // 插入的文字
+        console.log(link); // 插入的链接
+
+        return true; // 返回 true 表示校验成功
+        // return '验证失败' // 返回字符串，即校验失败的提示信息
+    }
+    editor.customConfig.linkImgCheck = function (src) {
+        console.log(src); // 图片的链接
+
+        return true; // 返回 true 表示校验成功
+        // return '验证失败' // 返回字符串，即校验失败的提示信息
+    }
+    editor.customConfig.linkImgCallback = function (url) {
+        console.log(url); // url 即插入图片的地址
+    }
+    editor.create();
+
+    function my_reset(){
+        editor.txt.html('');
+    }
+    function questionAjax() {
+
+        var questionKeyword = [];
+        var len = document.getElementsByName('questionKeyword');
+
+        for(var i = 0;i<len.length;i++){
+            var v =len[i].value;
+            questionKeyword.push(v);
+        }
+        var userid = sessionStorage.getItem("userid");
+        var questionContent = editor.txt.html();
+        console.log(questionKeyword)
+        console.log(questionKeyword.length)
+        var questionTitle = document.getElementById("field1").value;
+        var questionIntegral = document.getElementById("prizeNum").value;
+        var questionCategory = document.getElementById("third").value;
+        var questionCategory2 = document.getElementById("field2").value;
+        if( userid === "0")
+        {
+            document.getElementById("loginBtn").click();
+        }
+        else
+        {
+            if (questionContent === "<p><br></p>" || questionTitle === "")
+            {
+                alert("内容和标题不能为空！")
+            }
+            else if (_sensitive_test(questionContent) && _sensitive_test(questionTitle)
+                && _sensitive_test(questionKeyword))
+            {
+                $.ajax({
+                    type: "GET",
+                    url: "../QuestionServlet",
+                    data: {"questionContent":questionContent,"questionKeyword":questionKeyword,"questionTitle":questionTitle,"questionIntegral":questionIntegral,"questionCategory":questionCategory+" ("+questionCategory2+")","userid":userid},
+                    traditional: true,
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+
+                        var qid = data.current_qid;
+                        sessionStorage.setItem("qid", qid);
+                        $("#main_content").load("../html/reply.html");
+                        sessionStorage.setItem("page", "../html/reply.html");
+
+                        $.ajax({
+                            type: "GET",
+                            url: "../AddVisitServlet",
+                            data:{"qid":qid}
+                        });
+
+                    }
+
+                });
+            }
+        }
+
+
+    }
+
+
+    document.getElementById("prizeNum").oninput = function(){
+        if(parseInt(this.value)>20){
+            this.value=20;
+        }
+        if(parseInt(this.value)<0){
+            this.value=0;
+        }
+    };
+
+    $(document).on('click', "a[name='a_page']", function () {
+
+        var page = $(this).attr("page");
+        var solved = $(this).attr("solved");
+        var major = sessionStorage.getItem("major");
+
+        this.setAttribute("class",".active");
+
+        if (null === major) {
+            $.ajax({
+                type: "GET",
+                url: "../PageServlet",
+                data: {"page": page, "solved": solved},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var list = data.list;
+                    if (solved === "0") {
+                        createPageUnsolved(list, data.totalPage,data.currentPage);
+                    }
+                    else if (solved === "1") {
+                        createPageSolved(list, data.totalPage,data.currentPage);
+                    }
+
+
+                }
+            });
+        }
+        else {
+            $.ajax({
+                type: "GET",
+                url: "../PageMajorServlet",
+                data: {"page": page, "solved": solved, "major": major},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var list = data.list;
+                    if (solved === "0") {
+                        createPageUnsolved(list, data.totalPage,data.currentPage);
+                    }
+                    else if (solved === "1") {
+                        createPageSolved(list, data.totalPage,data.currentPage);
+                    }
+
+                }
+            });
+        }
+    });
+
+    var a= null;
+    var b=null;
+    var z=null;
+    var g=null;
+    function changecolor(id1,id2,id3)
+    {
+        if(a != null && b != null){
+
+            a.style.backgroundColor="#FFF";
+
+            b.style.backgroundColor="#FFF";
+        }
+        if(g != null)
+        {
+            g.style.backgroundColor="#FFF";
+        }
+        var d = document.getElementById(id1);
+        d.style.backgroundColor="#f8e8e8";
+        var c = document.getElementById(id2);
+        c.style.backgroundColor="#f8e8e8";
+        var f=document.getElementById(id3);
+        var e=document.getElementById("categoryname");
+        a=d;
+        b=c;
+        e.innerHTML="当前专业:"+f.innerHTML;
+
+        var major = f.text;
+        console.log(major);
+        sessionStorage.setItem("major", major);
+        $.ajax({
+            type: "GET",
+            url: "../PageMajorServlet",
+            data: {"page": 1, "solved": 1, "major": major},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                var list = data.list;
+                createPageSolved(list, data.totalPage);
+                document.getElementById("all-tab").click();
+
+            }
+        });
+    }
+    function changecolor4(id)
+    {
+        if(z!=null)
+        {
+            z.style.backgroundColor="#f8c25c";
+        }
+        var h=document.getElementById(id);
+        h.style.backgroundColor="#e0a128";
+        z=h;
+    }
+    function allSolved() {
+
+        sessionStorage.removeItem("major");
+        document.getElementById("categoryname").innerHTML = "";
+        document.getElementById("all-tab").click();
+        if(a != null && b != null){
+
+            a.style.backgroundColor="#FFF";
+
+            b.style.backgroundColor="#FFF";
+        }
+        if(g != null)
+        {
+            g.style.backgroundColor="#FFF";
+        }
+    }
+
+    function createPageAjax(solved) {
+
+        var major = sessionStorage.getItem("major");
+        if (null === major) {
+            $.ajax({
+                type: "GET",
+                url: "../PageServlet",
+                data: {"page": 1, "solved": solved},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var list = data.list;
+                    if (solved === 0) {
+                        createPageUnsolved(list, data.totalPage,data.currentPage);
+                    }
+                    else if (solved === 1) {
+                        createPageSolved(list, data.totalPage,data.currentPage);
+                    }
+
+
+                }
+            });
+        }
+        else {
+            $.ajax({
+                type: "GET",
+                url: "../PageMajorServlet",
+                data: {"page": 1, "solved": solved, "major": major},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var list = data.list;
+                    if (solved === 0) {
+                        createPageUnsolved(list, data.totalPage,data.currentPage);
+                    }
+                    else if (solved === 1) {
+                        createPageSolved(list, data.totalPage,data.currentPage);
+                    }
+                }
+            });
+        }
+
+
+    }
+
+
+    function createPageSolved(list, totalPage,currentPage) {
+        var data = [];
+        for (var i = 0; i < list.length; i++) {
+            data.push('<div class="topic_flag_reco" style="padding: 10px;border-bottom: 1px solid #CCCCCC;">' +
+                '<div class="topic_flag_reco top"><div class="topic_flag_reco topic"><a class="a_question" qid="'+list[i].qid+'">' +
+                '<b>' + list[i].title + '</b>' +
+                '</a></div><div class="topic_flag_reco offer">悬赏：' + list[i].integral + '</div></div>'+
+                '<div class="topic_flag_reco bottom"><div class="topic_flag_reco que">' +list[i].keyword+'</div><div> <div class="topic_flag_reco initiator"><a name="a_user" uid="'+list[i].userId+'">' + list[i].username + '</a></div>' +
+                '<div class="topic_flag_reco time">' + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss")  + '</div>' +
+                '<div class="topic_flag_reco classify">' + list[i].category + '</div>' +
+                '<div class="topic_flag_reco reply">回复数:' + list[i].answerCount + '</div><span class="interval">|</span><div class="single-view">浏览:'+list[i].visitCount+'</div>\n' +
+                '</div>' +
+                '</div>' +
+                '</div>')
+
+        }
+
+        var previous_page = currentPage -1;
+        var next_page = currentPage +1;
+        console.log(currentPage);
+        data.push('<ul class="pagination">');
+        if (currentPage>1)
+        {
+            data.push('<li><a name="a_page" solved = 1 page="'+previous_page+'"><<</a></li>');
+        }
+
+        for (var j = 0; j < totalPage; j++) {
+            var k = j + 1;
+            data.push('<li><a  name="a_page" solved = 1 page = ' + k + '>' + k + '</a></li>');
+        }
+        if(currentPage<totalPage)
+        {
+            data.push('<li><a name="a_page" solved = 1 page="'+next_page+'">>></a></li>');
+        }
+        data.push('</ul>')
+
+
+
+        document.getElementById('select_Content1').innerHTML = data.join('');
+
+
+    }
+
+    function createPageUnsolved(list, totalPage,currentPage) {
+        var data = [];
+        for (var i = 0; i < list.length; i++) {
+            data.push('<div class="topic_flag_reco" style="padding: 10px;border-bottom: 1px solid #CCCCCC;">' +
+                '<div class="topic_flag_reco top"><div class="topic_flag_reco topic"><a class="a_question" qid="'+list[i].qid+'">' +
+                '<b>' + list[i].title + '</b>' +
+                '</a></div><div class="topic_flag_reco offer">悬赏：' + list[i].integral + '</div></div>'+
+                '<div class="topic_flag_reco bottom"><div class="topic_flag_reco que">' +list[i].keyword+'</div><div> <div class="topic_flag_reco initiator"><a name="a_user" uid="'+list[i].userId+'">' + list[i].username + '</a></div>' +
+                '<div class="topic_flag_reco time">' + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss")  + '</div>' +
+                '<span> </span><div class="topic_flag_reco classify">' + list[i].category + '</div>' +
+                '<div class="topic_flag_reco reply">回复数:' + list[i].answerCount + '</div><span class="interval">|</span><div class="single-view">浏览"'+list[i].visitCount+'</div>\n' +
+                '</div>' +
+                '</div>' +
+                '</div>')
+
+        }
+        var previous_page = currentPage -1;
+        var next_page = currentPage +1;
+        data.push('<ul class="pagination">');
+        if (currentPage>1)
+        {
+            data.push('<li><a name="a_page" solved = 0 page="'+previous_page+'"><<</a></li>');
+        }
+
+        for (var j = 0; j < totalPage; j++) {
+            var k = j + 1;
+            data.push('<li><a  name="a_page" solved = 0 page = ' + k + '>' + k + '</a></li>');
+        }
+        if(currentPage<totalPage)
+        {
+            data.push('<li><a name="a_page" solved = 0 page="'+next_page+'">>></a></li>');
+        }
+data.push('</ul>')
+
+        document.getElementById('select_Content2').innerHTML = data.join('');
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+<default-config>
+	<property name="jdbcUrl">jdbc:mysql://47.100.101.60:3306/college_BBS?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
+	<property name="driverClass">com.mysql.jdbc.Driver</property>
+	<property name="user">root</property>
+	<property name="password">123456</property>
+</default-config>
+</c3p0-config>

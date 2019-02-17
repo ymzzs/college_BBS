@@ -1,0 +1,5 @@
+
+ul.line{padding-left:30px; width:500px; height:40px; background:#FFF; overflow:hidden;}
+ul.line li{height:50px; font-size:20px; line-height:30px;list-style:none;}
+ul.line a{color:black;}
+ul.line a:hover{color:red;}

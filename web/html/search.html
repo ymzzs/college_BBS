@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Orders</title>
+
+<link href="../css/buttons.css" rel="stylesheet">
+
+
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html,charset=utf-8" />
+<meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- js -->
+<!--animate-->
+<link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="../js/wow.min.js"></script>
+
+    <script language="javascript">
+
+        $(document).ready(function () {
+            $("#question-list-item").hide();
+            var keyword = sessionStorage.getItem("keyword");
+            if(null === keyword)
+            {
+
+            }
+            else
+            {
+                document.getElementById("keyword-input").value = keyword;
+                Search();
+            }
+            console.log(keyword);
+        });
+
+        function click_scroll(elem) {
+            var scroll_offset = $(elem).offset(); //得到pos这个div层的offset，包含两个值，top和left
+            $("body,html").animate({
+                scrollTop:scroll_offset.top //让body的scrollTop等于pos的top，就实现了滚动
+            },750);
+        }
+
+        var keywords = "";
+        var maxpage = 1;
+
+        function Search() {
+            keywords = document.getElementById("keyword-input").value;
+            $.ajax({
+                type: "GET",
+                url: "../SearchServlet", //URL
+                data: {
+                    startPage :1,
+                    keyword : keywords
+                },
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    $("#single-page").empty();
+                    document.getElementById("zongye").innerText = Math.ceil(data.count / 10.0);
+                    maxpage = Math.ceil(data.count / 10.0);
+                    console.log(data);
+                    $.each(data.questions,function(i,question) {
+                        var item = $("#question-list-item").clone();
+                        item.attr("id", "question-list-item" + question.qid);
+                        item.attr("qid", question.qid);
+                        item.find(".question-title").find(".question-name").html(question.title);
+                        item.find(".question-title").find(".question-time").html(new Date(question.time.time).format("yyyy-MM-dd hh:mm:ss"));
+                        item.find(".question-title").find(".question-from").html(question.username);
+                        item.find(".question-title").find(".question-prize").find(".my-box").html(question.integral + "C");
+                        item.find(".question-title").find(".question-status").html(question.answerCount + "</br>回答");
+                        item.find(".single-view-history").find(".single-collection").html("赞" + question.likeCount);
+                        item.find(".single-view").html("浏览数" + question.visitCount);
+                        item.show();
+                        item.appendTo("#single-page");
+                    });
+
+                    setPages();
+                },
+                error : function (XMLHttpRequest, textStatus, errorThrwon) {
+                    alert("error");
+                }
+            });
+            return true;
+        }
+
+        function TurnToPage(page) {
+            if (parseInt(page) == 0)
+                page = 1;
+            $.ajax({
+                type: "GET",
+                url: "../SearchServlet", //URL
+                data: {
+                    startPage : page,
+                    keyword : keywords
+                },
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    document.getElementById("keyword-input").value = keywords;
+                    $("#single-page").empty();
+                    $.each(data.questions,function(i,question) {
+                        var item = $("#question-list-item").clone();
+                        item.attr("id", "question-list-item" + question.qid);
+                        item.attr("qid", question.qid);
+                        item.find(".question-title").find(".question-name").find(".question-title").html(question.title);
+                        item.find(".question-title").find(".question-name").find(".question-title").attr("name","a_question");
+                        item.find(".question-title").find(".question-name").find(".question-title").attr("qid",question.qid);
+                        item.find(".question-title").find(".question-time").html(new Date(question.time.time).format("yyyy-MM-dd hh:mm:ss"));
+                        item.find(".question-title").find(".question-from").find(".question-user").html(question.username);
+                        item.find(".question-title").find(".question-from").find(".question-user").attr("uid",question.userId);
+                        item.find(".question-title").find(".question-from").find(".question-user").attr("name","a_user");
+                        item.find(".question-title").find(".question-prize").find(".my-box").html(question.integral + "C");
+                        item.find(".question-title").find(".question-status").html(question.answerCount + "</br>回答");
+                        item.find(".single-view-history").find(".single-collection").html("赞" + question.likeCount);
+                        item.find(".single-view").html("浏览数" + question.visitCount);
+                        item.show();
+                        item.appendTo("#single-page");
+                    });
+                },
+                error : function (XMLHttpRequest, textStatus, errorThrwon) {
+                    alert("error");
+                }
+            });
+        }
+
+    </script>
+    <script src="../js/jquery.page.js"></script>
+
+</head>
+<body>
+<div class="search-content">
+	<div class="container">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-6" style="width: 60%;">
+            <div class="input-group">
+                <input type="text" id="keyword-input" class="form-control" placeholder="请输入检索关键字">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" onclick="Search()">检索</button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+		
+		<div id="single-page" class="question-list">
+
+		</div>
+        <div id="question-list-item" class="question-list-item">
+            <div class="question-title">
+                <label class="question-name"><a class="question-title"></a></label>
+                <label class="question-time"></label>
+                <label style="color: #808080;font-size: 13px;">来自</label>
+                <label class="question-from"><a class="question-user"></a></label>
+                <label class="question-prize">悬赏:<span class="my-box"></span></label>
+                <label class="question-status"><span>0</span><p>回答</p></label>
+            </div>
+
+            <div class="search-link"><a href="http://muzhou.xin:8080/college_BBS/html/index.html">http://muzhou.xin:8080/college_BBS/html/index.html</a></div>
+            <div class="single-view-history"><div class="single-collection"><em>收藏5</em></div><span class="interval">|</span><div class="single-view"><em>浏览125</em></div></div>
+        </div>
+		<div style="width:50% ;margin: 0 auto">
+		  <div style="float: left" class="tcdPageCode"></div>
+		  <div style="float: right;margin-top: 20px;font-size: 14px;margin-right:30px;"  id="aaa"><span style="color: blue">当前页面:<span style="color: red;font-size: 12px;" id="dang">1</span>/<span style="font-size: 12px;" id="zongye">100</span></span>
+			<input onKeyUp="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="tiao" style="width: 25px;height: 16px;margin-left: 5px;border: 1px solid blue;" value="1">
+			<button onclick="" style="font-size: 12px;background-color: blue;border-radius: 5px;color: #ffffff;border: 1px solid blue;padding: 1px 2px;margin-left: 5px;cursor: pointer" id="zhuan">跳转</button>
+		  </div>
+		  <div style="clear: both"></div>
+		</div>
+		<div id="pages" style="font-size:12px;height:100px;width:80%; line-height:40px; text-align:center;"></div>
+	</div>
+	</div>
+	<div style="width:100%;height:50px;background-color:red;"></div>
+
+
+    <script language="javascript">
+        var obj = document.getElementById("single-page");  //获取内容层
+        var pages = document.getElementById("pages");         //获取翻页层
+        var pgindex=1;                                      //当前页
+        var allpages;
+        var ye;//可以分为几页
+        var currentUrl01;
+        var arr01;
+        function setPages() {
+            pgindex=1;                                      //当前页
+            allpages = parseInt(document.getElementById("zongye").innerText);
+            ye=  Math.ceil(allpages);//可以分为几页
+            currentUrl01 = decodeURI(window.location.href);
+            arr01 = currentUrl01.split("?");
+            $('#zongye').text(ye);
+            arr01[1] = "1";
+            history.pushState({}, "", arr01[0] + "?1");
+            $('#dang').html(arr01[1]);
+            $(function () {
+                $('#tiao').val(arr01[1]);
+                setTimeout(function () {
+                    $("#zhuan").click()
+                },1);
+            });
+            $(".tcdPageCode").createPage({
+                pageCount:ye,
+                current:1,
+                backFn:function(p){
+                    console.log(p);
+                    bian(p);
+                    click_scroll("#keyword-input");
+                }
+            });
+
+        }
+        ////////////////////////////////这里面获取数据  p 为当前页数
+        $(".tcdPageCode").createPage({
+            pageCount:ye,
+            current:1,
+            backFn:function(p){
+                console.log(p);
+                bian(p);
+            }
+        });
+        function gotopage(value){
+            try{
+                value=="-1"?showPage(pgindex-1):showPage(pgindex+1);
+            }catch(e){
+
+            }
+        }
+        function showPage(pageINdex)
+        {
+            obj.scrollTop=(pageINdex-1)*parseInt(obj.offsetHeight);                                                                  //根据高度，输出指定的页
+            pgindex=pageINdex;
+            TurnToPage(pageINdex);
+        }
+
+
+        function bian(yeshu){
+            var stateObject = {};
+            var title = "";
+            var newUrl ="" ;
+            if(arr01[0]!=parseInt($('#dang').text())){
+                newUrl =arr01[0]+"?"+yeshu;
+                history.pushState(stateObject,title,newUrl);
+            }
+            showPage(parseInt($('#dang').text()));
+        }
+    </script>
+<!-- //for bootstrap working -->
+</body>
+
+</html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我们的网页</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/mystyle.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style2.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/style3.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/font-awesome.css">
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+    <!-- //for-mobile-apps -->
+    <!-- js -->
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- <script type="application/x-javascript" src="/js/LoginAjax.js"></script>-->
+    <!-- js -->
+    <script>
+        $(document).ready(function () {
+            //Initialize tooltips
+            $('.nav-tabs > li a[title]').tooltip();
+
+            //Wizard
+            $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+                var $target = $(e.target);
+
+                if ($target.parent().hasClass('disabled')) {
+                    return false;
+                }
+            });
+
+            $(".next-step").click(function (e) {
+
+                var $active = $('.wizard .nav-tabs li.active');
+                $active.next().removeClass('disabled');
+                nextTab($active);
+
+            });
+            $(".prev-step").click(function (e) {
+
+                var $active = $('.wizard .nav-tabs li.active');
+                prevTab($active);
+
+            });
+        });
+
+        function nextTab(elem) {
+            $(elem).next().find('a[data-toggle="tab"]').click();
+        }
+        function prevTab(elem) {
+            $(elem).prev().find('a[data-toggle="tab"]').click();
+        }
+        function scrollTo(elem, speed){
+            if(!speed) speed = 300;
+            if(!elem){
+                $("html,body").animate({scrollTop:0},speed);
+            }else{
+                if(elem.length>0) $("html,body").animate({scrollTop:$(elem).offset().top},speed);
+            }
+            return false;
+        }
+        function click_scroll(elem) {
+            var scroll_offset = $(elem).offset(); //得到pos这个div层的offset，包含两个值，top和left
+            $("body,html").animate({
+                scrollTop:scroll_offset.top - 55 //让body的scrollTop等于pos的top，就实现了滚动
+            },500);
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <h1><a href="../html/index.html"><i><img src="../images/logo.png" alt=" "/></i> 求知现场</a></h1>
+    </div>
+    <div class="top-nav">
+        <span class="menu"><img src="../images/menu.png" alt=" "/></span>
+        <ul class="nav1" id="nav1">
+            <li><a href="javaScript:void(0);" onclick="jumpHome()">主页</a></li>
+            <li><a href="javaScript:void(0)" onclick="jumpCommunity()">问答社区</a></li>
+            <li><a href="#" id="loginBtn" data-toggle="modal" data-target="#myModal1">登录</a></li>
+            <li><a href="#" id="registerBtn" data-toggle="modal" data-target="#myModal2">注册</a></li>
+            <li><a href="javaScript:void(0)" onclick="jumpAbout()">关于我们</a></li>
+        </ul>
+    </div>
+    <!-- start search-->
+    <div class="search-box">
+        <div id="sb-search" class="sb-search">
+            <form id="searchForm" onsubmit="return false" >
+                <input class="sb-search-input" placeholder="输入搜索关键字..." type="search" name="keyword" id="keyword">
+                <input class="sb-search-submit" id="searchBtn" onclick="jumpSearch()" type="submit" value="">
+                <span class="sb-icon-search"></span>
+            </form>
+        </div>
+    </div>
+    <!-- search-scripts -->
+    <script src="../js/classie.js"></script>
+    <script src="../js/uisearch.js"></script>
+    <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+    </script>
+    <div class="clearfix"></div>
+</div>
+<!-- login -->
+<div id="main_content"></div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" style="height: 350px" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-spa">
+                <div class="login-grids">
+                    <div class="login">
+                        <div class="login-right">
+                            <form id="loginForm" onsubmit="return false">
+                                <h3 style="text-align:center;">登录</h3>
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-user-o" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="text" id="login_input" class="phone" name="username" placeholder="请输入用户名或邮箱"
+                                               onfocus="this.placeholder = '' "
+                                               onblur="this.placeholder = '请输入用户名或邮箱';ajaxName() "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="nameCorrect" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="用户不存在" id="nameWrong" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-key" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="password" class="password" name="password" placeholder="密码"
+                                               onfocus="this.placeholder = '' " onblur="this.placeholder = '密码' "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="passCorrect" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="密码错误" id="passWrong" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <div class="single-bottom" style="margin-left:8%;margin-top:1px">
+                                    <input type="checkbox" id="brand" value="">
+                                    <label for="brand"><span></span>记住我.</label>
+                                </div>
+                                <input type="submit" onclick="ajaxAll()" value="登录">
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p>登录即代表你同意此网站的 <span>相关政策</span> and <span>隐私协议</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //login -->
+<!-- signup -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" style="height: 450px" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" id="registerClose" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-spa">
+                <div class="login-grids">
+                    <div class="login">
+                        <div class="login-right">
+                            <form id="registerForm" onsubmit="return false">
+                                <h3 style="text-align:center;">注册</h3>
+                                <div class="pom-agile" style="width: 100%; display: inline-flex;">
+                                    <span class="fa fa-user-o" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:left;width: 82%">
+                                        <input type="text" maxlength="11" id="register_input" class="userName" name="username" placeholder="用户名"
+                                               onfocus="this.placeholder = '' "
+                                               onblur="this.placeholder = '用户名';ajaxRegisterName() "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="name-Correct" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="用户名已存在" id="name-duplicate" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <!--                                <span id="nameWrong" class="fa fa-close"
+                                                                          style="font-size:25px;margin-left: 5px; color:red;float: right;display: none;"></span>-->
+                                </div>
+
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-phone" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="text" class="phone" name="telephone" placeholder="手机号码"
+                                               onfocus="this.placeholder = '' " onblur="this.placeholder = '手机号码' "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="phone-valid" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="该号码已存在" id="phone-duplicate" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-envelope-o" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="text" class="phone" name="email" placeholder="邮箱"
+                                               onfocus="this.placeholder = '' " onblur="this.placeholder = '邮箱' "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="email-valid" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="该邮箱已存在" id="email-duplicate" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-key" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="password" class="password" name="password" placeholder="密码"
+                                               onfocus="this.placeholder = '' "
+                                               onblur="this.placeholder = '密码' ;ajaxRegisterName()"
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="password" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="密码长度应在6~16位" id="password-invalid" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <div class="pom-agile" style="width: 100%;display: inline-flex;">
+                                    <span class="fa fa-key" aria-hidden="true"
+                                          style="float:left;width: 8%;margin-top: 30px;"></span>
+                                    <div style="float:right;width: 82%">
+                                        <input type="password" class="password-ok" name="passwordConfirm"
+                                               placeholder="确认密码" onfocus="this.placeholder = '' "
+                                               onblur="this.placeholder = '确认密码';ajaxRegisterName() "
+                                               onKeypress="if(event.keyCode === 32)event.returnValue = false;" required>
+                                    </div>
+                                    <span id="password-same" aria-hidden="true" class="fa fa-check"
+                                          style="display:none;font-size:25px;width:10%;color:#00be00;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                    <span title="两次输入的密码不同" id="password-different" aria-hidden="true"
+                                          class="fa fa-exclamation-triangle"
+                                          style="display:none;font-size:25px;width:10%;color:red;float: right;margin-top: 27px;padding-left:5px;">
+												</span>
+                                </div>
+                                <input type="submit" id="register" onclick="ajaxRegisterAll()" value="注册">
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p>登录即代表你同意此网站的 <span>相关政策</span> and <span>隐私协议</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //signup -->
+<!-- for bootstrap working -->
+
+<script>
+
+    $(document).ready(function () {
+        sessionStorage.removeItem("major");
+        sessionStorage.removeItem("keyword");
+
+        $.ajax({
+            type: "GET",
+            url: "../SessionServlet",
+            data: {"hello": "hello"},
+            dataType: "json",
+            async:false,
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                if (data.ifLogin==="1") {
+                    console.log("session存在");
+                    sessionStorage.setItem("userid",data.userid);
+                    sessionStorage.setItem("ifLogin",data.ifLogin);
+                    sessionStorage.setItem("userHead",data.userHead);
+                    document.getElementById('nav1').innerHTML = " <li><a href=\"#\" onclick=\"jumpHome()\">主页</a></li>\n" +
+                        "                <li><a href='#' onclick='jumpCommunity()'>问答社区</a></li> <li><div id=\"user-all\">\n<div id=\"userInfo\"><img href='javaScript:void(0);' id='user-head-pic' src='"+data.userHead+"'  onclick='setting()' style='max-width:40px; cursor:pointer;'><i class='message-alert' id='message-alert'></i>\n</div><div id=\"user-menu\">\n" +
+                        "<div><a onclick='jumpNews()' id=''><i id='bell' class='fa fa-bell-o'></i>消息<b id='messageCount' style='display: none;color:red;'></b></a></div>\n" +
+                        "<div><a onclick='logoutAjax()'>注销</a></div>\n" +
+                        "</div></div></li> <li><a href=\"javaScript:void(0)\" onclick=\"jumpAbout()\">关于我们</a></li>" ;
+
+
+
+
+                }
+                else
+                {
+                    sessionStorage.setItem("userid","0");
+                    sessionStorage.setItem("ifLogin","0");
+                }
+
+            }
+
+        });
+        var session = sessionStorage.getItem("page");
+        console.log(session)
+        if (null === session) {
+            $("#main_content").load("../html/home.html");
+        }
+        else {
+            $("#main_content").load(session);
+        }
+
+        //Initialize tooltips
+        $('.nav-tabs > li a[title]').tooltip();
+
+        //Wizard
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+            var $target = $(e.target);
+
+            if ($target.parent().hasClass('disabled')) {
+                return false;
+            }
+        });
+
+        $(".next-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+
+        });
+        $(".prev-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+
+        });
+
+        var userid = parseInt(sessionStorage.getItem("userid"));
+        if(userid!==0)
+        {
+            getNewMessage(userid);
+            self.setInterval(function(){getNewMessage(userid)},1000*5);
+        }
+
+        function getNewMessage(userid) {
+            $.ajax({
+                type: "GET",
+                url: "../GetMessageCountServlet",
+                data: {"userid": userid},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var messageCount = data.messageCount;
+                    if (messageCount > 0)
+                    {
+                        document.getElementById("message-alert").style.display = "block";
+                        document.getElementById("user-menu").style.width = "80px";
+                        document.getElementById("user-menu").style.marginLeft = "-10px";
+                        document.getElementById("bell").style.color = "red";
+                        document.getElementById("messageCount").innerText ="("+ data.messageCount+")";
+                        document.getElementById("messageCount").style.display = "";
+                    }
+                    else
+                    {
+                        document.getElementById("message-alert").style.display = "none";
+                        document.getElementById("bell").style.color = "";
+                        document.getElementById("messageCount").style.display="none";
+                    }
+
+                }
+            });
+
+        }
+
+
+    });
+
+    function getHead(src) {
+
+        if (null === src||""===src)
+        {
+            return "../images/userHead.png"
+        }
+        else
+        {
+            return src;
+        }
+
+    }
+    
+    function getTitle(level) {
+        if(level===1)
+        {
+            return "小白";
+        }
+        if (level===2)
+        {
+            return "";
+        }
+        if (level===3)
+        {
+            return "";
+        }
+        if(level===4)
+        {
+            return "";
+        }
+        if(level===5)
+        {
+            return "";
+        }
+        
+    }
+    
+    function nextTab(elem) {
+        $(elem).next().find('a[data-toggle="tab"]').click();
+    }
+
+    function prevTab(elem) {
+        $(elem).prev().find('a[data-toggle="tab"]').click();
+    }
+
+    function scrollTo(elem, speed) {
+        if (!speed) speed = 300;
+        if (!elem) {
+            $("html,body").animate({scrollTop: 0}, speed);
+        } else {
+            if (elem.length > 0) $("html,body").animate({scrollTop: $(elem).offset().top}, speed);
+        }
+        return false;
+    }
+
+    function click_scroll(elem) {
+        var scroll_offset = $(elem).offset(); //得到pos这个div层的offset，包含两个值，top和left
+        $("body,html").animate({
+            scrollTop: scroll_offset.top //让body的scrollTop等于pos的top，就实现了滚动
+        }, 500);
+    }
+
+    function jumpNews() {
+
+        sessionStorage.setItem("jumpMessage","1");
+        setting();
+
+    }
+
+    function setting() {
+        var currentPage = sessionStorage.getItem("page");
+        sessionStorage.setItem("page","../html/settings.html");
+        window.open("../html/index.html");
+        if(null === currentPage)
+        {
+            sessionStorage.setItem("page","../html/home.html");
+        }
+        else
+        {
+            sessionStorage.setItem("page",currentPage);
+        }
+
+    }
+
+    function ajaxAll() {
+
+        $.ajax({
+            type: "GET",
+            url: "../LoginServlet?Login=1",
+            data: $('#loginForm').serialize(),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                if (data.checkName === "0") {
+                    document.getElementById("nameWrong").style.display = "";
+                    document.getElementById("nameCorrect").style.display = "none";
+                }
+                else if (data.checkName === "2") {
+                    document.getElementById("nameWrong").style.display = "none";
+                    document.getElementById("nameCorrect").style.display = "none";
+                    document.getElementById("passWrong").style.display = "none";
+                    document.getElementById("passCorrect").style.display = "none";
+                }
+                else {
+                    document.getElementById("nameWrong").style.display = "none";
+                    document.getElementById("nameCorrect").style.display = "";
+                    if (data.checkPass === "1") {
+                        console.log("我登录了");
+                        document.getElementById("passWrong").style.display = "none";
+                        document.getElementById("passCorrect").style.display = "";
+                        location.reload();
+                    }
+                    else {
+                        document.getElementById("passWrong").style.display = "";
+                        document.getElementById("passCorrect").style.display = "none";
+                    }
+                }
+
+            }
+        })
+    }
+
+    function ajaxName() {
+        $.ajax({
+            type: "GET",
+            url: "../LoginServlet?Login=0",
+            data: $('#loginForm').serialize(),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                if (data.checkName === "0") {
+                    document.getElementById("nameWrong").style.display = "";
+                    document.getElementById("nameCorrect").style.display = "none";
+                }
+                else if (data.checkName === "2") {
+                    document.getElementById("nameWrong").style.display = "none";
+                    document.getElementById("nameCorrect").style.display = "none";
+                    document.getElementById("passWrong").style.display = "none";
+                    document.getElementById("passCorrect").style.display = "none";
+                }
+                else {
+                    document.getElementById("nameWrong").style.display = "none";
+                    document.getElementById("nameCorrect").style.display = "";
+                }
+            }
+
+        })
+    }
+
+    function ajaxRegisterAll() {
+        $.ajax({
+            type: "GET",
+            url: "../RegisterServlet?Register=1",
+            data: $('#registerForm').serialize(),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                if (data.checkName === "0") {
+                    document.getElementById("name-duplicate").style.display = "";
+                    document.getElementById("name-Correct").style.display = "none";
+                }
+                else {
+                    if (data.checkName === "2") {
+                        document.getElementById("name-duplicate").style.display = "none";
+                        document.getElementById("name-Correct").style.display = "none";
+                    }
+                    else {
+                        document.getElementById("name-duplicate").style.display = "none";
+                        document.getElementById("name-Correct").style.display = "";
+                    }
+
+                    if (data.checkPass === "2") {
+                        document.getElementById("password-invalid").style.display = "none";
+                        document.getElementById("password").style.display = "none";
+                        if (data.checkConfirm === "2") {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "none";
+                        }
+                        else {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "";
+                        }
+                    }
+                    else if (data.checkPass === "0") {
+                        document.getElementById("password-invalid").style.display = "";
+                        document.getElementById("password").style.display = "none";
+
+                    }
+                    else {
+                        document.getElementById("password-invalid").style.display = "none";
+                        document.getElementById("password").style.display = "";
+                        if (data.checkConfirm === "0") {
+                            document.getElementById("password-different").style.display = "";
+                            document.getElementById("password-same").style.display = "none";
+
+                        }
+                        else if (data.checkConfirm === "2") {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "none";
+                        }
+                        else {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "";
+                        }
+
+                    }
+
+                }
+
+                if (data.jump === "1") {
+                    /*document.getElementById('register').innerHTML = "<input type= 'button' id='register' value= '注册成功，1.5秒后跳转登录'>";*/
+                    var registerName = document.getElementById("register_input").value;
+                    document.getElementById("login_input").setAttribute("value",registerName)
+                    setTimeout("document.getElementById('registerClose').click()", 1600);
+                    setTimeout("document.getElementById('loginBtn').click()", 2000);
+                }
+
+            }
+        })
+    }
+
+    function ajaxRegisterName() {
+        $.ajax({
+            type: "GET",
+            url: "../RegisterServlet?Register=0",
+            data: $('#registerForm').serialize(),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                if (data.checkName === "0") {
+                    document.getElementById("name-duplicate").style.display = "";
+                    document.getElementById("name-Correct").style.display = "none";
+                }
+                else {
+                    if (data.checkName === "2") {
+                        document.getElementById("name-duplicate").style.display = "none";
+                        document.getElementById("name-Correct").style.display = "none";
+                    }
+                    else {
+                        document.getElementById("name-duplicate").style.display = "none";
+                        document.getElementById("name-Correct").style.display = "";
+                    }
+
+                    if (data.checkPass === "2") {
+                        document.getElementById("password-invalid").style.display = "none";
+                        document.getElementById("password").style.display = "none";
+                        if (data.checkConfirm === "2") {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "none";
+                        }
+                        else {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "";
+                        }
+                    }
+                    else if (data.checkPass === "0") {
+                        document.getElementById("password-invalid").style.display = "";
+                        document.getElementById("password").style.display = "none";
+
+                    }
+                    else {
+                        document.getElementById("password-invalid").style.display = "none";
+                        document.getElementById("password").style.display = "";
+                        if (data.checkConfirm === "0") {
+                            document.getElementById("password-different").style.display = "";
+                            document.getElementById("password-same").style.display = "none";
+
+                        }
+                        else if (data.checkConfirm === "2") {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "none";
+                        }
+                        else {
+                            document.getElementById("password-different").style.display = "none";
+                            document.getElementById("password-same").style.display = "";
+                        }
+                    }
+                }
+            }
+        })
+    }
+
+    function logoutAjax() {
+
+        $.ajax({
+            type: "GET",
+            url: "../LogoutServlet",
+            async: false,
+            success: function (data) {
+                if(sessionStorage.getItem("page")==="../html/settings.html")
+                {
+                    jumpHome();
+                    location.reload();
+                }
+                else
+                {
+                    location.reload();
+                }
+
+            }
+        });
+    }
+
+    function jumpAbout() {
+        sessionStorage.setItem("page", "../html/about.html");
+        $("#main_content").load("../html/about.html");
+    }
+
+    function jumpCommunity() {
+
+        sessionStorage.setItem("page", "../html/community.html");
+        $("#main_content").load("../html/community.html");
+    }
+
+    function jumpHome() {
+        sessionStorage.setItem("page", "../html/home.html");
+        $("#main_content").load("../html/home.html");
+    }
+    function jumpSearch() {
+        if($("#keyword").val() !== "")
+        {
+            sessionStorage.setItem("page", "../html/search.html");
+            var keyword = $("#keyword").val();
+            sessionStorage.setItem("keyword", keyword);
+            $("#main_content").load("../html/search.html")
+        }
+
+    }
+
+    function getCookie(cookie_name) {
+
+        var allcookies = document.cookie;
+
+        var cookie_pos = allcookies.indexOf(cookie_name);
+
+        if (cookie_pos != -1) {
+
+            cookie_pos += cookie_name.length + 1;
+
+            var cookie_end = allcookies.indexOf(";", cookie_pos);
+
+            if (cookie_end == -1) {
+
+                cookie_end = allcookies.length;
+
+            }
+
+            var value = unescape(allcookies.substring(cookie_pos, cookie_end));
+
+        }
+
+        return value;
+
+    }
+
+    function clearAllCookie() {
+        var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+        if (keys) {
+            for (var i = keys.length; i--;)
+                document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+        }
+    }
+
+    $("span.menu").click(function () {
+
+
+        $("ul.nav1").slideToggle(300, function () {
+            if(document.getElementById("nav1").style.display === "none")
+            {
+                document.getElementById("nav1").style.display = "";
+            }
+            // Animation complete.
+        });
+    });
+
+    $(document).on("click", "a[name='a_user']",function () {
+        var ouserid = $(this).attr("uid");
+        var currentPage = sessionStorage.getItem("page");
+        if (ouserid===sessionStorage.getItem("userid"))
+        {
+            sessionStorage.setItem("ouserid",ouserid);
+            sessionStorage.setItem("page","../html/settings.html");
+            window.open("../html/index.html");
+        }
+        else
+        {
+            sessionStorage.setItem("ouserid",ouserid);
+            sessionStorage.setItem("page","../html/information.html");
+            window.open("../html/index.html");
+        }
+        sessionStorage.setItem("page",currentPage);
+    })
+    function transSolved(solved) {
+        return solved===0?"未解决":"已解决";
+
+    }
+    $(document).on('click', '.a_question', function () {
+        var qid = $(this).attr("qid");
+
+        sessionStorage.setItem("qid", qid);
+        sessionStorage.setItem("page", "../html/reply.html");
+        window.open("../html/index.html");
+        sessionStorage.setItem("page", "../html/community.html");
+
+        $.ajax({
+            type: "GET",
+            url: "../AddVisitServlet",
+            data:{"qid":qid}
+        });
+    });
+   $(document).on('click', "a[name = a_question]", function () {
+       var qid = $(this).attr("qid");
+
+       sessionStorage.setItem("qid", qid);
+       sessionStorage.setItem("page", "../html/reply.html");
+       window.open("../html/index.html");
+       sessionStorage.setItem("page", "../html/community.html");
+
+       $.ajax({
+           type: "GET",
+           url: "../AddVisitServlet",
+           data:{"qid":qid}
+       });
+   });
+   $(document).on('click', '.button-tiny', function () {
+
+       var qid = $(this).attr("qid");
+       sessionStorage.setItem("qid", qid);
+       sessionStorage.setItem("page", "../html/reply.html");
+       window.open("../html/index.html");
+       sessionStorage.setItem("page", "../html/community.html");
+       $.ajax({
+           type: "GET",
+           url: "../AddVisitServlet",
+           data:{"qid":qid}
+       });
+
+   });
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds()
+            //毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "")
+                .substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k])
+                    : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+
+
+
+</script>
+
+<script src="../js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>

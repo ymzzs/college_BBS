@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+
+    <link href="../css/buttons.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="../css/nprogress.css">
+    <link rel="stylesheet" href="../css/jquery.Jcrop.css" type="text/css"/>
+    <!-- for-mobile-apps -->
+
+    <!-- //for-mobile-apps -->
+    <!-- js -->
+    <!--animate-->
+    <link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/setting.css" rel="stylesheet" type="text/css">
+    <script src="../js/wow.min.js"></script>
+
+    <!-- js -->
+    <script>
+        function change() {
+            var y = document.getElementById("second");
+            var z = document.getElementById("third");
+            z.options.length = 0; // 清除下拉框的所有内容
+
+            if(y.selectedIndex == 0){
+                z.options.add(new Option("哲学 (本科)"));
+                z.options.add(new Option("逻辑学 (本科)"));
+                z.options.add(new Option("宗教学 (本科)"));
+                z.options.add(new Option("哲学 (考研)"));
+                z.options.add(new Option("逻辑学 (考研)"));
+                z.options.add(new Option("宗教学 (考研)"));
+            }
+            if(y.selectedIndex == 1){
+                z.options.add(new Option("经济学类 (本科)"));
+                z.options.add(new Option("财政学 (本科)"));
+                z.options.add(new Option("金融学类 (本科)"));
+                z.options.add(new Option("经济与贸易类 (本科)"));
+                z.options.add(new Option("经济学类 (考研)"));
+                z.options.add(new Option("财政学 (考研)"));
+                z.options.add(new Option("金融学类 (考研)"));
+                z.options.add(new Option("经济与贸易类 (考研)"));
+            }
+
+            if(y.selectedIndex == 2){
+                z.options.add(new Option("法学类 (本科)"));
+                z.options.add(new Option("政治学类 (本科)"));
+                z.options.add(new Option("社会学类 (本科)"));
+                z.options.add(new Option("名族学类 (本科)"));
+                z.options.add(new Option("马克思主义理论类 (本科)"));
+                z.options.add(new Option("公安学类 (本科)"));
+                z.options.add(new Option("法学类 (考研)"));
+                z.options.add(new Option("政治学类 (考研)"));
+                z.options.add(new Option("社会学类 (考研)"));
+                z.options.add(new Option("名族学类 (考研)"));
+                z.options.add(new Option("马克思主义理论类 (考研)"));
+                z.options.add(new Option("公安学类 (考研)"));
+            }
+            if(y.selectedIndex == 3){
+                z.options.add(new Option("教育学类 (本科)"));
+                z.options.add(new Option("体育学类 (本科)"));
+                z.options.add(new Option("教育学类 (考研)"));
+                z.options.add(new Option("体育学类 (考研)"));
+            }
+            if(y.selectedIndex == 4){
+                z.options.add(new Option("中国语言文学类 (本科)"));
+                z.options.add(new Option("外国语言文学类 (本科)"));
+                z.options.add(new Option("新闻传播学类 (本科)"));
+                z.options.add(new Option("中国语言文学类 (考研)"));
+                z.options.add(new Option("外国语言文学类 (考研)"));
+                z.options.add(new Option("新闻传播学类 (考研)"));
+            }
+            if(y.selectedIndex == 5){
+                z.options.add(new Option("历史学 (本科)"));
+                z.options.add(new Option("世界史 (本科)"));
+                z.options.add(new Option("考古学 (本科)"));
+                z.options.add(new Option("文物与博物馆学 (本科)"));
+                z.options.add(new Option("历史学 (考研)"));
+                z.options.add(new Option("世界史 (考研)"));
+                z.options.add(new Option("考古学 (考研)"));
+                z.options.add(new Option("文物与博物馆学 (考研)"));
+            }
+            if(y.selectedIndex == 6){
+                z.options.add(new Option("数学类 (本科)"));
+                z.options.add(new Option("物理学类 (本科)"));
+                z.options.add(new Option("化学类 (本科)"));
+                z.options.add(new Option("天文学类 (本科)"));
+                z.options.add(new Option("地理科学类 (本科)"));
+                z.options.add(new Option("大气科学类 (本科)"));
+                z.options.add(new Option("海洋科学类 (本科)"));
+                z.options.add(new Option("地球物理学类 (本科)"));
+                z.options.add(new Option("地质学类 (本科)"));
+                z.options.add(new Option("生物科学类 (本科)"));
+                z.options.add(new Option("心理学类 (本科)"));
+                z.options.add(new Option("统计学类 (本科)"));
+                z.options.add(new Option("数学类 (考研)"));
+                z.options.add(new Option("物理学类 (考研)"));
+                z.options.add(new Option("化学类 (考研)"));
+                z.options.add(new Option("天文学类 (考研)"));
+                z.options.add(new Option("地理科学类 (考研)"));
+                z.options.add(new Option("大气科学类 (考研)"));
+                z.options.add(new Option("海洋科学类 (考研)"));
+                z.options.add(new Option("地球物理学类 (考研)"));
+                z.options.add(new Option("地质学类 (考研)"));
+                z.options.add(new Option("生物科学类 (考研)"));
+                z.options.add(new Option("心理学类 (考研)"));
+                z.options.add(new Option("统计学类 (考研)"));
+            }
+            if(y.selectedIndex == 7){
+                z.options.add(new Option("力学类 (本科)"));
+                z.options.add(new Option("机械类 (本科)"));
+                z.options.add(new Option("仪器类 (本科)"));
+                z.options.add(new Option("材料类 (本科)"));
+                z.options.add(new Option("能源动力类 (本科)"));
+                z.options.add(new Option("电气类 (本科)"));
+                z.options.add(new Option("电子信息类 (本科)"));
+                z.options.add(new Option("自动化类 (本科)"));
+                z.options.add(new Option("计算机类 (本科)"));
+                z.options.add(new Option("土木类 (本科)"));
+                z.options.add(new Option("水利类 (本科)"));
+                z.options.add(new Option("测绘类 (本科)"));
+                z.options.add(new Option("化工与制药类 (本科)"));
+                z.options.add(new Option("地质类 (本科)"));
+                z.options.add(new Option("矿业类 (本科)"));
+                z.options.add(new Option("纺织类 (本科)"));
+                z.options.add(new Option("轻工类 (本科)"));
+                z.options.add(new Option("交通运输类 (本科)"));
+                z.options.add(new Option("海洋工程类 (本科)"));
+                z.options.add(new Option("航空航天类 (本科)"));
+                z.options.add(new Option("兵器类 (本科)"));
+                z.options.add(new Option("核工程类 (本科)"));
+                z.options.add(new Option("农业工程类 (本科)"));
+                z.options.add(new Option("环境科学与工程类 (本科)"));
+                z.options.add(new Option("生物医学工程类 (本科)"));
+                z.options.add(new Option("食品科学与工程类 (本科)"));
+                z.options.add(new Option("建筑类 (本科)"));
+                z.options.add(new Option("安全科学与工程类 (本科)"));
+                z.options.add(new Option("生物工程类 (本科)"));
+                z.options.add(new Option("公安技术类 (本科)"));
+                z.options.add(new Option("力学类 (考研)"));
+                z.options.add(new Option("机械类 (考研)"));
+                z.options.add(new Option("仪器类 (考研)"));
+                z.options.add(new Option("材料类 (考研)"));
+                z.options.add(new Option("能源动力类 (考研)"));
+                z.options.add(new Option("电气类 (考研)"));
+                z.options.add(new Option("电子信息类 (考研)"));
+                z.options.add(new Option("自动化类 (考研)"));
+                z.options.add(new Option("计算机类 (考研)"));
+                z.options.add(new Option("土木类 (考研)"));
+                z.options.add(new Option("水利类 (考研)"));
+                z.options.add(new Option("测绘类 (考研)"));
+                z.options.add(new Option("化工与制药类 (考研)"));
+                z.options.add(new Option("地质类 (考研)"));
+                z.options.add(new Option("矿业类 (考研)"));
+                z.options.add(new Option("纺织类 (考研)"));
+                z.options.add(new Option("轻工类 (考研)"));
+                z.options.add(new Option("交通运输类 (考研)"));
+                z.options.add(new Option("海洋工程类 (考研)"));
+                z.options.add(new Option("航空航天类 (考研)"));
+                z.options.add(new Option("兵器类 (考研)"));
+                z.options.add(new Option("核工程类 (考研)"));
+                z.options.add(new Option("农业工程类 (考研)"));
+                z.options.add(new Option("环境科学与工程类 (考研)"));
+                z.options.add(new Option("生物医学工程类 (考研)"));
+                z.options.add(new Option("食品科学与工程类 (考研)"));
+                z.options.add(new Option("建筑类 (考研)"));
+                z.options.add(new Option("安全科学与工程类 (考研)"));
+                z.options.add(new Option("生物工程类 (考研)"));
+                z.options.add(new Option("公安技术类 (考研)"));
+            }
+            if(y.selectedIndex == 8){
+                z.options.add(new Option("植物生产类 (本科)"));
+                z.options.add(new Option("自然保护与环境生态类 (本科)"));
+                z.options.add(new Option("动物生产类 (本科)"));
+                z.options.add(new Option("动物医学类 (本科)"));
+                z.options.add(new Option("林学类 (本科)"));
+                z.options.add(new Option("水产类 (本科)"));
+                z.options.add(new Option("草学类 (本科)"));
+                z.options.add(new Option("植物生产类 (考研)"));
+                z.options.add(new Option("自然保护与环境生态类 (考研)"));
+                z.options.add(new Option("动物生产类 (考研)"));
+                z.options.add(new Option("动物医学类 (考研)"));
+                z.options.add(new Option("林学类 (考研)"));
+                z.options.add(new Option("水产类 (考研)"));
+                z.options.add(new Option("草学类 (考研)"));
+            }
+            if(y.selectedIndex == 9){
+                z.options.add(new Option("基础医学类 (本科)"));
+                z.options.add(new Option("临床医学类 (本科)"));
+                z.options.add(new Option("口腔医学类 (本科)"));
+                z.options.add(new Option("公卫生与预防医学类 (本科)"));
+                z.options.add(new Option("中医学类 (本科)"));
+                z.options.add(new Option("中西医结合类 (本科)"));
+                z.options.add(new Option("药学类 (本科)"));
+                z.options.add(new Option("中药学类 (本科)"));
+                z.options.add(new Option("法医学类 (本科)"));
+                z.options.add(new Option("医学技术类 (本科)"));
+                z.options.add(new Option("护理类 (本科)"));
+                z.options.add(new Option("基础医学类 (考研)"));
+                z.options.add(new Option("临床医学类 (考研)"));
+                z.options.add(new Option("口腔医学类 (考研)"));
+                z.options.add(new Option("公卫生与预防医学类 (考研)"));
+                z.options.add(new Option("中医学类 (考研)"));
+                z.options.add(new Option("中西医结合类 (考研)"));
+                z.options.add(new Option("药学类 (考研)"));
+                z.options.add(new Option("中药学类 (考研)"));
+                z.options.add(new Option("法医学类 (考研)"));
+                z.options.add(new Option("医学技术类 (考研)"));
+                z.options.add(new Option("护理类 (考研)"));
+            }
+            if(y.selectedIndex == 10){
+                z.options.add(new Option("管理科学与工程类 (本科)"));
+                z.options.add(new Option("工商管理类 (本科)"));
+                z.options.add(new Option("农业经济管理类 (本科)"));
+                z.options.add(new Option("公共管理类 (本科)"));
+                z.options.add(new Option("图书情报与档案管理类 (本科)"));
+                z.options.add(new Option("物流管理与工程类 (本科)"));
+                z.options.add(new Option("工业工程类 (本科)"));
+                z.options.add(new Option("电子商务类 (本科)"));
+                z.options.add(new Option("旅游管理类 (本科)"));
+                z.options.add(new Option("管理科学与工程类 (考研)"));
+                z.options.add(new Option("工商管理类 (考研)"));
+                z.options.add(new Option("农业经济管理类 (考研)"));
+                z.options.add(new Option("公共管理类 (考研)"));
+                z.options.add(new Option("图书情报与档案管理类 (考研)"));
+                z.options.add(new Option("物流管理与工程类 (考研)"));
+                z.options.add(new Option("工业工程类 (考研)"));
+                z.options.add(new Option("电子商务类 (考研)"));
+                z.options.add(new Option("旅游管理类 (考研)"));
+
+            }
+            if(y.selectedIndex == 11){
+                z.options.add(new Option("艺术 (本科)"));
+                z.options.add(new Option("艺术学理论类 (本科)"));
+                z.options.add(new Option("音乐与舞蹈学类 (本科)"));
+                z.options.add(new Option("戏剧与影视学类 (本科)"));
+                z.options.add(new Option("美术学类 (本科)"));
+                z.options.add(new Option("设计学类 (本科)"));
+                z.options.add(new Option("艺术 (考研)"));
+                z.options.add(new Option("艺术学理论类 (考研)"));
+                z.options.add(new Option("音乐与舞蹈学类 (考研)"));
+                z.options.add(new Option("戏剧与影视学类 (考研)"));
+                z.options.add(new Option("美术学类 (考研)"));
+                z.options.add(new Option("设计学类 (考研)"));
+            }
+
+
+
+
+        }
+
+
+    </script>
+
+    <style>
+        img {
+            border: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .headinit {
+        / / overflow: hidden;
+            float: left;
+            width: 600px;
+            height: 400px;
+            background-color: gray;
+        }
+
+        .headinit2 {
+            float: right;
+            width: 200px;
+            height: 400px;
+
+        }
+
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=88);
+        }
+
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 15%;
+            width: 850px;
+            height: 420px;
+            padding: 0px;
+            border: 10px solid orange;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+
+        #imgtarget {
+            max-width: 600px;
+            max-height: 600px;
+        }
+
+        #preview-pane {
+            top: 0;
+            right: 0;
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        #preview-pane .preview-container {
+            width: 0px;
+            height: 0px;
+
+        }
+
+        canvas {
+
+            top: 0;
+            right: 0px;
+            border: 1px solid red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/nprogress.js" type="text/javascript">
+
+    $(function () {
+        NProgress.start();
+        $(window).load(function () {
+            NProgress.done();
+        })
+    })
+
+</script>
+
+<!-- //截图div块 -->
+<div id="screenshot" class="white_content">
+    <div class="headinit" id="change1">
+        <img src="../images/defaultHead.png" id="imgtarget"/>
+    </div>
+    <div id="change2">
+        <input type="file" id="fileinit" onchange="changeFile()" style="display: none;"/>
+    </div>
+    <div class="headinit2" align="center">
+        <canvas id="myCan" width="200" height="200"></canvas>
+        <p>200*200</p><br>
+        <b>我的头像</b>
+        <div id="preview-pane">
+            <div class="preview-container" id="change3">
+                <img src="" class="jcrop-preview" alt="Preview" id="Preview"/>
+            </div>
+        </div>
+        <a id="btn-change-head" class="choose button-raised" href="javascript:void(0)" onclick="openBrowse()">
+            选择上传的图片</a><br>
+        <a id="uploadHead" class="uploadHead button-raised" href="javascript:void(0)" onClick="uploadFile()">确认并上传图片</a><br>
+        <a class="closeDiv button-raised" href="javascript:void(0)" onclick="closeDialog()">点此关闭本窗口</a></div>
+</div>
+<!-- //截图div块结束 -->
+<!-- //截图div块外变黑 -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.Jcrop.js"></script>
+
+<div id="fade" class="black_overlay"></div>
+
+<div class="my-information" style="height: 320px;">
+    <div class="photo-and-other" style="width:40%;height: 100%;float:left;">
+        <div class="head">
+            <img id="head-pic" src="" style="max-width: 140px;margin-left: 5px">
+            <div class="change-head">
+                <input id='up-head-pic' type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"
+                       style="display:none;"/>
+                <a style="width: 95%" class="button button-raised" href="javascript:void(0)" onclick="openDialog()"><i
+                        class="fa fa-camera"></i> 更换头像</a>
+            </div>
+            <div class="change-password"><a style="width: 95%" class="button button-raised" data-toggle="modal"
+                                            data-target="#myModal"><i class="fa fa-key"></i> 修改密码</a></div>
+        </div>
+
+    </div>
+    <div class="details-and-other" style="width:60%;height: 100%;float:right;">
+        <ul class="information">
+            <li>ID:<b id="ID"></b></li>
+            <li>用户名:<b id="USERNAME"></b></li>
+            <li>积分：<b id="MONEY"></b></li>
+            <li>个签:<b id="SIGNATURE"></b></li>
+
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" style="width: 50%;min-width: 400px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">更改密码</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form name="forms" onsubmit="return false">
+                                <ul>
+                                    <li><b>原密码：</b>
+                                        <div class="box"><input id="old-password" type="password" name="password1"
+                                                                size="80" value=""><span id="if-correct"></span></div>
+                                        <a id="click1" onclick="javascript:showps(this)"><i class="fa fa-eye"
+                                                                                            style="font-size:24px;"></i></a>
+                                    </li>
+                                    <li><b>新密码：</b>
+                                        <div class="box"><input onblur="ifSamePass()" id="new-password" type="password"
+                                                                name="password2" size="80" value=""><span
+                                                id="if-Pass"></span></div>
+                                        <a id="click2" onclick="javascript:showps(this)"><i class="fa fa-eye"
+                                                                                            style="font-size:24px;"></i></a>
+                                    </li>
+                                    <li><b>确认密码：</b>
+                                        <div class="box"><input onblur="ifSamePass()" id="confirm-password"
+                                                                type="password" name="password3" size="80"
+                                                                value=""><span id="if-same"></span></div>
+                                        <a id="click3" onclick="javascript:showps(this)"><i class="fa fa-eye"
+                                                                                            style="font-size:24px;"></i></a>
+                                    </li>
+                                </ul>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="closeBtn" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <input type="submit" name="save" onclick="ifPassCorrect()" value="保存"
+                                   class="btn btn-primary"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </li>
+        </ul>
+        <div class="daily-mission">
+            <h4 style="height:15%;"><i class="fa fa-ellipsis-v" style="color:#fc9b2d"></i><b>每日任务</b></h4>
+            <div class="mission-details">
+                <div class="single-mission">
+                    <div class="attendace-pic"><i class="fa fa-calendar-check-o"
+                                                  style="margin-top:10px;font-size:30px;color:#FFFFFF;"></i></div>
+                    <div class="attendace-explain"><h4>签到<span class="mission-add-points"><em>积分+5</em></span></h4>
+                        <p id="if-complete-attendance" style="margin-top:3px;font-size:15px;color: #778899">完成 0/1</p>
+                    </div>
+                    <div class="attendace-assign"><a id="signin" onclick="attenanceAssign(this)"
+                                                     class="button button-border button-rounded">签到</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="set-content">
+    <div id="personal-information" class="container">
+        <div class="orders-tab" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#question-published" id="question-published-tab"
+                                                          role="tab" data-toggle="tab" aria-expanded="true">已发布的问题</a>
+                </li>
+                <li role="presentation"><a href="#myAnswer-question" onclick="myAnswerAjax()" role="tab"
+                                           id="question-accepted-tab"
+                                           data-toggle="tab">我的回答</a></li>
+                <li role="presentation"><a href="#question-collected" role="tab" id="question-collected-tab"
+                                           onclick="collectAjax()"
+                                           data-toggle="tab">收藏</a></li>
+                <li role="presentation"><a href="#personal-info" role="tab" id="personal-info-tab" data-toggle="tab">个人资料</a>
+                </li>
+                <li role="presentation"><a href="#message-content" role="tab" onclick="myMessageAjax()" id="interaction-tab"
+                                           data-toggle="tab">我的消息</a></li>
+                <li role="presentation"><a href="#more" role="tab" id="more-tab" data-toggle="tab">更多</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tabs-para tab-pane fade in active" id="question-published">
+                    <div class="tab-name">
+                        <div class="tab-name-que" style="width:70%;float:left;">问题描述</div>
+                        <div class="tab-name-offer" style="width:10%;float:left;">悬赏</div>
+                        <div class="tab-name-state" style="width:20%;float:left;">状态</div>
+                    </div>
+                    <div id="question-content-published" class="answer-content">
+
+                    </div>
+
+                </div>
+
+                <div role="tabpanel" class="tabs-para tab-pane fade" id="myAnswer-question">
+                    <div class="an-tab-name">
+                        <div class="gd-desc-gds">
+                            <div class="gd-desc sec-one">
+                                <h4>问题描述</h4>
+                            </div>
+                            <div class="gd-desc sec-two">
+                                <h4>发起者</h4>
+                            </div>
+                            <div class="gd-desc sec-three">
+                                <h4>悬赏</h4>
+                            </div>
+                            <div class="gd-desc sec-four">
+                                <h4>回答时间</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div id="myAnswer-question-content"></div>
+                </div>
+
+                <div role="tabpanel" class="tabs-para tab-pane fade" id="question-collected">
+                    <div role="tabpanel" class="tabs-para tab-pane fade in active"
+                         aria-labelledby="all-tab">
+                        <div class="profile-gd">
+                            <div class="gd-desc-gds">
+                                <div class="gd-desc sec-one">
+                                    <h4>问题描述</h4>
+                                </div>
+                                <div class="gd-desc sec-two">
+                                    <h4>来自</h4>
+                                </div>
+                                <div class="gd-desc sec-three">
+                                    <h4>悬赏</h4>
+                                </div>
+                                <div class="gd-desc sec-four">
+                                    <h4>操作</h4>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="answer-content" class="answer-content">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div role="tabpanel" class="tabs-para tab-pane fade" id="personal-info">
+                    <div class="update-information">
+
+                        <form id="changeUserInf" onsubmit="return false">
+                            <div class="ul1">
+                                <ul>
+                                    <li style="width: 85%">用户名：<span id="name_duplicate" title="用户名已存在"
+                                                                     aria-hidden="true"
+                                                                     class="fa fa-exclamation-triangle"
+                                                                     style="display:none;font-size:25px;width:5%;color:red;float: right;padding-top: 5px; margin-right: -6%;"></span><input
+                                            type="text" id="update-information-username" name="USERNAME"/>
+                                    </li>
+                                    <li>性别：<select id="update-information-sex" name="SEX">
+                                        <option>男</option>
+                                        <option>女</option>
+                                    </select>
+                                    </li>
+                                    <li>邮箱：<span id="type-error" title="邮箱格式错误，缺少@"
+                                                 aria-hidden="true"
+                                                 class="fa fa-exclamation-triangle"
+                                                 style="display:none;font-size:25px;width:5%;color:red;float: right;padding-top: 5px; margin-right: -6%;"></span><input
+                                            type="email" onblur="emailType(this)" id="update-information-email"
+                                            name="EMAIL"/>
+                                    </li>
+                                    <li>个性签名：<input type="text" id="update-information-motto" name="SIGNATURE"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ul2">
+                                <ul>
+                                    <li>学校：<input type="text" id="update-information-school"  name="SCHOOL"/>
+                                    </li>
+                                    <li><div class="question-label"><label
+                                            style="color:#48cfc1;font-weight:normal;margin-top: 2px;">专业:</label>
+                                    </div>
+                                        <div class="field-widget" style="padding-left:50px;">
+
+                                            <select id="second" name="questionCategory" class="validate-selection" style="width:100px; margin-left:40px;font-size:15px;" onChange="change()">
+                                                <option selected="selected">哲学</option>
+                                                <option>经济学</option>
+                                                <option>法学</option>
+                                                <option>教育学</option>
+                                                <option>文学</option>
+                                                <option>历史学</option>
+                                                <option>理学</option>
+                                                <option>工学</option>
+                                                <option>农学</option>
+                                                <option>医学</option>
+                                                <option>管理学</option>
+                                                <option>艺术学</option>
+                                            </select>
+                                            <select id="third" name="MAJOR" style="width:300px;font-size:15px;" class="validate-selection">
+                                                <option selected="selected">哲学(本科)</option>
+                                                <option>逻辑学 (本科)</option>
+                                                <option>宗教学 (本科)</option>
+                                                <option>哲学 (考研)</option>
+                                                <option>逻辑学 (考研)</option>
+                                                <option>宗教学 (考研)</option>
+                                            </select>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li>电话：<input type="text" id="update-information-telephone" name="TELEPHONE"/>
+                                    </li>
+                                    <li>生日：<input type="date" class="form-control" placeholder="输入生日"
+                                                  name="UserInfoFormMap.birthday" id="update-information-birthday" value
+                                                  max="date" name="UserInfoFormMap.birthday"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="alter">
+                                <input type="submit" value="保存" onclick="toSaveInfo()"/>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="my-information-details">
+                        <div class="ul1">
+                            <ul>
+                                <li>用户名：<i id="information-user-name"></i></li>
+                                <li>性别：<i id="information-user-sex"></i></li>
+                                <li>邮箱：<i id="information-user-email"></i></li>
+                                <li>个性签名：<i id="information-user-motto"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ul2">
+                            <ul>
+                                <li>学校：<i id="information-user-school"></i></li>
+                                <li>专业：<i id="information-user-profession"></i></li>
+                                <li>电话：<i id="information-user-telephone"></i></li>
+                                <li>生日：<i id="information-user-birthday"></i></li>
+                            </ul>
+                        </div>
+                        <div class="alter">
+                            <input type="button" value="修改个人信息" onclick="toUpdateInfo()"/>
+                        </div>
+
+                    </div>
+                </div>
+                <!--消息列表-->
+                <div role="tabpanel" id="message-content" class="tabs-para tab-pane fade">
+
+                </div>
+                <div role="tabpanel" class="fans-and-follows-tabs tab-pane fade" id="more">
+                    <ul class="nav nav-tabs my-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#fans" id="fans-tab" role="tab"
+                                                                  data-toggle="tab" aria-expanded="true">我的粉丝</a></li>
+                        <li role="presentation"><a href="#follow" role="tab" id="follow-tab" data-toggle="tab">我的关注</a>
+                        </li>
+                    </ul>
+                    <div id="more-TabContent" class="tab-content my-fans-follows">
+                        <div role="tabpanel" class="tabs-para tab-pane fade in active" id="fans">
+
+                        </div>
+                        <div role="tabpanel" class="tabs-para tab-pane fade" id="follow">
+
+                        </div>
+
+                    </div>
+                    <div class="summary-fans-follows">
+                        <div>粉丝数：<b id="fans_count" style="color: red;"></b></div>
+                        <div>关注数：<b id="follow_count" style="color: red;"></b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var fList;
+    var userid = parseInt(sessionStorage.getItem("userid"));
+    $(document).ready(function () {
+        $.ajax({
+            type: "POST",
+            url: "../UserServlet",
+            data: {"userid": userid},
+            dataType: "json",
+            async: false,
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                console.log("setting成功了");
+                var user = data.user;
+                console.log(user);
+
+                document.getElementById("ID").innerText = userid;
+                document.getElementById("USERNAME").innerText = user.userName;
+                document.getElementById("MONEY").innerText = user.integral;
+                document.getElementById("SIGNATURE").innerText = user.signature;
+                document.getElementById("information-user-name").innerText = user.userName;
+                document.getElementById("information-user-sex").innerText = user.sex;
+                document.getElementById("information-user-email").innerText = user.email;
+                document.getElementById("information-user-motto").innerText = user.signature;
+                document.getElementById("information-user-school").innerText = user.school;
+                document.getElementById("information-user-profession").innerText = user.major;
+                document.getElementById("information-user-telephone").innerText = user.telephone;
+                if (null !== user.birthday)
+                {  document.getElementById("information-user-birthday").innerText = new Date(user.birthday.time).format("yyyy-MM-dd");
+                }
+                document.getElementById("head-pic").setAttribute("src",getHead(user.head) )
+
+
+                if (user.signin === 1) {
+                    var obj = document.getElementById("signin");
+                    obj.parentNode.innerHTML = "<i class=\"attendance-done\"></i>";
+                    document.getElementById("if-complete-attendance").innerHTML = "完成 1/1";
+                }
+
+
+                console.log(sessionStorage.getItem("jumpMessage"))
+                if (null!==sessionStorage.getItem("jumpMessage"))
+                {
+                    document.getElementById("interaction-tab").click();
+                    sessionStorage.removeItem("jumpMessage");
+                }
+                else
+                {
+                    document.getElementById("question-published-tab").click();
+                }
+
+            }
+        });
+
+
+
+
+
+    });
+
+
+    function toFollow(e) {
+        var followed_userid = e.getAttribute("fid");
+
+        if (e.innerHTML === '关注') {
+            $.ajax({
+                type: "POST",
+                url: "../AddFollowServlet",
+                data: {"userid": userid, "followed_userid": followed_userid},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    e.innerHTML = '⇋取消关注';
+
+                    document.getElementById("more-tab").click();
+                }
+            });
+
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "../DelFollowServlet",
+                data: {"userid": userid, "followed_userid": followed_userid},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    e.innerHTML = '关注';
+                    document.getElementById("more-tab").click();
+                }
+            });
+
+        }
+
+    }
+
+    function notToFollow(e) {
+
+        var followed_userid = e.getAttribute("fid");
+        console.log(followed_userid)
+        $.ajax({
+            type: "POST",
+            url: "../DelFollowServlet",
+            data: {"userid": userid, "followed_userid": followed_userid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                document.getElementById("follow-tab").click();
+                document.getElementById("more-tab").click();
+            }
+        });
+    }
+    var a=new Array();
+
+    function toUpdateInfo() {
+        if(c!=null){
+            a=c.split(" ");
+            document.getElementById("second").value=a[0];
+            document.getElementById("third").value=a[1]+" "+a[2];
+        }
+        document.getElementsByClassName("my-information-details")[0].style.display = "none";
+        document.getElementsByClassName("update-information")[0].style.display = "inline";
+        document.getElementById("update-information-username").value = document.getElementById("information-user-name").innerHTML;
+        document.getElementById("update-information-sex").value = document.getElementById("information-user-sex").innerHTML;
+        document.getElementById("update-information-email").value = document.getElementById("information-user-email").innerHTML;
+        document.getElementById("update-information-motto").value = document.getElementById("information-user-motto").innerHTML;
+        document.getElementById("update-information-school").value = document.getElementById("information-user-school").innerHTML;
+        document.getElementById("update-information-telephone").value = document.getElementById("information-user-telephone").innerHTML;
+        document.getElementById("update-information-birthday").value = document.getElementById("information-user-birthday").innerHTML;
+    }
+    var c=null;
+    function toSaveInfo() {
+        var date = document.getElementById("update-information-birthday");
+        console.log(date.value);
+        if(date.value !== ""){
+
+            var value = document.getElementById("update-information-email").value;
+            if (value.indexOf("@") === -1) { //等于-1表示这个字符串中没有@这个字符
+                document.getElementById("type-error").style.display = "block";
+
+            } else {
+                document.getElementById("type-error").style.display = "none";
+                $.ajax({
+                    type: "POST",
+                    url: "../UpdateServlet",
+                    data: $('#changeUserInf').serialize(),
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        if (data.ifSuccess === "1") {
+                            document.getElementsByClassName("my-information-details")[0].style.display = "inline";
+                            document.getElementsByClassName("update-information")[0].style.display = "none";
+                            document.getElementById("information-user-name").innerHTML = document.getElementById("update-information-username").value;
+                            document.getElementById("information-user-sex").innerHTML = document.getElementById("update-information-sex").value;
+                            document.getElementById("information-user-email").innerHTML = document.getElementById("update-information-email").value;
+                            document.getElementById("information-user-motto").innerHTML = document.getElementById("update-information-motto").value;
+                            document.getElementById("information-user-school").innerHTML = document.getElementById("update-information-school").value;
+                            c=document.getElementById("second").value+" "+document.getElementById("third").value;
+                            document.getElementById("information-user-telephone").innerHTML = document.getElementById("update-information-telephone").value;
+                            document.getElementById("information-user-birthday").innerHTML = document.getElementById("update-information-birthday").value;
+                            document.getElementById("information-user-profession").innerHTML=document.getElementById("third").value;
+                        }
+                        else {
+
+                            document.getElementById("name_duplicate").style.display = "block";
+                            //alert("用户名已存在,请重新设置")
+                        }
+                    }
+                })
+            }
+        }else{
+
+            alert("日期格式不正确！");
+        }
+
+
+
+    }
+
+
+    function myAnswerAjax() {
+
+        /* var obj = document.elementFromPoint(event.clientX, event.clientY);
+     var qid = obj.getAttribute("qid");*/
+        $.ajax({
+            type: "GET",
+            url: "../GetMyAnswerServlet",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm">' +
+                        '<div class="gd-desc sec-one">' +
+                        '<a class="a_question" qid="' + list[i].qid + '">' + list[i].title + '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-two">' +
+                        '<a name="a_user" uid="' + list[i].userid + '">'
+                        + list[i].username +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-three">' +
+                        '<b>'
+                        + list[i].integral +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-four">' +
+                        '<b>'
+                        + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss") +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="clearfix">' +
+                        '</div>' +
+                        '</div>')
+
+                }
+
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="answer_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="answer_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="answer_page" page="'+next_page+'">>>/a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('myAnswer-question-content').innerHTML = collection.join('');
+            }
+        });
+    }
+
+    function collectAjax() {
+
+        /* var obj = document.elementFromPoint(event.clientX, event.clientY);
+     var qid = obj.getAttribute("qid");*/
+        $.ajax({
+            type: "POST",
+            url: "../CollectionServlet",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                console.log("data.totalPage")
+                console.log(data.totalPage)
+
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm">' +
+                        '<div class="gd-desc sec-one">' +
+                        '<a href="#" class="a_see" qid=' + list[i].qid + ' >'
+                        + list[i].title +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-two">' +
+                        '<a name="a_user" uid="' + list[i].userid + '">'
+                        + list[i].username +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-three">' +
+                        '<b>'
+                        + list[i].integral +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-four">' +
+                        ' <span></span>' +
+                        '<div class="an-con-offer" style="width:40%;">' +
+                        ' <div class="an-con-offer" style="width:10%;float:left;"> <a class="col_delete" qid=' + list[i].qid + '><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>'
+                        +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="clearfix">' +
+                        '</div>' +
+                        '</div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="collection_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="collection_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="collection_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+
+                document.getElementById('answer-content').innerHTML = collection.join('');
+            }
+        });
+    }
+
+    $(document).on('click', "a[name='collection_page']", function () {
+
+        var page = $(this).attr("page");
+        $.ajax({
+            type: "POST",
+            url: "../CollectionServlet",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                console.log("data.totalPage")
+                console.log(data.totalPage)
+
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm">' +
+                        '<div class="gd-desc sec-one">' +
+                        '<a href="#" class="a_see" qid=' + list[i].qid + ' >'
+                        + list[i].title +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-two">' +
+                        '<a name="a_user" uid="' + list[i].userid + '">'
+                        + list[i].username +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-three">' +
+                        '<b>'
+                        + list[i].integral +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-four">' +
+                        ' <span></span>' +
+                        '<div class="an-con-offer" style="width:40%;">' +
+                        ' <div class="an-con-offer" style="width:10%;float:left;"> <a class="col_delete" qid=' + list[i].qid + '><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>'
+                        +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="clearfix">' +
+                        '</div>' +
+                        '</div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="collection_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="collection_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="collection_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+
+                document.getElementById('answer-content').innerHTML = collection.join('');
+            }
+        });
+
+    });
+
+
+    $(document).on("click", "#more-tab", function () {
+
+        $.ajax({
+            type: "POST",
+            url: "../FollowServlet?type=fans",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var fList = data.fList;
+                var list = data.list;
+                document.getElementById("fans_count").innerText = list.length;
+                document.getElementById("follow_count").innerText = fList.length;
+
+
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('    <div class="single-fan">\n' +
+                        '                                <img class="more-pic" src="' + getHead(list[i].head)  + '"></img>\n' +
+                        '                                <div class="name-and-motto">\n' +
+                        '                                    <div class="more-name"><a name="a_user" uid="' + list[i].userid + '">' + list[i].username + '</a></div>\n' +
+                        '                                    <div class="more-motto">' + list[i].signature + '</div>\n' +
+                        '</div>\n' +
+                        '<div class="more-to-follow"><a id="fans' + list[i].userid + '" fid="' + list[i].userid + '"' +
+                        'class="button button-border button-rounded button-primary"' + 'style="margin-top: 15px;" onClick="toFollow(this)">关注</a></div>\n' +
+                        '                            </div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="fans_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="fans_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="fans_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('fans').innerHTML = collection.join('');
+                if (fList.length === 0) {
+                    document.getElementById("fans" + list[i].userid).innerHTML = "关注";
+                }
+                else {
+                    for (var i = 0; i < list.length; i++) {
+
+                        for (var j = 0; j < fList.length; j++) {
+                            if (list[i].userid === fList[j].followed_userid) {
+                                document.getElementById("fans" + list[i].userid).innerHTML = "⇋取消关注";
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        });
+    });
+
+    $(document).on("click", "#follow-tab", function () {
+
+        $.ajax({
+            type: "POST",
+            url: "../FollowServlet?type=follow",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                var list = data.list;
+                console.log(list)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('  <div class="single-follow">\n' +
+                        '                <img class="more-pic" src="' +getHead( list[i].head) + '"/>\n' +
+                        '                <div class="name-and-motto">\n' +
+                        '                <div class="more-name"><a name="a_user" class="a_follow" uid="' + list[i].followed_userid + '">' + list[i].username + '</a></div>\n' +
+                        '            <div class="more-motto">' + list[i].signature + '</div>\n' +
+                        '            </div>\n' +
+                        '            <div class="more-not-follow"><a\n' +
+                        '        class="button button-border button-rounded button-primary"\n' +
+                        '            style="margin-top: 15px;" fid="' + list[i].followed_userid + '" onClick="notToFollow(this)">取消关注</a></div>\n' +
+                        '            </div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="follow_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="follow_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="follow_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('follow').innerHTML = collection.join('');
+            }
+        });
+
+    });
+
+
+    $(document).on("click", "#fans-tab", function () {
+
+        $.ajax({
+            type: "POST",
+            url: "../FollowServlet?type=fans",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var fList = data.fList;
+                var list = data.list;
+                console.log(list);
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('    <div class="single-fan">\n' +
+                        '<img class="more-pic" src="' + getHead( list[i].head)+ '"/>\n' +
+                        '<div class="name-and-motto">\n' +
+                        '<div class="more-name"><a name="a_user" uid="' + list[i].userid + '">' + list[i].username + '</a></div>\n' +
+                        '<div class="more-motto">' + list[i].signature + '</div>\n' +
+                        '</div>\n' +
+                        '<div class="more-to-follow"><a id="fans' + list[i].userid + '" fid="' + list[i].userid + '" class="button button-border button-rounded button-primary"' + 'style="margin-top: 15px;" onClick="toFollow(this)">关注</a></div>\n' +
+                        '</div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="fans_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="fans_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="fans_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('fans').innerHTML = collection.join('');
+                if (fList.length === 0) {
+                    document.getElementById("fans" + list[i].userid).innerHTML = "关注";
+                }
+                else {
+
+                    console.log("list");
+                    console.log(list);
+                    console.log("fList");
+                    console.log(fList)
+                    for (var i = 0; i < list.length; i++) {
+                        for (var j = 0; j < fList.length; j++) {
+                            if (list[i].userid === fList[j].followed_userid) {
+                                document.getElementById("fans" + list[i].userid).innerHTML = "⇋取消关注";
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        });
+
+    });
+
+    $(document).on('click', "a[name='fans_page']", function () {
+
+        var page = $(this).attr("page");
+        $.ajax({
+            type: "POST",
+            url: "../FollowServlet?type=fans",
+            data: {"userid": userid, "page": page},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var fList = data.fList;
+                var list = data.list;
+                console.log(list);
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('    <div class="single-fan">\n' +
+                        '<img class="more-pic" src="' + getHead( list[i].head)+ '"/>\n' +
+                        '<div class="name-and-motto">\n' +
+                        '<div class="more-name"><a name="a_user" uid="' + list[i].userid + '">' + list[i].username + '</a></div>\n' +
+                        '<div class="more-motto">' + list[i].signature + '</div>\n' +
+                        '</div>\n' +
+                        '<div class="more-to-follow"><a id="fans' + list[i].userid + '" fid="' + list[i].userid + '" class="button button-border button-rounded button-primary"' + 'style="margin-top: 15px;" onClick="toFollow(this)">关注</a></div>\n' +
+                        '</div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="fans_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="fans_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="fans_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('fans').innerHTML = collection.join('');
+                if (fList.length === 0) {
+                    document.getElementById("fans" + list[i].userid).innerHTML = "关注";
+                }
+                else {
+
+                    console.log("list");
+                    console.log(list);
+                    console.log("fList");
+                    console.log(fList)
+                    for (var i = 0; i < list.length; i++) {
+                        for (var j = 0; j < fList.length; j++) {
+                            if (list[i].userid === fList[j].followed_userid) {
+                                document.getElementById("fans" + list[i].userid).innerHTML = "⇋取消关注";
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        });
+
+    });
+
+    $(document).on('click', "a[name='follow_page']", function () {
+
+        var page = $(this).attr("page");
+        $.ajax({
+            type: "POST",
+            url: "../FollowServlet?type=follow",
+            data: {"userid": userid, "page": page},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                var list = data.list;
+                console.log(list)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('  <div class="single-follow">\n' +
+                        '                <img class="more-pic" src="' +getHead( list[i].head) + '"/>\n' +
+                        '                <div class="name-and-motto">\n' +
+                        '                <div class="more-name"><a name="a_user" class="a_follow" uid="' + list[i].followed_userid + '">' + list[i].username + '</a></div>\n' +
+                        '            <div class="more-motto">' + list[i].signature + '</div>\n' +
+                        '            </div>\n' +
+                        '            <div class="more-not-follow"><a\n' +
+                        '        class="button button-border button-rounded button-primary"\n' +
+                        '            style="margin-top: 15px;" fid="' + list[i].followed_userid + '" onClick="notToFollow(this)">取消关注</a></div>\n' +
+                        '            </div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="follow_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="follow_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="follow_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('follow').innerHTML = collection.join('');
+            }
+        });
+
+
+    });
+
+
+    $(document).on('click', '.a_see', function () {
+
+        var qid = $(this).attr("qid");
+        sessionStorage.setItem("qid", qid);
+        sessionStorage.setItem("page", "../html/reply.html");
+        window.open("../html/index.html");
+        sessionStorage.setItem("page", "../html/settings.html");
+
+    });
+    $(document).on('click', '.col_delete', function () {
+        console.log("我被执行了")
+        var qid = $(this).attr("qid");
+        $.ajax({
+            type: "POST",
+            url: "../DelCollectionServlet",
+            data: {"userid": userid, "qid": qid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                console.log("成功删除收藏");
+                collectAjax();
+
+            }
+        });
+    });
+
+    $(document).on('click', '.a_follow', function () {
+
+        var userid = $(this).attr("uid");
+        sessionStorage.setItem("userid", userid);
+        sessionStorage.setItem("page", "../html/information.html");
+        window.open("../html/index.html");
+        sessionStorage.setItem("page", "../html/setting.html");
+
+    });
+
+    function ifPassCorrect() {
+
+        var password = $("#old-password").val();
+        var password2 = $("#new-password").val();
+        var password3 = $("#confirm-password").val();
+
+        $.ajax({
+            type: "POST",
+            url: "../ChangePassServlet",
+            data: {"userid": userid, "password": password, "password2": password2, "password3": password3},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                if (data.ifUpdateCorrect === 1) {
+                    document.getElementById("closeBtn").click();
+                }
+                else {
+                    if (data.ifOldCorrect === 1) {
+                        document.getElementById("if-correct").setAttribute("class", "fa fa-check");
+                        document.getElementById("if-correct").style.color = "green";
+                        ifSamePass();
+                    }
+                    else {
+                        document.getElementById("if-correct").setAttribute("title", "密码错误");
+                        document.getElementById("if-correct").setAttribute("class", "fa fa-times");
+                        document.getElementById("if-correct").style.color = "red";
+                    }
+                }
+
+            }
+        });
+    }
+
+    function ifSamePass() {
+
+        if (document.getElementById("new-password").value.length >= 6 && document.getElementById("new-password").value.length <= 16) {
+            document.getElementById("if-Pass").setAttribute("class", "fa fa-check");
+            document.getElementById("if-Pass").style.color = "green";
+
+            if (document.getElementById("new-password").value === document.getElementById("confirm-password").value && document.getElementById("new-password").value !== "") {
+                document.getElementById("if-same").setAttribute("class", "fa fa-check");
+                document.getElementById("if-same").style.color = "green";
+            } else if (document.getElementById("new-password").value !== document.getElementById("confirm-password").value && document.getElementById("new-password").value !== "" && document.getElementById("confirm-password").value !== "") {
+                document.getElementById("if-same").setAttribute("title", "两次密码不一致");
+                document.getElementById("if-same").setAttribute("class", "fa fa-times");
+                document.getElementById("if-same").style.color = "red";
+            } else {
+                document.getElementById("if-same").setAttribute("class", "none");
+            }
+        }
+        else {
+            document.getElementById("if-Pass").setAttribute("title", "密码长度应在6~16位");
+            document.getElementById("if-Pass").setAttribute("class", "fa fa-times");
+            document.getElementById("if-Pass").style.color = "red";
+        }
+
+    }
+
+    function showps(obj) {
+        var pass;
+        if (obj.id === "click1") {
+            pass = document.getElementById("old-password");
+        } else if (obj.id === "click2") {
+            pass = document.getElementById("new-password");
+        } else {
+            pass = document.getElementById("confirm-password");
+        }
+        if (pass.type = "password") {
+            pass.type = "text";
+            console.log(obj.onclick);
+            obj.onclick = function () {
+                hideps(this);
+            };
+            obj.innerHTML = "<i class=\"fa fa-eye-slash\" style=\"font-size:24px\"></i>";
+        }
+    }
+
+    function hideps(obj) {
+        var pass;
+        if (obj.id === "click1") {
+            pass = document.getElementById("old-password");
+        } else if (obj.id === "click2") {
+            pass = document.getElementById("new-password");
+        } else {
+            pass = document.getElementById("confirm-password");
+        }
+        if (pass.type = "text") {
+            pass.type = "password";
+            obj.onclick = function () {
+                showps(this);
+            };
+            obj.innerHTML = "<i class=\"fa fa-eye\" style=\"font-size:24px\"></i>";
+        }
+    }
+
+    $(document).on('click', '#question-published-tab', function () {
+
+        $.ajax({
+            type: "POST",
+            url: "../GetPublishedServlet",
+            data: {"userid": userid, "page": 1},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                console.log(data.totalPage)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm"><div class="an-con-que" style="width:70%;float:left;"><a class="a_question" href="javaScript:void(0)" qid = "' + list[i].qid + '">                                 ' + list[i].title + '</a></div>' +
+                        '<div class="an-con-offer" style="width:10%;float:left;">' + list[i].integral + '</div>\n' +
+                        '<div class="an-con-state" style="width:20%;float:left;">' + transSolved(list[i].solved) + '</div></div>')
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="published_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="published_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="published_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+                document.getElementById('question-content-published').innerHTML = collection.join('');
+
+            }
+        });
+    });
+
+    $(document).on('click', "a[name='published_page']", function () {
+
+        var page = $(this).attr(    "page");
+
+        $.ajax({
+            type: "POST",
+            url: "../GetPublishedServlet",
+            data: {"page": page, "userid": userid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                console.log(data.totalPage)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm"><div class="an-con-que" style="width:70%;float:left;"><a class="a_question" href="javaScript:void(0)" qid = "' + list[i].qid + '">                                 ' + list[i].title + '</a></div>' +
+                        '<div class="an-con-offer" style="width:10%;float:left;">' + list[i].integral + '</div>\n' +
+                        '<div class="an-con-state" style="width:20%;float:left;">' + transSolved(list[i].solved) + '</div></div>')
+
+                }
+
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="published_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="published_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="published_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('question-content-published').innerHTML = collection.join('');
+            }
+        });
+
+    });
+
+    //点击分页
+    $(document).on('click', "a[name = 'answer_page']", function () {
+
+        var page = $(this).attr("page");
+
+        $.ajax({
+            type: "POST",
+            url: "../GetMyAnswerServlet",
+            data: {"page": page, "userid": userid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var list = data.list;
+                console.log(list)
+                console.log(data.totalPage)
+                var collection = [];
+                for (var i = 0; i < list.length; i++) {
+                    collection.push('<div class="gd-desc-btm">' +
+                        '<div class="gd-desc sec-one">' +
+                        '<a class="a_question" qid="' + list[i].qid + '">' + list[i].title + '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-two">' +
+                        '<a name="a_user" uid="' + list[i].userid + '">'
+                        + list[i].username +
+                        '</a>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-three">' +
+                        '<b>'
+                        + list[i].integral +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="gd-desc sec-four">' +
+                        '<b>'
+                        + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss") +
+                        '</b>' +
+                        '</div>' +
+                        '<div class="clearfix">' +
+                        '</div>' +
+                        '</div>');
+
+                }
+                var currentPage = data.currentPage;
+                var previous_page = currentPage -1;
+                var next_page = currentPage +1;
+                var totalPage = data.totalPage;
+                console.log(currentPage);
+                collection.push('<ul class="pagination">');
+                if (currentPage>1)
+                {
+                    collection.push('<li><a name="answer_page" page="'+previous_page+'"><<</a></li>');
+                }
+
+                for (var j = 0; j < totalPage; j++) {
+                    var k = j + 1;
+                    collection.push('<li><a  name="answer_page" page = ' + k + '>' + k + '</a></li>');
+                }
+                if(currentPage<totalPage)
+                {
+                    collection.push('<li><a name="answer_page" page="'+next_page+'">>></a></li>');
+                }
+                collection.push('</ul>')
+
+                document.getElementById('myAnswer-question-content').innerHTML = collection.join('');
+            }
+        });
+
+    });
+
+
+    function attenanceAssign(obj) {
+
+        $.ajax({
+            type: "POST",
+            url: "../SigninServlet",
+            data: {"userid": userid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+
+                obj.parentNode.innerHTML = "<i class=\"attendance-done\"></i>";
+                document.getElementById("if-complete-attendance").innerHTML = "完成 1/1";
+                document.getElementById("MONEY").innerText = 5 + parseInt(document.getElementById("MONEY").innerText);
+
+            }
+        })
+    }
+
+    function emailType(e) {
+        var value = e.value;
+        if (value.indexOf("@") === -1) { //等于-1表示这个字符串中没有o这个字符
+
+            document.getElementById("type-error").style.display = "block";
+        } else {
+            document.getElementById("type-error").style.display = "none";
+        }
+    }
+
+
+    $(document).on("click", "a[name='a_user_message']",function () {
+        var ouserid = $(this).attr("uid");
+        var mid = $(this).attr("mid");
+        var currentPage = sessionStorage.getItem("page");
+        console.log("1DelMessageServlet")
+        if (ouserid===sessionStorage.getItem("userid"))
+        {
+            sessionStorage.setItem("ouserid",ouserid);
+            sessionStorage.setItem("page","../html/settings.html");
+            window.open("../html/index.html");
+        }
+        else
+        {
+            sessionStorage.setItem("ouserid",ouserid);
+            sessionStorage.setItem("page","../html/information.html");
+            window.open("../html/index.html");
+        }
+        sessionStorage.setItem("page",currentPage);
+
+        console.log("DelMessageServlet")
+        $.ajax({
+            type: "POST",
+            url: "../DelMessageServlet",
+            data:{"mid":mid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                myMessageAjax();
+            }
+        });
+
+    });
+
+    $(document).on('click', "a[name='a_question_message']", function () {
+        var qid = $(this).attr("qid");
+        var mid = $(this).attr("mid");
+        sessionStorage.setItem("qid", qid);
+        sessionStorage.setItem("page", "../html/reply.html");
+        window.open("../html/index.html");
+        sessionStorage.setItem("page", "../html/community.html");
+
+        $.ajax({
+            type: "POST",
+            url: "../DelMessageServlet",
+            data:{"mid":mid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                myMessageAjax();
+            }
+        });
+    });
+
+    function myMessageAjax() {
+
+        $.ajax({
+            type: "GET",
+            url: "../ReceMessageServlet",
+            data: {"userid": userid},
+            dataType: "json",
+            async: false,
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                var mList = data.mList;
+
+                console.log(mList);
+
+                var array = [];
+                for (var i = 0; i <mList.length; i++) {
+                    if (mList[i].type === "follow") {
+                        array.push('<div class="an-answer-content">\n' +
+                            '                <div class="an-con-que" style="width:55%;float:left;"><a name="a_user_message" uid="'+mList[i].send_userid+'" mid="'+mList[i].mid+'" class="praise-person">'+mList[i].username+'</a>关注了你</div>\n' +
+                            '            <div class="an-con-date2" style="width:20%;float:left;">'+new Date(mList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '            <div class="clear-one" style="width:25%;float:left;"> <a mid="'+mList[i].mid+'" onclick="clearOne(this)"><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>\n' +
+                            '            </div>')
+                    }
+                    if (mList[i].type === "collection") {
+                        array.push('<div class="an-answer-content">\n' +
+                            '                <div class="an-con-que" style="width:55%;float:left;"><a name="a_user" uid="'+mList[i].send_userid+'" mid="'+mList[i].mid+'" class="praise-person">'+mList[i].username+'</a>收藏了你的问题:<a name="a_question_message" mid="'+mList[i].mid+'" qid="'+mList[i].qid+'">'+mList[i].title+'</a></div>' +
+                            '            <div class="an-con-date2" style="width:20%;float:left;">'+new Date(mList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '            <div class="clear-one" style="width:25%;float:left;"> <a mid="'+mList[i].mid+'" onclick="clearOne(this)"><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>\n' +
+                            '            </div>')
+                    }
+
+                    if (mList[i].type === "answer") {
+                        array.push('<div class="an-answer-content">\n' +
+                            '                <div class="an-con-que" style="width:55%;float:left;"><a name="a_user" uid="'+mList[i].send_userid+'" mid="'+mList[i].mid+'" class="praise-person">'+mList[i].username+'</a>回答了你的问题:<a name="a_question_message" mid="'+mList[i].mid+'" qid="'+mList[i].qid+'">'+mList[i].title+'</a></div>' +
+                            '            <div class="an-con-date2" style="width:20%;float:left;">'+new Date(mList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '            <div class="clear-one" style="width:25%;float:left;"> <a mid="'+mList[i].mid+'" onclick="clearOne(this)"><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>\n' +
+                            '            </div>')
+                    }
+                    if (mList[i].type === "best") {
+                        array.push('<div class="an-answer-content">\n' +
+                            '                <div class="an-con-que" style="width:55%;float:left;"><a name="a_user" uid="'+mList[i].send_userid+'" mid="'+mList[i].mid+'" class="praise-person">'+mList[i].username+'</a>采纳了你关于问题:<a name="a_question_message" mid="'+mList[i].mid+'" qid="'+mList[i].qid+'">'+mList[i].title+'</a>的回答</div>' +
+                            '            <div class="an-con-date2" style="width:20%;float:left;">'+new Date(mList[i].time.time).format("yyyy-MM-dd hh:mm:ss")+'</div>\n' +
+                            '            <div class="clear-one" style="width:25%;float:left;"> <a mid="'+mList[i].mid+'" onclick="clearOne(this)"><i class="fa fa-trash-o" style="font-size:20px"></i></a></div>\n' +
+                            '            </div>')
+                    }
+
+                }
+
+                document.getElementById("message-content").innerHTML = array.join('');
+
+            }
+        })
+    }
+    function clearOne(obj){
+
+        var mid = obj.getAttribute("mid");
+        $.ajax({
+            type: "POST",
+            url: "../DelMessageServlet",
+            data:{"mid":mid},
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                obj.parentNode.parentNode.remove();
+            }
+        });
+
+    }
+
+    function openBrowse() {
+        var ie = navigator.appName === "Microsoft Internet Explorer" ? true : false;
+        if (ie) {
+            document.getElementById("fileinit").click();
+        } else {
+            var a = document.createEvent("MouseEvents");
+            a.initEvent("click", true, true);
+            document.getElementById("fileinit").dispatchEvent(a);
+        }
+    }
+
+    function openDialog() {
+
+
+        document.getElementById('screenshot').style.display = 'block';
+        document.getElementById('fade').style.display = 'block'
+    }
+
+    function closeDialog() {
+
+        document.getElementById('imgtarget').setAttribute("src", "../images/defaultHead.png");
+        //  preImg("");
+        document.getElementById('screenshot').style.display = 'none';
+        document.getElementById('fade').style.display = 'none';
+    }
+
+    //图片获取
+    var jcrop_api,//jcrop对象
+        boundx,//图片实际显示宽度
+        boundy,//图片实际显示高度
+        realWidth,// 真实图片宽度
+        realHeight, //真实图片高度
+
+        // 使用的jquery对象
+        $Imagetarget = $('#imgtarget'),
+        $preview = $('#preview-pane'),
+        $pcnt = $('#preview-pane .preview-container'),
+        $pimg = $('#preview-pane .preview-container img'),
+
+        xsize = $pcnt.width(),
+        ysize = $pcnt.height();
+
+
+    function changeFile() {
+        var url = getFileUrl("fileinit");//根据id获取文件路径
+        preImg(url);
+        return false;
+    }
+
+    function preImg(url) {
+
+        console.log('url===' + url);
+        //图片裁剪逻辑
+        if (jcrop_api)//判断jcrop_api是否被初始化过
+        {
+            jcrop_api.destroy();
+        }
+
+        //初始化预览div内容
+        initPreview();
+        //var p = document.getElementById('Preview');
+        //p.src = url;
+
+        //初始化图片
+        initTarget();
+        var image = document.getElementById('imgtarget');
+        image.onload = function () {//图片加载是一个异步的过程
+            //获取图片文件真实宽度和大小
+            var img = new Image();
+            img.onload = function () {
+                realWidth = img.width;
+                realHeight = img.height;
+                initJcrop();//初始化Jcrop插件
+                initCanvas();//初始化Canvas内容
+
+
+            };
+            img.src = url;
+        };
+        image.src = url;
+        console.log("1");
+    }
+
+    function getFileUrl(sourceId) {
+        var url;
+        if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
+            url = document.getElementById(sourceId).value;
+        } else if (navigator.userAgent.indexOf("Firefox") > 0) { // Firefox
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        } else if (navigator.userAgent.indexOf("Chrome") > 0) { // Chrome
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        } else if (navigator.userAgent.indexOf("Safari") > 0) { // Chrome
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        }
+        return url;
+    }
+
+    //初始化Jcrop插件
+    function initJcrop() {
+        if (realWidth / realHeight >= 1.5) {
+            document.getElementById("imgtarget").setAttribute("width", "100%");
+        } else {
+            document.getElementById("imgtarget").setAttribute("height", "100%");
+        }
+
+        console.log('init', [xsize, ysize]);
+        $Imagetarget.removeAttr("style");//清空上一次初始化设置的样式
+        console.log('1');
+        //$Imagetarget.alert("go");
+        if (realWidth / realHeight >= 1.5 && realWidth > 600) {
+            $Imagetarget.Jcrop({
+                onChange: updatePreview,
+                minSize: [200 * 600 / realWidth, 200 * 600 / realWidth],
+                //maxSize:[200*600/realWidth,200*600/realWidth],
+                onSelect: updatePreview,
+                aspectRatio: xsize / ysize
+            }, function () {
+                //初始化后回调函数
+                // 获取图片实际显示的大小
+                var bounds = this.getBounds();
+                boundx = bounds[0];//图片实际显示宽度
+                boundy = bounds[1];//图片实际显示高度
+
+                // 保存jcrop_api变量
+                jcrop_api = this;
+
+            });
+        }
+        if (realWidth / realHeight < 1.5 && realHeight > 400) {
+            $Imagetarget.Jcrop({
+                onChange: updatePreview,
+                minSize: [200 * 400 / realHeight, 200 * 400 / realHeight],
+                //maxSize:[200*600/realWidth,200*600/realWidth],
+                onSelect: updatePreview,
+                aspectRatio: xsize / ysize
+            }, function () {
+                //初始化后回调函数
+                // 获取图片实际显示的大小
+                var bounds = this.getBounds();
+                boundx = bounds[0];//图片实际显示宽度
+                boundy = bounds[1];//图片实际显示高度
+
+                // 保存jcrop_api变量
+                jcrop_api = this;
+
+            });
+        }
+
+        else {
+            $Imagetarget.Jcrop({
+                onChange: updatePreview,
+                minSize: [200, 200],
+                //maxSize:[200*600/realWidth,200*600/realWidth],
+                onSelect: updatePreview,
+                aspectRatio: xsize / ysize
+            }, function () {
+                //初始化后回调函数
+                // 获取图片实际显示的大小
+                var bounds = this.getBounds();
+                boundx = bounds[0];//图片实际显示宽度
+                boundy = bounds[1];//图片实际显示高度
+
+                // 保存jcrop_api变量
+                jcrop_api = this;
+
+            });
+        }
+        //console.log('1');
+    }
+
+
+    function initPreview() {
+        $pimg.removeAttr("style");//清空上一次初始化设置的样式
+        $pimg.css({
+            maxWidth: xsize + 'px',
+            maxHeight: ysize + 'px'
+        });
+    }
+
+    function initCanvas() {
+        //更新canvas画板内容
+        var img = document.getElementById("imgtarget");
+        var ct = document.getElementById("myCan");
+        var ctx = ct.getContext("2d");
+
+        var myCanWidth = $('#myCan').width();
+        var myCanHeight = $('#myCan').height();
+
+        //清空画板
+        ctx.clearRect(0, 0, ct.width, ct.height);
+
+        //.drawImage(图像对象,原图像截取的起始X坐标,原图像截取的起始Y坐标,原图像截取的宽度,原图像截取的高度，绘制图像的起始X坐标,绘制图像的起始Y坐标,绘制图像所需要的宽度,绘制图像所需要的高度);
+        var dWidth = realWidth;//绘制实际宽度
+        var dHeight = realHeight;//绘制实际高度
+        if (dWidth > myCanWidth) {
+            dHeight = myCanWidth / dWidth * dHeight;
+            dWidth = myCanWidth;
+        }
+        if (dHeight > myCanHeight) {
+            dWidth = myCanHeight / dHeight * dWidth;
+            dHeight = myCanHeight;
+        }
+        ctx.drawImage(img, 0, 0, realWidth, realHeight, 0, 0, dWidth, dHeight);
+    }
+
+    function updatePreview(c) {
+        if (parseInt(c.w) > 0) {
+            var rx = xsize / c.w;
+            var ry = ysize / c.h;
+
+            $pimg.css({
+                maxWidth: Math.round(rx * boundx) + 'px',
+                maxHeight: Math.round(ry * boundy) + 'px',
+                width: Math.round(rx * boundx) + 'px',
+                height: Math.round(ry * boundy) + 'px',
+                marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                marginTop: '-' + Math.round(ry * c.y) + 'px'
+            });
+
+            //更新canvas画板内容
+            var img = document.getElementById("imgtarget");
+            var ct = document.getElementById("myCan");
+            var ctx = ct.getContext("2d");
+            //清空画板
+            ctx.clearRect(0, 0, ct.width, ct.height);
+            //.drawImage(图像对象,原图像截取的起始X坐标,原图像截取的起始Y坐标,原图像截取的宽度,原图像截取的高度，绘制图像的起始X坐标,绘制图像的起始Y坐标,绘制图像所需要的宽度,绘制图像所需要的高度);
+
+            ctx.drawImage(img, c.x / boundx * realWidth, c.y / boundy * realHeight, c.w / boundx * realWidth, c.h / boundy * realHeight, 0, 0, ct.width, ct.height);          // c.w/boundx*realWidth, c.h/boundy*realHeight  ,    用 200 ,200,代替。
+            //ct.width,ct.height, 用200,200代替。
+        }
+    }
+
+    function initTarget() {
+        $Imagetarget.removeAttr("style");//清空上一次初始化设置的样式
+        $Imagetarget.css({
+            maxWidth: '100%',
+            maxHeight: '100%'
+        });
+    }
+
+    function convertCanvasToImage(canvas) {
+        var image = new Image();
+        image.src = canvas.toDataURL("image/png");
+        return image.src;
+    }
+
+    function uploadFile() {
+        var canvas = document.getElementById("myCan");
+        var image = convertCanvasToImage(canvas);
+        var img1 = document.getElementById("fileinit").value;
+        if (img1!=="")
+        {
+            $.ajax({
+                type: "POST",
+                url: "../uploadHeadServlet", //URL
+                data: {
+                    "head": image,
+                    "userid": userid
+                },
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    if (data.result === "1") {
+                        alert("上传成功！");
+                        closeDialog();
+                        location.reload();
+
+
+                    } else {
+                        alert("上传失败!");
+                    }
+                }
+            });
+        }
+
+    }
+
+
+    document.getElementById("update-information-birthday").oninput = function(){
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth()+1 < 10 ? "0"+(myDate.getMonth()+1) : (myDate.getMonth()+1);
+        var date = myDate.getDate() < 10 ? "0"+myDate.getDate() : myDate.getDate();
+        var date_all = year+"-"+month+"-"+date;
+
+        if(this.value>date_all){
+            this.value=date_all;
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

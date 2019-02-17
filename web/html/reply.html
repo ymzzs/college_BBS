@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reply</title>
+
+
+    <link href="../css/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- js -->
+    <!--animate-->
+    <link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/setting.css" rel="stylesheet" type="text/css">
+    <script src="../js/SensitiveTest.js"></script>
+    <script src="../js/wow.min.js"></script>
+
+
+</head>
+
+<body style="min-width: 1100px;">
+
+<div id="body-reply" class="body-reply">
+    <div id="questioner" class="questioner">
+
+    </div>
+    <ul id="pn">
+
+    </ul>
+    <div id="alike-list" style="margin-top: 20px">
+
+    </div>
+</div>
+<div id="inf-container"></div>
+<div class="modal fade" id="replywindow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:70%;padding: 10px;height:500px;min-width: 600px;">
+        <div class="modal-content" style="height: 100%;">
+            <div class="modal-body" style="width:100%;height: 100%;">
+                <div class="edit-pro">
+                    <form onsubmit="return false">
+                        <div class="edit-for-sett">
+                            <div id="my-editor">
+
+                            </div>
+                            <div class="replybotton3">
+                                <input type="submit" onclick="replyAjax()" value="提交"/>
+                                <input type="button" data-dismiss="modal" aria-label="Close" value="取消"/>
+                                <input id="pre-see" data-toggle="modal" data-target="#presee-div" type="button"
+                                       value="预览"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="presee-div" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:80%;padding: 10px;height:500px;min-width: 600px;">
+        <div class="modal-content" style="height: 100%;">
+            <div class="modal-body" style="width:100%;height: 100%;">
+                <div id="seesee">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/wangEditor.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/wangEditor-fullscreen-plugin.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor;
+    var editor = new E('#my-editor');
+    // 关闭粘贴样式的过滤
+    editor.customConfig.pasteFilterStyle = false;
+    // 忽略粘贴内容中的图片
+    editor.customConfig.pasteIgnoreImg = true;
+    // 显示“上传图片”的tab
+    // editor.customConfig.uploadImgServer = '/upload';
+    // 自定义处理粘贴的文本内容
+    editor.customConfig.pasteTextHandle = function (content) {
+        // content 即粘贴过来的内容（html 或 纯文本），可进行自定义处理然后返回
+        return content + '<p>在粘贴内容后面追加一行</p>';
+    }
+    editor.customConfig.linkCheck = function (text, link) {
+        console.log(text); // 插入的文字
+        console.log(link); // 插入的链接
+
+        return true; // 返回 true 表示校验成功
+        // return '验证失败' // 返回字符串，即校验失败的提示信息
+    }
+    editor.customConfig.linkImgCheck = function (src) {
+        console.log(src); // 图片的链接
+
+        return true; // 返回 true 表示校验成功
+        // return '验证失败' // 返回字符串，即校验失败的提示信息
+    }
+    editor.customConfig.linkImgCallback = function (url) {
+        console.log(url); // url 即插入图片的地址
+    }
+    document.getElementById('pre-see').addEventListener('click', function () {
+        // 读取 html
+        document.getElementById("seesee").innerHTML = editor.txt.html();
+    }, false);
+    editor.customConfig.uploadImgShowBase64 = true;
+    editor.customConfig.uploadImgMaxSize = 1024 * 1024;
+    editor.create();
+
+
+    function replyAjax() {
+
+        if (sessionStorage.getItem("userid") === "0") {
+            document.getElementById("loginBtn").click();
+        }
+        else {
+            var content = editor.txt.html();
+            var qid = sessionStorage.getItem("qid");
+            if(content === "<p><br></p>")
+            {
+                alert("内容不能为空");
+            }
+            else if (_sensitive_test(content))
+            {
+                $.ajax({
+                    type: "GET",
+                    url: "../ReplyServlet",
+                    data: {"content": content, "qid": qid,"userid":userid},
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("location.reload()")
+                        location.reload();
+                    }
+                });
+            }
+
+        }
+
+    }
+
+    //自动应答
+    function auto_reply() {
+        $.ajax({
+            type: "POST",
+            url: "http://www.tuling123.com/openapi/api",
+            data: {
+                "key": "affed8ae73fa4e009b4d735a3cd94db0",
+                "info": $('#qtitle').html()
+            },
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                console.log(data);
+                if (data.code === 100000) {
+
+                    //设置答案
+                    if (document.getElementById("auto-reply") === null)
+                        $("#pn").append(
+                            ' <li class="list0" id = "auto-reply">\n' +
+                            '     <div class="answerper">\n' +
+                            '         <div class="ans-ans">\n' +
+                            '             <div class="que-textbox">\n' +
+                            '                 <div class="main-body">\n' +
+                            data.text +
+                            '                 </div>\n' +
+                            '                 <div class="anwser-priase">\n' +
+                            '                     <span class="date" style="">刚刚</span>\n' +
+                            '                 </div>\n' +
+                            '             </div>\n' +
+                            '         </div>\n' +
+                            '         <div class="ans-infor">\n' +
+                            '             <div>\n' +
+
+                            ' <div class="best-ans">小灵知道</div><img src="../images/tuling.png" style="margin-left: 38%;margin-top: 10%" width="70px" height="70px "/>' +
+                            '             </div>\n' +
+                            '             <div class="ans-name"> <span>求知小灵</span></div>' +
+                            '             <div style="margin-left: 37%;margin-top:10%">等级: 0</div>\n' +
+                            '         </div>\n' +
+                            '     </div>\n' +
+                            '</li>'
+                        );
+                }
+                else {
+                    //出错
+                }
+            }
+        });
+    }
+
+    //获取相似问题列表
+    function getAlikeQuestion() {
+        $.ajax({
+            type: "GET",
+            url: "../SearchServlet", //URL
+            data: {
+                startPage: 1,
+                keyword: $('#qtitle').html()
+            },
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function (data) {
+                if (data.count > 1) {
+                    $("#alike-list").append('<span style="color: #EE0000; font-size: 26px">相似问题</span>');
+                    $.each(data.questions, function (i, question) {
+                        if (parseInt(question.qid) !== parseInt(sessionStorage.getItem("qid"))) {
+                            var item = $(
+                                '<div class="question-list-item">' +
+                                '   <div class="question-title">' +
+                                '       <label class="question-name"><a class="a_question" qid="' + question.qid + '">' + question.title + '</a></label>' +
+                                '       <label class="question-time">' + new Date(question.time.time).format("yyyy-MM-dd hh:mm:ss") + '</label>' +
+                                '       <label style="color: #808080;font-size: 13px;">来自</label>' +
+                                '       <label class="question-from"><a name="a_user" uid="' + question.userId + '">' + question.username + '</a></label>' +
+                                '       <label class="question-status"><span>' + question.answerCount + '</span><p>回答</p></label>' +
+                                '   </div>' +
+                                '   <div class="search-link"><a>http://47.100.101.60:8080/college_BBS/html/index.html</a></div>' +
+                                '   <div class="single-view-history">' +
+                                '       <div class="single-collection"><em>赞' + question.likeCount + '</em></div>' +
+                                '       <span class="interval">|</span>' +
+                                '       <div class="single-view"><em>浏览' + question.visitCount + '</em></div>' +
+                                '   </div>' +
+                                '</div>')
+                            item.appendTo($("#alike-list"));
+                        }
+                    });
+                }
+            }// end success
+        });
+
+    }
+
+</script>
+
+<!-- js -->
+<script type="text/javascript">
+    var qid = sessionStorage.getItem("qid");
+    var userid = sessionStorage.getItem("userid");
+    $(document).ready(function () {
+        var best = 0;
+        var quserid;
+
+
+        if (null !== qid) {
+            $.ajax({
+                type: "GET",
+                url: "../UAQServlet",
+                data: {"qid": qid,"userid":userid},
+                async:false,
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    var userInf = data.userInf;
+                    document.getElementById("inf-container").innerHTML = '<div id="body-my-info" class="body-my-info">\n' +
+                        '    <div class="body-info-details">\n' +
+                        '        <h4>我的问答</h4>\n' +
+                        '        <div class="body-info-pic"><img style="width: 50px;float: left;margin-left: 25px;margin-top: 10px; height: 50px;" src="'+getHead(sessionStorage.getItem("userHead"))+'"/>\n' +
+                        '            <span class="body-info-name-and-level"><span class="body-info-name"><a>'+userInf.username+'</a></span><span style="color:#828282;font-size: 13px;">等级:'+userInf.level+'</span><span style="color:#828282;font-size: 13px;">称号：'+getTitle(userInf.level)+'</span>\n' +
+                        '</span>\n' +
+                        '        </div>\n' +
+                        '    </div>\n' +
+                        '    <div class="body-info-my-status">\n' +
+                        '        <p>我提了：<b>'+userInf.userqCount+'</b>个问题，<b>'+userInf.solvedCount+'</b>个获得了解答</p>\n' +
+                        '        <p>我回答了：<b>'+userInf.useraCount+'</b>个问题，<b>'+userInf.bestCount+'</b>个得到了采纳</p>\n' +
+                        '    </div>\n' +
+                        '</div>';
+
+                    document.getElementById("questioner").innerHTML= '  <div class="que-infor"\n' +
+                        '             style="display:flex;width: 100%;height:70px;background-color:#fff;border-bottom: 1px solid #DDDDDD">\n' +
+                        '            <div id="que-head">\n' +
+                        '             <a name="a_user" uid="'+data.userid+'" >  <img  src='+data.userHead+' style="max-width:40px; margin-top:20px;margin-left: 10px;"/></a> ' +
+                        '            </div>\n' +
+                        '            <div id="que-name"\n' +
+                        '                 style="margin-right:10px;margin-left:10px;height:70px;text-align:center;margin-top:27px;font-weight:bold;">\n' +
+                        '                <a name="a_user" id="quserName" uid="'+data.userid+'">'+data.quserName+'</a>\n' +
+                        '            </div>\n' +
+                        '            <span style="margin-top: 27px;">于</span>\n' +
+                        '            <div class="quetime" style="    margin-top: 24px;' +
+                        '    margin-left: 10px;height: 70px;float: right;">\n' +
+                        '                <span id="qtime" class="time">'+data.qtime+'</span>\n' +
+                        '            </div>\n' +
+                        '            <span style="margin-top: 27px;">提问</span>\n' +
+                        '        </div>\n' +
+                        '        <div class="que-que" style="width: 100%;float:right;background-color:#fff;">\n' +
+                        '            <div class="que-textbox"\n' +
+                        '                 style="width:90%;background-color:#fff;margin-left:auto; margin-right:auto;margin-top:25px; ">\n' +
+                        '                <div class="que-title"\n' +
+                        '                     style="display: flex;font-size:30px;max-height: 50px;border-bottom: 1px solid #DDDDDD">\n' +
+                        '                    <div id="qtitle">'+data.qtitle+'</div>\n' +
+                        '                    <div id="qintegral" class="arrow_box">'+data.qintegral + "C"+'</div>\n' +
+                        '                </div>\n' +
+                        '                <div id="question-labels" class="question-labels">\n' +
+                        '                </div>\n' +
+                        '                <div id="qcontent" class="main-body"\n' +
+                        '                     style="max-height:450px;overflow-y: scroll;width:100%;height: 70%;margin-top:10px;min-height: 321px; border-bottom: 1px solid #DDDDDD">\n' +data.qcontent+
+                        '                </div>\n' +
+                        '\n' +
+                        '                <div id="button-reply">\n' +
+                        '                    <div class="to-collect"><a id="if_collect" onclick="toCollect(this)"><i id="not-collected"\n' +
+                        '                                                                                            class="fa fa-star-o"></i>收藏</a>\n' +
+                        '                    </div>\n' +
+                        '                    <div id="answerBtn" role="button" class="reply-to-question-button" style="color: #888888;">\n' +
+                        '                        <a href="javaScript:void(0)" >回复</a>\n' +
+                        '                        <a href="javaScript:void(0)" data-toggle="modal" data-target="#replywindow" id="answer_Btn"\n' +
+                        '                           style="display: none;"></a>\n' +
+                        '                    </div>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '        </div>';
+
+                    quserid = data.userid;
+                    for (var j = 0; j < data.labels.length; j++) {
+                        $("#question-labels").append("<a>" + data.labels[j] + "</a>");
+                    }
+
+                    var colist = data.colist;
+                    for (var x = 0; x < colist.length; x++) {
+                        if (parseInt(userid) === colist[x].userid) {
+                            console.log("userid === colist.userid")
+
+                            document.getElementById("if_collect").innerHTML = "<i id='collected' class='fa fa-star'></i>已收藏";
+                            document.getElementById("if_collect").style.color = "red";
+                        }
+                    }
+
+
+                }
+            });
+            if (userid!=="0")
+            {
+
+                document.getElementById("body-reply").style = "width: 75%; float: left;padding-left: 2%;min-width:650px;padding-right:0;height: 2000px;"
+                document.getElementById("body-my-info").style.display = "block";
+
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "../AnswerServlet",
+                data: {"qid": qid},
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    if (null !== data.aList) {
+                        var list = data.aList;
+                        var cList = data.cList;
+                        for (var i = 0; i < list.length; i++) {
+                            var bestAnswer = [];
+                            var answer = [];
+                            console.log(list[i].bestAid)
+                            if (list[i].aid === list[i].bestAid) {
+                                console.log("优质答案");
+                                best = 1;
+                                bestAnswer.push(' <li class = "list0">\n' +
+                                    '            <div class="answerper">\n' +
+                                    '                <div class="ans-ans">\n' +
+                                    '                    <div class="que-textbox">\n' +
+                                    '                        <div class="main-body">\n' +
+                                    list[i].content +
+                                    '                        </div>\n' +
+                                    '                        <div class="anwser-priase">\n' +
+                                    '                            <div class="good"><a class="dzan" href="javascript:;"><i class="fa fa-thumbs-o-up" id="like' + list[i].aid + '" aid="' + list[i].aid + '" style="color:black;font-size:24px"></i></a></div>\n' +
+                                    '                            <div class="good-people"  total-good=' + list[i].likeCount + '>' + list[i].likeCount + '</div>\n' +
+                                    '                            <div class="bad"><a class="dzan" href="javascript:;"><i class="fa fa-thumbs-o-down" id="dislike' + list[i].aid + '" aid="' + list[i].aid + '" style="color:black;font-size:24px"></i></a></div>\n' +
+                                    '                            <div class="bad-people" total-bad=' + list[i].dislikeCount + '>' + list[i].dislikeCount + '</div>\n' +
+                                    '          <span class="hide-or-show-comments" onclick="hide_or_show_comments(this)">收起<i class="fa fa-angle-up" style="font-size:25px;"></i></span>                  <span class="date" style="">' + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss") + '</span>\n' +
+                                    '            </div>\n' +
+                                    '                    </div>\n' +
+                                    '<div class="comment-list" id="c' + list[i].aid + '"></div>' +
+                                    '                    <div class="hf">\n' +
+                                    '                        <textarea type="text" class="hf-text" aid="' + list[i].aid + '" autocomplete="off" maxlength="100">评论…</textarea>\n' +
+                                    '                        <button class="hf-btn">回复</button>\n' +
+                                    '                        <span class="hf-nub">0/100</span>\n' +
+                                    '                    </div>\n' +
+                                    '                    </div>\n' +
+                                    '                <div class="ans-infor">\n' +
+                                    '     <div class="best-ans">优质回答</div>             <div>\n' +
+
+                                    '<a  name = "a_user" uid = "' + list[i].userid+'" ><img src="'+getHead(list[i].head)+'" style="margin-left: 38%;margin-top: 10%" width="70px" height="70px "/></a>' +
+                                    '                    </div>\n' +
+                                    '                    <div class="ans-name"> <a uid = ' + list[i].userid + ' name = "a_user">' + list[i].username + ' </a></div>\n' +
+                                    '<div style="margin-left: 37%;margin-top:10%">等级:' + list[i].level + '</div>' + '                 </div>\n' +
+                                    '            </div>\n' +
+                                    '        </li>'
+                                )
+                            }
+                            else {
+                                answer.push(
+                                    ' <li class = "list0">\n' +
+                                    '            <div class="answerper">\n' +
+                                    '                <div class="ans-ans">\n' +
+                                    '                    <div class="que-textbox">\n' +
+                                    '                        <div class="main-body">\n' +
+                                    list[i].content +
+                                    '                        </div>\n' +
+                                    '                        <div class="anwser-priase">\n' +
+                                    '                            <div class="good"><a class="dzan" href="javascript:;"><i class="fa fa-thumbs-o-up" id="like' + list[i].aid + '" aid="' + list[i].aid + '" style="color:black;font-size:24px"></i></a></div>\n' +
+                                    '                            <div class="good-people"  total-good=' + list[i].likeCount + '>' + list[i].likeCount + '</div>\n' +
+                                    '                            <div class="bad"><a class="dzan" href="javascript:;"><i class="fa fa-thumbs-o-down" id="dislike' + list[i].aid + '" aid="' + list[i].aid + '" style="color:black;font-size:24px"></i></a></div>\n' +
+                                    '                            <div class="bad-people" total-bad=' + list[i].dislikeCount + '>' + list[i].dislikeCount + '</div>\n' +
+                                    '      <span class="hide-or-show-comments" onclick="hide_or_show_comments(this)">收起<i class="fa fa-angle-up" style="font-size:25px;"></i></span>\n                      <span class="date" style="">' + new Date(list[i].time.time).format("yyyy-MM-dd hh:mm:ss") + '</span>\n' +
+                                    '                        </div>\n' +
+                                    '                    </div>\n' +
+                                    '<div class="comment-list" id="c' + list[i].aid + '"></div>' +
+                                    '                    <div class="hf">\n' +
+                                    '                        <textarea type="text" class="hf-text" aid="' + list[i].aid + '" autocomplete="off" maxlength="100">评论…</textarea>\n' +
+                                    '                        <button class="hf-btn">回复</button>\n' +
+                                    '                        <span class="hf-nub">0/100</span>\n' +
+                                    '                    </div>\n' +
+                                    '                    </div>\n' +
+                                    '                <div class="ans-infor">\n' +
+                                    '                    <div>\n' +
+
+                                    '<a  name = "a_user" uid = "' + list[i].userid+'" > ><img src="'+getHead(list[i].head)+'" style="margin-left: 38%;margin-top: 10%" width="70px" height="70px "/></a>' +
+                                    '                    </div>\n' +
+                                    '                    <div class="ans-name"> <a uid = ' + list[i].userid + ' name = a_user>' + list[i].username + ' </a></div>\n' +
+                                    '<div style="margin-left: 37%;margin-top:10%">等级:' + list[i].level + '</div>' +
+                                    '  <div aid="' + list[i].aid + '" class="choose-best"></div>              </div>\n' +
+                                    '            </div>\n' +
+                                    '        </li>'
+                                )
+                            }
+
+                            $("#pn").prepend(bestAnswer.join('')).append(answer.join(''));
+                            var likedUserIds = list[i].likedUserId.split(',');
+                            var dislikedUserIds = list[i].dislikedUserId.split(',');
+
+                            for (var k = 0; k < likedUserIds.length; k++) {
+                                if (userid === likedUserIds[k]) {
+                                    document.getElementById("like" + list[i].aid + "").style.color = "red";
+                                }
+                            }
+                            for (var n = 0; n < dislikedUserIds.length; n++) {
+                                if (userid === dislikedUserIds[n]) {
+
+                                    document.getElementById("dislike" + list[i].aid + "").style.color = "red";
+                                }
+                            }
+
+
+                            for (var p = 0; p < cList.length; p++) {
+                                var c = cList;
+                                if (c[p].aid === list[i].aid) {
+                                    var cdiv = [];
+                                    if (c[p].userid === parseInt(userid)) {
+                                        console.log("c[p].userid === userid")
+                                        $("#c" + list[i].aid).append('    <div class="comment" user="self">\n' +
+                                            '                            <div class="comment-left"><img src="" alt=""/></div>\n' +
+                                            '                            <div class="comment-right">\n' +
+                                            '                                <div class="comment-text"><span class="user">我：</span>' + c[p].content + '</div>\n' +
+                                            '                                <div class="comment-date">' + new Date(c[p].time.time).format("yyyy-MM-dd hh:mm:ss") +
+                                            '                                    <a class="comment-dele" cid="' + c[p].cid + '" href="javascript:;">删除</a>\n' +
+                                            '                                </div>\n' +
+                                            '                            </div>\n' +
+                                            '                        </div>')
+                                    }
+                                    else {
+                                        $("#c" + list[i].aid).append(' <div class="comment" user="self">\n' +
+                                            '                            <div class="comment-left"><img src="" alt=""/></div>\n' +
+                                            '                            <div class="comment-right">\n' +
+                                            '                                <div class="comment-text"><a class="user" uid = ' + list[i].userid + ' name = a_user>' + c[p].username + ':</a></span>' + c[p].content + '</div>\n' +
+                                            '                                <div class="comment-date">' + new Date(c[p].time.time).format("yyyy-MM-dd hh:mm:ss") +
+                                            '                                    <a class="comment-dele" cid="' + c[p].cid + '" aid="' + c[p].aid + '" href="javascript:;">回复</a>\n' +
+                                            '                                </div>\n' +
+                                            '                            </div>\n' +
+                                            '                        </div>')
+
+                                    }
+                                }
+                            }
+                        }
+                        if (best === 0 && quserid === parseInt(userid)) {
+                            var bestDiv = document.getElementsByClassName("choose-best");
+
+                            for (var i = 0; i < bestDiv.length; i++) {
+                                bestDiv[i].innerHTML = "<input type='button' class='to-best' onClick='bestAnswer(this.parentElement)' value='选为最佳' />"
+                            }
+
+                        }
+                        auto_reply();
+                        getAlikeQuestion();
+
+                    }//end success if
+                }
+            });
+        }
+
+    });
+
+    $(document).on('click', '#answerBtn', function () {
+
+        if (sessionStorage.getItem("userid") === "0") {
+
+            document.getElementById("loginBtn").click();
+
+        }
+        else {
+
+            document.getElementById("answer_Btn").click();
+        }
+
+
+    });
+
+    function hide_or_show_comments(obj){
+        var curr_comments = obj.parentNode.parentNode.parentNode.getElementsByClassName("comment-list")[0];
+        console.log(curr_comments.style.display);
+        if(curr_comments.style.display==="inline-block" || curr_comments.style.display===""){
+            curr_comments.style.display="none";
+            obj.innerHTML="展开<i class=\"fa fa-angle-down\" style=\"font-size:25px;\"></i>";
+        }else{
+            curr_comments.style.display="inline-block";
+            obj.innerHTML="收起<i class=\"fa fa-angle-up\" style=\"font-size:25px;\"></i>";
+        }
+    }
+
+    /*
+     *
+     * 评论script
+     *
+     *
+     */
+    var curr_value;
+    $("#pn").on("mouseover", function () {
+        var pn = document.getElementById("pn");
+        var lists = pn.children;
+
+        function remove(node) {
+            node.parentNode.removeChild(node);
+        }
+
+//回复评论
+        function reply(box) {
+
+            //获取qid
+            var qid = sessionStorage.getItem("qid");
+            //获取userid
+            var userid = sessionStorage.getItem("userid");
+            //获取aid
+            var aid = sessionStorage.getItem("aid");
+            //获取recid
+            var recid = sessionStorage.getItem("cid");
+
+            var username = sessionStorage.getItem("username_reply");
+            sessionStorage.removeItem("cid");
+            sessionStorage.removeItem("aid");
+
+            //获取评论框
+            var textarea = box.getElementsByTagName("textarea")[0];
+
+            //获取content
+            var content = textarea.value;
+            if(sessionStorage.getItem("userid")==="0")
+            {
+                document.getElementById("loginBtn").click();
+            }
+
+            else if (_sensitive_test(content)) {
+                if(content==="回复 "+username)
+                {
+                    alert("回复不能为空");
+                }
+                else if(content!=="回复 "+username)
+                {
+                    $.ajax({
+                        type: "GET",
+                        url: "../CommentServlet",
+                        data: {
+                            "aid": aid,
+                            "userid": userid,
+                            "recid": recid,
+                            "content": content,
+                            "qid": qid
+                        },
+                        dataType: "json",
+                        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                        success: function (data) {
+                            console.log("成功");
+                        }
+                    });
+
+                    //获取包含所有评论的容器
+                    var comment = box.getElementsByClassName("comment-list")[0];
+                    //创建新的评论div
+                    var div = document.createElement("div");
+                    //赋类名
+                    div.className = "comment";
+                    //设置属性
+                    div.setAttribute("user", "self");
+                    //获取每条评论的innerHTML结构，每次只替换textarea的输入内容和 当前发送时间
+                    var html = '<div class="comment-left">' + '<img src="" alt=""/>' + '</div>' +
+                        '<div class="comment-right">' +
+                        '<div class="comment-text"><span>我：</span>' + textarea.value + '</div>' +
+                        '<div class="comment-date">' +
+                        getTime() +
+                        '<a class="comment-dele" href="javascript:;">删除</a>' +
+                        '</div>' +
+                        '</div>';
+                    //插入到新建的评论div
+                    div.innerHTML = html;
+                    //把新评论插入到评论列表
+                    comment.appendChild(div);
+
+                    console.log(userid);
+                    console.log(aid);
+                    console.log(recid);
+                    console.log(content);
+
+
+                    //评论后初始化textarea输入框
+                    textarea.value = "评论…";
+                    textarea.parentNode.className = "hf";
+                }
+
+            }
+        }
+
+
+//获取当前时间回复评论时调用
+        function getTime() {
+            var t = new Date();
+            var y = t.getFullYear();
+            var m = t.getMonth() + 1;
+            var d = t.getDate();
+            var h = t.getHours();
+            var mi = t.getMinutes();
+            m = m < 10 ? "0" + m : m;
+            d = d < 10 ? "0" + d : d;
+            h = h < 10 ? "0" + h : h;
+            mi = mi < 10 ? "0" + mi : mi;
+            return y + "-" + m + "-" + d + "" + h + ":" + mi;
+        }
+
+        function criticizebox(box, el) {
+
+            var obj = document.elementFromPoint(event.clientX, event.clientY);
+            var userid = sessionStorage.getItem("userid");
+            var ifLogin = sessionStorage.getItem("ifLogin");
+            var aid = obj.getAttribute("aid");
+            console.log(obj)
+            console.log(userid)
+            console.log(ifLogin)
+            console.log(aid)
+            if (ifLogin !== "1") {
+                document.getElementById("loginBtn").click();
+            }
+            else {
+                //获取踩数量容器
+                var criticize = box.getElementsByClassName("bad-people")[0];
+                //容器当前total值
+                var total = parseInt(criticize.getAttribute("total-bad"));
+                //获取点击的状态
+                var txt = el.style.color;
+                //创建一个新的total存储用
+                var newtotal;
+                //判断点击的文字内容
+                var ifCancel;
+                if (txt === "black") {
+                    //total值+1 因为我还没踩，所以要点击的时候就多了一个人 total+1
+                    newtotal = total + 1;
+                    //判断踩数量 把相应文字放到踩容器里
+                    //  criticize.innerHTML = newtotal === 1 ? "我觉得很捞" : "我和" + total + "个人觉得很捞";
+                    criticize.innerHTML = newtotal;
+                    el.style.color = "red";
+                    if (box.getElementsByClassName("fa fa-thumbs-o-up")[0].style.color === "red") {
+                        praisebox(box, box.getElementsByClassName("fa fa-thumbs-o-up")[0]);
+                    }
+                    ifCancel = "notCancel";
+                }
+                else {
+                    //反之total值-1
+                    newtotal = total - 1;
+                    // criticize.innerHTML = newtotal === 0 ? "0" : newtotal;
+                    criticize.innerHTML = newtotal;
+                    el.style.color = "black";
+                    ifCancel = "cancel";
+                }
+                //更新total值
+                criticize.setAttribute("total-bad", newtotal);
+                //如果没有人踩容器隐藏
+                //  criticize.style.display = (newtotal === 0) ? "none" : "block";
+                $.ajax({
+                    type: "GET",
+                    url: "../LikeServlet",
+                    data: {
+                        "newtotal": newtotal,
+                        "ifLike": "dislike",
+                        "ifCancel": ifCancel,
+                        "userid": userid,
+                        "aid": aid
+                    },
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("成功");
+
+                    }
+                });
+
+            }
+
+
+        }
+
+//上面的点赞
+        function praisebox(box, el) {
+
+            var obj = document.elementFromPoint(event.clientX, event.clientY);
+            var ifLogin = sessionStorage.getItem("ifLogin");
+            var aid = obj.getAttribute("aid");
+            if (ifLogin !== "1") {
+                document.getElementById("loginBtn").click();
+            }
+            else {
+                //获取赞数量容器
+                var praise = box.getElementsByClassName("good-people")[0];
+                //获取容器当前total值
+                var total = parseInt(praise.getAttribute("total-good"));
+                //获取点击的状态
+                var txt = el.style.color;
+                //创建一个新的total存储用
+                var newtotal;
+                var ifCancel;
+                //判断点击的文字内容
+                if (txt === "black") {
+                    //total值+1 因为我还没点击赞，所以要点击的时候就多了一个人 total+1
+                    newtotal = total + 1;
+                    //判断赞数量 把相应文字放到赞容器里
+                    // praise.innerHTML = newtotal === 1 ? "我觉得很赞" : "我和" + total + "个人觉得很赞";
+                    praise.innerHTML = newtotal;
+                    el.style.color = "red";
+                    if (box.getElementsByClassName("fa fa-thumbs-o-down")[0].style.color === "red") {
+                        criticizebox(box, box.getElementsByClassName("fa fa-thumbs-o-down")[0]);
+                    }
+                    ifCancel = "notCancel";
+
+                }
+                else {
+                    //反之total值-1
+                    newtotal = total - 1;
+                    //  praise.innerHTML = newtotal === 0 ? "" : newtotal + "个人觉得很赞";
+                    praise.innerHTML = newtotal;
+                    el.style.color = "black";
+                    ifCancel = "cancel";
+                }
+                //更新total值
+                praise.setAttribute("total-good", newtotal);
+
+                $.ajax({
+                    type: "GET",
+                    url: "../LikeServlet",
+                    data: {
+                        "newtotal": newtotal,
+                        "ifLike": "like",
+                        "ifCancel": ifCancel,
+                        "userid": userid,
+                        "aid": aid
+                    },
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("成功");
+
+                    }
+                });
+                //如果没有人点赞容器隐藏
+                //   praise.style.display = (newtotal === 0) ? "none" : "block";
+
+            }
+        }
+
+//操作回复
+        function operateReply(el) {
+
+            //cid
+            var obj1 = document.elementFromPoint(event.clientX, event.clientY);
+
+
+            //每条评论
+            var comment = el.parentNode.parentNode.parentNode;
+            //整个状态
+            var box = comment.parentNode.parentNode.parentNode;
+            //评论框
+            var textarea = box.getElementsByTagName("textarea")[0];
+            //名字
+            var user = comment.getElementsByClassName("user")[0];
+
+            console.log(user)
+            //点击的innerHTML
+            var txt = el.innerHTML;
+            //判断当前点击的是否为回复
+            if (txt === "回复") {
+                //评论框触发焦点事件 也就是变高
+                textarea.onfocus();
+                //内容变为回复+当前人的名字
+                console.log(user.innerText);
+                sessionStorage.setItem("username_reply",user.innerText);
+                textarea.value = "回复 " + user.innerText;
+                curr_value = textarea.value;
+                //调用键盘事件
+                textarea.onkeyup();
+                textarea.focus();
+                var cid = obj1.getAttribute("cid");
+                var aid = obj1.getAttribute("aid");
+                sessionStorage.setItem("cid", cid);
+                sessionStorage.setItem("aid", aid);
+
+
+            } else {
+                //否则就是删除节点
+                var cid1 = obj1.getAttribute("cid");
+
+                $.ajax({
+                    type: "GET",
+                    url: "../DelCommentServlet",
+                    data: {
+                        "cid": cid1
+                    },
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("成功");
+
+                    }
+                });
+                remove(comment);
+            }
+        }
+
+//遍历所有状态消息
+        for (var i = 0; i < lists.length; i++) {
+            if (lists[i] !== document.getElementById("auto-reply")) {
+                //全部事件代理
+                lists[i].onclick = function (e) {
+                    //获取当前点击事件
+                    var e = e || window.event;
+                    var el = e.srcElement;
+                    if (!el) {
+                        el = e.target;//兼容火狐
+                    }
+                    //判断点击的类名
+                    switch (el.className) {
+                        //关闭整个状态
+                        case "close":
+                            remove(el.parentNode);
+                            break;
+                        //上面的点赞
+                        case "fa fa-thumbs-o-up":
+                            praisebox(el.parentNode.parentNode.parentNode, el);
+                            break;
+                        //回复评论
+                        case "hf-btn hf-btn-on":
+                            reply(el.parentNode.parentNode.parentNode);
+                            break;
+                        case "comment-dele":
+                            operateReply(el);
+                            break;
+                        case "fa fa-thumbs-o-down":
+                            criticizebox(el.parentNode.parentNode.parentNode, el);
+                            break;
+                    }
+                }
+                var textarea = lists[i].getElementsByClassName("hf-text")[0];
+                //焦点事件
+                textarea.onfocus = function () {
+                    var aid = this.getAttribute("aid");
+                    console.log(aid)
+                    sessionStorage.setItem("aid", aid);
+                    this.parentNode.className = 'hf hf-on';
+                    this.value = this.value === '评论…' ? '' : this.value;
+
+
+                }
+                //失焦事件
+
+                textarea.onblur = function () {
+                    if (this.value === '') {
+                        this.parentNode.className = 'hf';
+                        this.value = '评论…';
+                    } else if (this.value.indexOf("回复") === 0) {
+                        if (this.value.indexOf("：") === this.value.length - 1) {
+                            this.parentNode.className = 'hf';
+                            this.value = '评论…';
+                        }
+                    }
+                }
+                //键盘事件
+                textarea.onkeyup = function () {
+                    var len = this.value.length;
+                    var textParentNode = this.parentNode;
+                    var textBtn = textParentNode.children[1];
+                    var textNub = textParentNode.children[2];
+                    if (len === 0 /*|| len>100*/) {
+                        textBtn.className = "hf-btn";
+                    } else {
+                        textBtn.className = "hf-btn hf-btn-on";
+                        /*this.style.color="#333"; */
+                    }
+                    textNub.innerHTML = len + "/100";
+                }
+                textarea.onkeydown = function () {
+                    var oEvent = window.event;
+                    if (oEvent.keyCode === 8) {
+                        if (this.value === curr_value) {
+                            this.value = "";
+                            curr_value = "";
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    function toCollect(obj) {
+        console.log(userid);
+        if ("0" !== userid) {
+            if (obj.innerText === "收藏") {
+
+                $.ajax({
+                    type: "GET",
+                    url: "../AddCollectionServlet",
+                    data: {
+                        "userid": userid,
+                        "qid": qid
+                    },
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("成功");
+                        console.log("添加");
+                        obj.style.color = "red";
+                        obj.innerHTML = "<i id='collected' class='fa fa-star'></i>已收藏";
+
+                    }
+                });
+
+
+            } else {
+
+                $.ajax({
+                    type: "GET",
+                    url: "../DelCollectionServlet",
+                    data: {
+                        "userid": userid,
+                        "qid": qid
+                    },
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function (data) {
+                        console.log("成功");
+                        console.log("删除");
+                        obj.style.color = "#8D8D8D";
+                        obj.innerHTML = "<i id='not-collected' class='fa fa-star-o'></i>收藏";
+                    }
+                });
+            }
+        }
+        else {
+            document.getElementById("loginBtn").click();
+        }
+
+    }
+
+    function bestAnswer(obj) {
+        console.log(obj)
+        var aid = parseInt(obj.getAttribute("aid"));
+        console.log(aid)
+        var r = confirm("最佳一旦确定，将无法更改，此答者获得积分，确定选择此回答为最佳吗？");
+        if (r) {
+            $.ajax({
+                type: "GET",
+                url: "../ChooseBestServlet",
+                data: {
+                    "qid": qid,
+                    "aid": aid,
+                    "send_userid":userid
+                },
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function (data) {
+                    location.reload();
+                }
+            });
+        }
+    };
+</script>
+</body>
+</html>
